@@ -6,6 +6,8 @@ import Newsletter from './component/newsletter';
 import Shoppingcart from './component/shoppingcart';
 import Banner from './component/banner';
 import Product from './component/product';
+import NewItem from './component/newItems';
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
     <Banner />
     <Navigation  
     />  
+
+    <NewItem />
 
     <Product />
 
