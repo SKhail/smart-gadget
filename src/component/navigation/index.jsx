@@ -1,7 +1,3 @@
-
-// import style css
-import './style.css'
-
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -35,9 +31,8 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
-     <nav className="mx-auto flex   max-w-7xl   items-center  justify-between p-6 lg:px-8" aria-label="Global">
-     {/* <nav className="flex flex-col lg:flex-row lg:flex-1 p-6 lg:px-8">   */}
+    <header className="bg-blue">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
