@@ -7,4 +7,10 @@ https://github.com/SKhail/smart-gadget
 Nadines Figmae framework
 https://www.figma.com/file/FJfdlthb2B7I1EPW7M6IC3/Untitled?type=design&node-id=0-1&mode=design
 
+tailwind
+https://tailwindui.com/components/ecommerce/components/promo-sections
+
+
+
+
 
