@@ -12,5 +12,13 @@ https://tailwindui.com/components/ecommerce/components/promo-sections
 
 
 
+what we used until now
+tailwind
+react
+react-multi-carousel
+
+
+corousal
+https://www.npmjs.com/package/react-multi-carousel?activeTab=readme
 
 
