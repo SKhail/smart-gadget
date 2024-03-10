@@ -7,6 +7,7 @@ import Shoppingcart from './component/shoppingcart';
 import Banner from './component/banner';
 import Product from './component/product';
 import NewItem from './component/newItems';
+import Cart from './component/cart'
 
 
 function App() {
@@ -17,11 +18,15 @@ function App() {
     <Navigation  
     />  
 
+{/* <Cart /> */}
+
     <NewItem />
 
     <Product />
 
-    <Shoppingcart  />
+    {/* <Cart /> */}
+
+    {/* <Shoppingcart  /> */}
     <Newsletter />
 
     </>
