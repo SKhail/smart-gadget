@@ -8,7 +8,7 @@ import Banner from './component/banner';
 import Product from './component/product';
 import NewItem from './component/newItems';
 // import Cart from './component/cart'
-import Carousel from './component/corousal'
+import MyCarousel from './component/corousal'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
 
 {/* <Cart /> */}
 
-<Carousel />
+<MyCarousel />
 
     <NewItem />
 
