@@ -7,10 +7,11 @@ export default {
     './src/**/*.ts',
     './src/**/*.tsx',
   ],
+  darkMode: "class",   //Apply Dark Mode feature 
   theme: {
     extend: {
       backgroundImage: {
-     
+
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
@@ -22,26 +23,29 @@ export default {
         'display': ['Oswald', 'sans-serif'],
 
         'body': ['Inter', 'sans-serif'],
-
-        
-
       },
       colors: {
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
+        'primary': '#FF8C32',
+        'secondary': 'ed8900',
+        'black': '#06113C',
+        'background-white': '#FFFBF5',
+        'custom-white': '#F7EFE5',
+
+        'space-grey': '#EEEEEE'
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '3rem',
+
+        }
+      }
     },
-    
+
   },
   plugins: [
-    
+
 
   ],
 }
