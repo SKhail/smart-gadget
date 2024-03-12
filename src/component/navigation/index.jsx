@@ -57,11 +57,11 @@ const Index = () => {
   return (
     <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200'>
       {/* Logo */}
-      <div className='flex justify-between items-center bg-primary/60 py-3'>
+      <div className='flex justify-between items-center bg-primary/60 py-0.5'>
         {/* Logo */}
-        {/* <a href='#' className='logo-container'>
+        <a href='#' className='logo-container'>
           <img src={Logo} alt='logo' className='logo' />
-        </a> */}
+        </a>
 
         {/* SearchBar */}
         <div className='flex justify-between items-center'>
