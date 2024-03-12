@@ -25,7 +25,7 @@ export default {
         'body': ['Inter', 'sans-serif'],
       },
       colors: {
-        'primary': '#FF8C32',
+        'primary': '#0f4c5c',
         'secondary': 'ed8900',
         'black': '#06113C',
         'background-white': '#FFFBF5',
