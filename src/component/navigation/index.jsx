@@ -27,7 +27,7 @@ const NavData = [
   {
     id: 3,
     name: 'Laptops',
-    link: '/aboutus',
+    link: '/#Laptops',
   },
   {
     id: 4,
