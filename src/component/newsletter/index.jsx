@@ -13,7 +13,7 @@
   ```
 */
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
-import { FaSquareXTwitter, FaWhatsapp, FaInstagram,FaFacebook } from "react-icons/fa6";
+import { FaXTwitter, FaWhatsapp, FaInstagram,FaFacebook } from "react-icons/fa6";
 
 
 export default function Example() {
@@ -49,13 +49,24 @@ export default function Example() {
                 Subscribe
               </button>
             </div>
-            <div className="bg-state-300 h-screan justify-center flex items-center">
+            <div className="bg-state-300 h-screan justify-start flex items-center">
               {/* social Icons */}
               <div className="flex flex-row space-x-5 text-4xl">
-                <FaFacebook className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-blue-600 "/>
-                <FaInstagram className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600 "/>
-                <FaSquareXTwitter className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-blue-600 "/>
-                <FaWhatsapp className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-green-600 "/>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-blue-600">
+                <FaFacebook/>
+                </a>
+
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600">
+                <FaInstagram/>
+                </a>
+                
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-blue-600">
+                <FaXTwitter/>
+                </a>
+
+                <a href="https://whatsApp.com" target="_blank" rel="noopener noreferrer" className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-green-600">
+                <FaWhatsapp/>
+                </a>
               </div>
             </div> 
 
