@@ -131,13 +131,13 @@ const Index = () => {
         </div>
         {/* SearchBar */}
         <div className='relative mx-auto text-gray-600 lg:block hidden'>
-          <div class='bg-white py-3 px-4 rounded-lg flex justify-around items-center '>
-            <input type='text' placeholder='seach' class=' bg-gray-100 rounded-md  outline-none pl-2 ring-indigo-700 w-full mr-2 p-2' />
+          <div className='bg-white py-3 px-4 rounded-lg flex justify-around items-center '>
+            <input type='text' placeholder='seach' className=' bg-gray-100 rounded-md  outline-none pl-2 ring-indigo-700 w-full mr-2 p-2' />
           </div>
         </div>
       </div>
       <div className='flex'>
-        <h1 class='text-text-gray-600  py-2 hover:cursor-pointer hover:text-space-grey'>LOGIN</h1>
+        <h1 className='text-text-gray-600  py-2 hover:cursor-pointer hover:text-space-grey'>LOGIN</h1>
       </div>
     </nav>
   )
