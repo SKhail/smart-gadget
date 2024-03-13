@@ -7,13 +7,15 @@ import Newsletter from "./component/newsletter";
 import Banner from "./component/banner";
 import Product from "./component/product";
 import NewItem from "./component/newItems";
+import Corousal from "./component/corousal";
 // import Cart from './component/cart'
 
 function App() {
   return (
     <>
       <Navigation />
-      {/* <Corousal /> */}
+      <Corousal />
+        
       <NewItem />
       {/* <Banner /> */}
       <Product />

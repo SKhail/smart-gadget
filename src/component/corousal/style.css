@@ -1,8 +1,13 @@
-/* .prev-btn {
-    display: block !important;
-  }
+.carousel-image {
+  border: none !important; /* Override any border styles */
+}
+
+.slider-container {
+  width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+margin-top: 25px;
+max-width: 100%;
+}
+
   
-  .next-btn {
-    display: block !important;
-  }
-   */
