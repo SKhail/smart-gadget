@@ -22,7 +22,7 @@ export function CarouselDefault() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false
@@ -31,7 +31,7 @@ export function CarouselDefault() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false
@@ -95,7 +95,7 @@ const NextArrow = (props) => {
       className={className}
       style={{
         ...style,
-        display: "block",
+        display: "d-block",
         position: "absolute",
         top: "50%",
         right: "40px",
@@ -104,6 +104,8 @@ const NextArrow = (props) => {
         padding: "20px",
         borderRadius: "50%",
         cursor: "pointer",
+        background: "rgba(0, 0, 0, 0.3)",
+       
       }}
       onClick={onClick}
     >
