@@ -104,7 +104,7 @@ const NextArrow = (props) => {
         padding: "20px",
         borderRadius: "50%",
         cursor: "pointer",
-        background: "rgba(0, 0, 0, 0.3)",
+       
        
       }}
       onClick={onClick}
