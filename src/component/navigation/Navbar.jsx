@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-//Logo
-import Logo from '../../assets/images/logo.png'
-
-// Icons
-import { FaCaretDown } from 'react-icons/fa'
-import { IoPersonOutline } from 'react-icons/io5'
-
-// Dark Mode Feature
-import DarkMode from '../DarkMode/DarkMode'
-
-// custom  CSS
-import '../navigation/style.css'
+import Logo from '../../assets/images/logo.png' //Logo
+import { FaCaretDown } from 'react-icons/fa' // Icons
+import DarkMode from '../DarkMode/DarkMode' // Dark Mode Feature
+import LoginPage from '../../component/LoginFeature/LoginPage'
+import '../navigation/style.css' // custom  CSS
 
 const NavData = [
   {
@@ -59,8 +52,8 @@ const DropbarData = [
 ]
 
 // Scrollbar effect to make the navbar static
-const Index = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false) // using the state it to keep the navbar static
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +72,7 @@ const Index = () => {
   return (
     // Applying the static scroll feature utilsing the isScrolled var
     <nav
-      className={`flex items-center justify-between flex-wrap py-1.5 lg:px-12 border-b-2 shadow-md border-gray-100 pb-3 
+      className={`flex items-center justify-between flex-wrap lg:px-12 border-b-2 shadow-md border-gray-100 
       ${isScrolled ? 'fixed top-0 w-full z-10 bg-space-grey' : ''}`}
     >
       <div className='flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0'>
@@ -88,7 +81,7 @@ const Index = () => {
           {/* <a href='#' className='logo-container'>
             <img src={Logo} alt='logo' className='logo' />
           </a> */}
-          <span className='font-semibold text-xl tracking-tight'>Smart Gagdet</span>
+          {/* <span className='font-semibold text-xl tracking-tight'>Smart Gagdet</span> */}
         </div>
         <div className='block lg:hidden '>{/* Your mobile menu button */}</div>
       </div>
@@ -100,7 +93,15 @@ const Index = () => {
             <ul className='sm:flex hidden items-center gap-4'>
               {NavData.map((data, index) => (
                 <li key={index}>
-                  <a href={data.link} className='inline-block px-4 hover:text-primary duration-200'>
+                  <a
+                    href={data.link}
+                    className='inline-block px-4 hover:text-primary duration-200'
+                    onClick={() => {
+                      if (data.name === 'Login') {
+                        LoginPage(true)
+                      }
+                    }}
+                  >
                     {data.name}
                   </a>
                 </li>
@@ -131,16 +132,16 @@ const Index = () => {
         </div>
         {/* SearchBar */}
         <div className='relative mx-auto text-gray-600 lg:block hidden'>
-          <div class='bg-white py-3 px-4 rounded-lg flex justify-around items-center '>
-            <input type='text' placeholder='seach' class=' bg-gray-100 rounded-md  outline-none pl-2 ring-indigo-700 w-full mr-2 p-2' />
+          <div className='py-3 px-4 rounded-lg flex justify-around items-center '>
+            <input type='text' placeholder='seach' className=' bg-gray-100 rounded-md  outline-none pl-2 ring-indigo-700 w-full mr-2 p-2' />
           </div>
         </div>
       </div>
       <div className='flex'>
-        <h1 class='text-text-gray-600  py-2 hover:cursor-pointer hover:text-space-grey'>LOGIN</h1>
+        <h1 className='text-teal  py-2 hover:cursor-pointer hover:text-primary duration-200'>LOGIN</h1>
       </div>
     </nav>
   )
 }
 
-export default Index
+export default Navbar
