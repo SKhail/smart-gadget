@@ -22,7 +22,7 @@ const NavData = [
   {
     id: 2,
     name: 'Consoles',
-    link: '/#services',
+    link: '/#Consoles',
   },
   {
     id: 3,
