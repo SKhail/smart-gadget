@@ -22,17 +22,17 @@ const NavData = [
   {
     id: 2,
     name: 'Consoles',
-    link: '/#Consoles',
+    link: '/#services',
   },
   {
     id: 3,
     name: 'Laptops',
-    link: '/#Laptops',
+    link: '/aboutus',
   },
   {
     id: 4,
     name: 'SmartPhones ',
-    link: '/#SmartPhones',
+    link: '/contact',
   },
 ]
 const DropbarData = [
