@@ -53,7 +53,6 @@ function App() {
 function App() {
   return (
     <>
-      <Navigation />
       <NewItem />
       {/* <Banner /> */}
       <Product />
