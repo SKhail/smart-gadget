@@ -32,7 +32,7 @@ const NavData = [
   {
     id: 4,
     name: 'SmartPhones ',
-    link: '/contact',
+    link: '/#SmartPhones',
   },
 ]
 const DropbarData = [
