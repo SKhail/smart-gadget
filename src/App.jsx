@@ -21,7 +21,28 @@ import SpecialDeals from './SpecialDeals';
 function App() {
   return (
     <Router>
-  
+          <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Consoles">Consoles</Link>
+            </li>
+            <li>
+              <Link to="/Laptops">Laptops</Link>
+            </li>
+            <li>
+              <Link to="/SmartPhones">SmartPhones</Link>
+            </li>
+            <li>
+              <Link to="/SpecialDeals">SpecialDeals</Link>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
     </Router>
   );
 }
