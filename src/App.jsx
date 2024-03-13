@@ -10,7 +10,6 @@ import Product from "./component/product";
 import NewItem from "./component/newItems";
 // import Cart from './component/cart'
 
-import React from 'react';
 import Home from './Home';
 import Consoles from './component/Consoles';
 import Laptops from './component/Laptops';
