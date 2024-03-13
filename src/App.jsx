@@ -41,7 +41,11 @@ function App() {
             </li>
           </ul>
         </nav>
-
+        <Route path="/" exact component={Home} />
+        <Route path="/Consoles" component={Consoles} />
+        <Route path="/Laptops" component={Laptops} />
+        <Route path="/SmartPhones" component={SmartPhones} />
+        <Route path="/SpecialDeals" component={SpecialDeals} />
       </div>
     </Router>
   );
