@@ -12,10 +12,10 @@ import NewItem from "./component/newItems";
 
 import React from 'react';
 import Home from './Home';
-import Consoles from './Consoles';
-import Laptops from './Laptops';
-import SmartPhones from './SmartPhones'; 
-import SpecialDeals from './SpecialDeals';
+import Consoles from './component/Consoles';
+import Laptops from './component/Laptops';
+import SmartPhones from './component/SmartPhones'; 
+import SpecialDeals from './component/SpecialDeals';
 
 
 function App() {
