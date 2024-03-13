@@ -50,15 +50,4 @@ function App() {
   );
 }
 
-function App() {
-  return (
-    <>
-      <NewItem />
-      {/* <Banner /> */}
-      <Product />
-      <Newsletter />
-    </>
-  );
-}
-
 export default App;
