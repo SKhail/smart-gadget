@@ -29,8 +29,7 @@ export default {
         'secondary': 'ed8900',
         'black': '#06113C',
         'background-white': '#FFFBF5',
-        'custom-white': '#F7EFE5',
-
+        'teal': '#76ABAE',
         'space-grey': '#EEEEEE'
       },
       container: {
