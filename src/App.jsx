@@ -17,6 +17,15 @@ import Laptops from './Laptops';
 import SmartPhones from './SmartPhones'; 
 import SpecialDeals from './SpecialDeals';
 
+
+function App() {
+  return (
+    <Router>
+  
+    </Router>
+  );
+}
+
 function App() {
   return (
     <>
