@@ -10,6 +10,7 @@ import Corousal from './component/corousal'
 
 // import LoginPage from './component/LoginFeature/LoginPage'
 // import Cart from './component/cart';
+import Corousal from './component/corousal'
 
 function App() {
   return (
@@ -24,8 +25,7 @@ function App() {
         <Newsletter />
       </>
     </BrowserRouter>
-
   )
 }
 
-export default App
+export default App 
