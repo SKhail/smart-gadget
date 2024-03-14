@@ -3,20 +3,7 @@ import React from "react";
 import products from "../Laptops-list/products";
 
 
-// *
-//   This example requires some changes to your config:
-  
-//   ```
-//   // tailwind.config.js
-//   module.exports = {
-//     // ...
-//     plugins: [
-//       // ...
-//       require('@tailwindcss/aspect-ratio'),
-//     ],
-//   }
-//   ```
-// */
+
   
   export default function Laptop() {
     return (
