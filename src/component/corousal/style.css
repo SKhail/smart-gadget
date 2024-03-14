@@ -1,0 +1,11 @@
+.slider-container {
+  width: 100%; /* Change to percentage to make it responsive */
+  max-width: 1300px; /* Set a maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
+
+/* popover */
+
