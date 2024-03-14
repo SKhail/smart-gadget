@@ -1,8 +1,8 @@
-// Home.js
+// SpecialDeals.js
 import React from 'react';
 
-function Home() {
-  return <h2>Home</h2>;
+function SpecialDeals() {
+  return <h2>SpecialDeals</h2>;
 }
 
-export default Home;
+export default SpecialDeals;
