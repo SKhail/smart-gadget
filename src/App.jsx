@@ -1,13 +1,13 @@
 // App.js
-
-import React from "react";
-import Navigation from "./component/navigation"; // Assuming you have the component in Example.js
-import Newsletter from "./component/newsletter";
-// import Shoppingcart from './component/shoppingcart';
-import Banner from "./component/banner/banner";
-import Product from "./component/product";
-import NewItem from "./component/newItems";
-// import Cart from './component/cart'
+import React, { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import Navigation from './component/navigation/Navbar'
+import Newsletter from './component/newsletter'
+import Banner from '../src/component/banner/banner'
+import Product from './component/product'
+import NewItem from './component/newItems'
+import LoginPage from './component/LoginFeature/LoginPage'
+// import Cart from './component/cart';
 
 function App() {
   return (
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
