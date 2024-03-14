@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-
-import Logo from '../../assets/images/logo.png' //Logo
-import { FaCaretDown } from 'react-icons/fa' // Icons
-import DarkMode from '../DarkMode/DarkMode' // Dark Mode Feature
-import LoginPage from '../../component/LoginFeature/LoginPage'
-import '../navigation/style.css' // custom  CSS
+import { Link } from 'react-router-dom'
+import { FaCaretDown } from 'react-icons/fa'
+import DarkMode from '../DarkMode/DarkMode'
+import LoginPage from '../LoginFeature/LoginPage' // Ensure correct import path
+import '../navigation/style.css' // Ensure correct import path
 
 const NavData = [
   {
@@ -15,19 +14,20 @@ const NavData = [
   {
     id: 2,
     name: 'Consoles',
-    link: '/#services',
+    link: '/consoles',
   },
   {
     id: 3,
     name: 'Laptops',
-    link: '/aboutus',
+    link: '/laptops',
   },
   {
     id: 4,
     name: 'SmartPhones ',
-    link: '/contact',
+    link: '/smartphones',
   },
 ]
+
 const DropbarData = [
   {
     id: 1,
@@ -51,9 +51,9 @@ const DropbarData = [
   },
 ]
 
-// Scrollbar effect to make the navbar static
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false) // using the state it to keep the navbar static
+const Navbar = ({ toggleLoginPage }) => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +61,6 @@ const Navbar = () => {
       setIsScrolled(scrollPosition > 0)
     }
 
-    //Listen for scroll events
     window.addEventListener('scroll', handleScroll)
 
     return () => {
@@ -69,77 +68,53 @@ const Navbar = () => {
     }
   }, [])
 
+  const handleLoginButtonCLick = () => {
+    setShowModal(!showModal) // Toggle showModal state
+  }
+
   return (
-    // Applying the static scroll feature utilsing the isScrolled var
     <nav
       className={`flex items-center justify-between flex-wrap lg:px-12 border-b-2 shadow-md border-gray-100 
-      ${isScrolled ? 'fixed top-0 w-full z-10 bg-space-grey' : ''}`}
+      ${isScrolled ? 'fixed top-0 w-full z-10 text-white bg-primary' : ''}`}
     >
-      <div className='flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0'>
-        <div className='flex items-center flex-shrink-0 text-gray-800 mr-16'>
-          {/* Logo */}
-          {/* <a href='#' className='logo-container'>
-            <img src={Logo} alt='logo' className='logo' />
-          </a> */}
-          {/* <span className='font-semibold text-xl tracking-tight'>Smart Gagdet</span> */}
-        </div>
-        <div className='block lg:hidden '>{/* Your mobile menu button */}</div>
-      </div>
-
-      <div className='menu w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8'>
-        <div className='text-md font-bold text-teal lg:flex-grow'>
-          {/* Navigation */}
-          <div className='flex justify-center'>
-            <ul className='sm:flex hidden items-center gap-4'>
-              {NavData.map((data, index) => (
-                <li key={index}>
-                  <a
-                    href={data.link}
-                    className='inline-block px-4 hover:text-primary duration-200'
-                    onClick={() => {
-                      if (data.name === 'Login') {
-                        LoginPage(true)
-                      }
-                    }}
-                  >
+      {/* Navbar content */}
+      <ul className='flex items-center gap-4 list-none'>
+        {/* Apply list-none here */}
+        {NavData.map((data, index) => (
+          <li key={index}>
+            <Link to={data.link} className='inline-block px-4 hover:text-primary duration-200'>
+              {data.name}
+            </Link>
+          </li>
+        ))}
+        {/* Special Deals dropdown */}
+        <li className='group relative cursor-pointer'>
+          <Link to='#' className='flex item-center gap-[2px] py-2'>
+            Special Deals
+            <span>
+              <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
+            </span>
+          </Link>
+          {/* Dropdown content */}
+          <div className='absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md'>
+            <ul>
+              {DropbarData.map((data) => (
+                <li key={data.id}>
+                  <Link to={data.link} className='inline-block w-full rounded-md p-2 hover:bg-primary/60'>
                     {data.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
-
-              {/* Dropdown list for the Special deals */}
-              <li className='group relative cursor-pointer'>
-                <a href='#' className='flex item-center gap-[2px] py-2'>
-                  Special Deals
-                  <span>
-                    <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
-                  </span>
-                </a>
-                <div className='absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md'>
-                  <ul>
-                    {DropbarData.map((data) => (
-                      <li key={data.id}>
-                        <a href={data.link} className='inline-block w-full rounded-md p-2 hover:bg-primary'>
-                          {data.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
             </ul>
           </div>
-        </div>
-        {/* SearchBar */}
-        <div className='relative mx-auto text-gray-600 lg:block hidden'>
-          <div className='py-3 px-4 rounded-lg flex justify-around items-center '>
-            <input type='text' placeholder='seach' className=' bg-gray-100 rounded-md  outline-none pl-2 ring-indigo-700 w-full mr-2 p-2' />
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
+      {/* Login button */}
       <div className='flex'>
-        <h1 className='text-teal  py-2 hover:cursor-pointer hover:text-primary duration-200'>LOGIN</h1>
+        <button onClick={handleLoginButtonCLick}>Login</button>
       </div>
+      {/* Render LoginPage component if showModal is true */}
+      {showModal && <LoginPage />}
     </nav>
   )
 }
