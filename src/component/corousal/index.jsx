@@ -47,40 +47,48 @@ export function CarouselDefault() {
         <img 
           src= {image1}
           alt="image 1"
-          className="object-fill h-48 w-60 carousel-image"
-          style={{ margin : "10px", borderRadius: "15px",marginLeft:"10px"  }}
-        />
+          className="object-fill h- w-60 carousel-image"
+          style={{ marginLeft:"10px" , margin : "10px 10px -40px" , borderRadius: "15px"}}
+          />
+           <a href=""><p style={{ borderRadius: "15px", marginTop: "-25px", marginLeft: "20px", marginBottom: "10px",width: "200px", position: "absolute"}} className="text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 ">View Details</p></a>
+      <div>
+          <a href=""> <p style={{marginBottom: "10px",height: "40px"}}></p></a>
+          </div>
       </div>
       <div>
         <img
           src= {image2}
           alt="image 2"
           className="object-fill h-48 w-96 carousel-image"
-          style={{marginLeft:"10px" , margin : "10px",borderRadius: "15px"}}
+          style={{ marginLeft:"10px" , margin : "10px 10px -40px" , borderRadius: "15px"}}
         />
+        <a href=""><p style={{ borderRadius: "15px", marginLeft: "20px", marginBottom: "10px",width: "200px", position: "absolute"}} className="text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 ">View Details</p></a>
       </div>
       <div>
         <img
           src={image3}
           alt="image 3"
           className="h-48 w-96 object-cover carousel-image"
-          style={{  marginLeft:"10px" , margin : "10px",borderRadius: "15px"}}
-        />
+          style={{ marginLeft:"10px" , margin : "10px 10px -40px" , borderRadius: "15px"}}
+          />
+          <a href=""><p style={{ borderRadius: "15px", marginLeft: "20px", marginBottom: "10px",width: "200px", position: "absolute"}} className="text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 ">View Details</p></a>
       </div>
       <div>
         <img
           src={image4}
           className="h-48 w-96 object-cover carousel-image"
-          style={{marginLeft:"10px" , margin : "10px",borderRadius: "15px"  }}
-        />
+          style={{ marginLeft:"10px" , margin : "10px 10px -40px" , borderRadius: "15px"}}
+          />
+          <a href=""><p style={{ borderRadius: "15px", marginLeft: "20px", marginBottom: "10px",width: "200px", position: "absolute"}} className="text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 ">View Details</p></a>
       </div>
       <div>
         <img
           src={image5}
           alt="image 3"
           className="h-48 w-41 object-cover carousel-image"
-          style={{ marginLeft:"10px" , margin : "10px",borderRadius: "15px"}}
+          style={{ marginLeft:"10px" , margin : "10px 10px -40px" , borderRadius: "15px"}}
         />
+        <a href=""><p style={{ borderRadius: "15px", marginLeft: "20px", marginBottom: "10px",width: "200px", position: "absolute"}} className="text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 ">View Details</p></a>
       </div>
     </Slider>
     </div>
