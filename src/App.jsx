@@ -57,27 +57,5 @@ export default App;
 
 
 
-// import LoginPage from './component/LoginFeature/LoginPage'
-// import Cart from './component/cart';
 
 
-/*
-function App() {
-  return (
-    <BrowserRouter>
-      <>
-     
-        <Navigation />
-        <Corousal />
-        <NewItem />
-        <Banner />
-        <Product />
-        <Newsletter />
-      </>
-    </BrowserRouter>
-
-  )
-}
-
-export default App
-*/
