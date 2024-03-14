@@ -7,6 +7,7 @@ import Newsletter from "./component/newsletter";
 import Banner from "./component/banner";
 import Product from "./component/product";
 import NewItem from "./component/newItems";
+
 // import Cart from './component/cart'
 
 function App() {

@@ -1,6 +1,6 @@
 
 import React from "react";
-import products from "../Products/products";
+import products from "../Laptops-list/products";
 
 
 // *
