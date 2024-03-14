@@ -6,7 +6,9 @@ import Newsletter from './component/newsletter'
 import Banner from '../src/component/banner/banner'
 import Product from './component/product'
 import NewItem from './component/newItems'
-import LoginPage from './component/LoginFeature/LoginPage'
+import Corousal from './component/corousal'
+
+// import LoginPage from './component/LoginFeature/LoginPage'
 // import Cart from './component/cart';
 import Corousal from './component/corousal'
 
@@ -14,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <>
+     
         <Navigation />
         <Corousal />
         <NewItem />
@@ -24,4 +27,5 @@ function App() {
     </BrowserRouter>
   )
 }
-export default App
+
+export default App 
