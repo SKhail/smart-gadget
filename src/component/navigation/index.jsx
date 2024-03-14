@@ -138,7 +138,7 @@ const Index = () => {
         </div>
       </div>
       <div className='flex'>
-        <h1 className='text-text-gray-600  py-2 hover:cursor-pointer hover:text-space-grey'>LOGIN</h1>
+        <h1 className='text-text-gray-600  py-2 hover:cursor-pointer hover:text-space-grey'>Login</h1>
       </div>
     </nav>
   )
