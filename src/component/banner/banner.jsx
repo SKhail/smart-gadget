@@ -1,30 +1,52 @@
-// import { Carousel } from "@material-tailwind/react";
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
-// import { PiFlagBanner } from "react-icons/pi";
 
-function banner() {
+function Banner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSlideChange = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <Carousel className="rounded-xl">
-      <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-        alt="image 1"
-        className="h-full w-50% object-cover"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-        alt="image 2"
-        className="h-full w-50% object-cover"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className="h-full w-50% object-cover"
-      />
-    </Carousel>
+    <div className="relative rounded-xl overflow-hidden h-300">
+      <Carousel
+        index={currentIndex}
+        onChangeIndex={(index) => handleSlideChange(index)}
+        swipe={true}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+          alt="image 1"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          alt="image 2"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+          alt="image 3"
+          className="h-full w-full object-cover"
+        />
+      </Carousel>
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            className={`h-2 w-2 rounded-full mx-1 cursor-pointer ${
+              index === currentIndex ? "bg-gray-900" : "bg-gray-300"
+            }`}
+            onClick={() => handleSlideChange(index)}
+          ></div>
+        ))}
+      </div>
+    </div>
   );
 }
-export default banner;
+
+export default Banner;
 
 // import { XMarkIcon } from "@heroicons/react/20/solid";
 
