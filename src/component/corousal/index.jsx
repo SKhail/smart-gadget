@@ -1,13 +1,36 @@
-import React from "react";
+// import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 import "./style.css";
 import image1 from "../../assets/images/example1.jpeg";
 import image2 from "../../assets/images/example2.jpeg";
 import image3 from "../../assets/images/example3.jpeg";
 import image4 from "../../assets/images/example4.jpeg";
 import image5 from "../../assets/images/example5.jpeg";
+
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCL9xz44YkYgK53LC5cIKb6AHsQyJy9d3s",
+  authDomain: "smartgadjet-e0ed3.firebaseapp.com",
+  projectId: "smartgadjet-e0ed3",
+  storageBucket: "smartgadjet-e0ed3.appspot.com",
+  messagingSenderId: "243610321397",
+  appId: "1:243610321397:web:aab8e94ff6a8a126bde0bc",
+  measurementId: "G-RWYM8C1SKG"
+};
+
+
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 export function CarouselDefault() {
   const settings = {
@@ -97,6 +120,7 @@ export function CarouselDefault() {
 
 // Custom Next Arrow Component
 const NextArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { className, style, onClick } = props;
   return (
     <div
@@ -124,6 +148,7 @@ const NextArrow = (props) => {
 
 // Custom Previous Arrow Component
 const PrevArrow = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { className, style, onClick } = props;
   return (
     <div
