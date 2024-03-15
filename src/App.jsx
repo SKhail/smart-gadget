@@ -8,6 +8,8 @@ import Product from './component/product'
 import NewItem from './component/newItems'
 import Corousal from '../src/component/corousal/index'
 
+// Linking to componenets
+
 import Home from "./component/home/Home";
 import Consoles from "./component/consoles/Consoles";
 import Laptops from "./component/laptops/Laptops";
