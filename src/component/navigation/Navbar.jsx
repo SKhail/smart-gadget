@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { FaCaretDown } from 'react-icons/fa'
+import { FaBars, FaCaretDown, FaUser } from 'react-icons/fa'
 import DarkMode from '../DarkMode/DarkMode'
 import LoginPage from '../LoginFeature/LoginPage' // Ensure correct import path
 import '../navigation/style.css' // Ensure correct import path
+import Logo from '../../assets/Logos/logo2.png'
 
 const NavData = [
   {
@@ -52,8 +53,9 @@ const DropbarData = [
 ]
 
 const Navbar = ({ toggleLoginPage }) => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false) // used this for the fixed navbar
+  const [showModal, setShowModal] = useState(false) // used this in the login modal
+  const [isMobileOpen, setIsMobileOpen] = useState(false) // Used this for hamburger on smaller devices
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,14 +74,21 @@ const Navbar = ({ toggleLoginPage }) => {
     setShowModal(!showModal) // Toggle showModal state
   }
 
+  const toggleHamburger = () => {
+    setIsMobileOpen(!isMobileOpen) // For Mobile devices
+  }
   return (
-    <nav
-      className={`flex items-center justify-between flex-wrap lg:px-12 border-b-2 shadow-md border-gray-100 
-      ${isScrolled ? 'fixed top-0 w-full z-10 text-white bg-primary' : ''}`}
-    >
-      {/* Navbar content */}
-      <ul className='flex items-center gap-4 list-none'>
-        {/* Apply list-none here */}
+    <nav className={`flex items-center justify-between px-4 py-1 lg:px-12 ${isScrolled ? 'fixed top-0 w-full z-10 text-white bg-primary' : 'bg-primary/15'}`}>
+      {/*  Hamburger for smaller Devices */}
+      <button onClick={handleLoginButtonCLick}>
+        <FaUser />
+      </button>
+      {/*  Logo  */}
+      <img src={Logo} alt='Logo' className='logo' style={{ width: '100px', height: 'auto' }} />
+
+      {/* Mobile Device Menu */}
+      <ul className={`lg:flex items-center gap-4 list-none ${isMobileOpen ? 'block' : 'hidden'}`}>
+        {/* Navigation links */}
         {NavData.map((data, index) => (
           <li key={index}>
             <Link to={data.link} className='inline-block px-4 hover:text-primary duration-200'>
@@ -87,16 +96,12 @@ const Navbar = ({ toggleLoginPage }) => {
             </Link>
           </li>
         ))}
-        
         {/* Special Deals dropdown */}
-
-        <li className='group relative cursor-pointer'>
-          <Link to='#' className='flex item-center gap-[2px] py-2'>
+        <li className='relative group'>
+          <button onClick={() => {}} className='block px-4 py-2 text-center hover:text-primary duration-200'>
             Special Deals
-            <span>
-              <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
-            </span>
-          </Link>
+            <FaCaretDown className='inline-block m1-1' />
+          </button>
           {/* Dropdown content */}
           <div className='absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md'>
             <ul>
@@ -112,9 +117,10 @@ const Navbar = ({ toggleLoginPage }) => {
         </li>
       </ul>
       {/* Login button */}
-      <div className='flex'>
-        <button onClick={handleLoginButtonCLick}>Login</button>
-      </div>
+      <button onClick={toggleHamburger} className='lg:hidden text-2xl'>
+        <FaBars />
+      </button>
+
       {/* Render LoginPage component if showModal is true */}
       {showModal && <LoginPage />}
     </nav>
