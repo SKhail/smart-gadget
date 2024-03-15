@@ -21,6 +21,8 @@ import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from '@material-tailwind/react'
 
+import SmartPhones from './component/smartphones/SmartPhones'
+import SpecialDeals from './component/specialdeals/SpecialDeals'
 
 function App() {
   const [cart, setCart] = useState([])
@@ -44,13 +46,13 @@ function App() {
         <Route path="/SmartPhones" element={<SmartPhones />} />
         <Route path="/SpecialDeals" element={<SpecialDeals />} />
       </Routes>
+      <Banner />
       <Corousal />
       <NewItem />
-      <Banner />
       <Product />
       <Newsletter />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
