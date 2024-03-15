@@ -1,25 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 
 import "./banner.css";
 
 function Banner() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % 4); // Adjust the number based on the number of images
-    }, 3000); // Change image every 3 seconds (adjust as needed)
-
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
   return (
     <div className="carousel-container relative overflow-hidden">
-      <Carousel
-        index={currentIndex}
-        // onChangeIndex={(index) => setCurrentIndex(index)}
-        // swipe={true}
-      >
+      <Carousel>
         <img
           src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/5VYFQwxthpmehrmh4riGTC/1165bfb6dfc5bca0cf0eea6c145b2a86/GENERIC_HPBANNERS_iPhone13_Desktop_UK.jpeg"
           alt="image 1"
