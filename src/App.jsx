@@ -7,7 +7,7 @@ import Banner from '../src/component/banner/banner'
 import Product from './component/product'
 import NewItem from './component/newItems'
 import Corousal from './component/corousal'
-import Home from './Home';
+import Home from './component/home';
 import Consoles from './component/Consoles';
 import Laptops from './component/Laptops';
 import SmartPhones from './component/SmartPhones'; 
