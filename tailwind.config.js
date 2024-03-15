@@ -35,20 +35,15 @@ module.exports = withMT({
         body: ["Inter", "sans-serif"],
       },
       colors: {
-        primary: "#0f4c5c",
-        secondary: "ed8900",
-        black: "#06113C",
+        "primary": "#0f4c5c",
+        "secondary": "ed8900",
+        "black": "#06113C",
         "background-white": "#FFFBF5",
-        teal: "#76ABAE",
+        "teal": "#76ABAE",
         "space-grey": "#EEEEEE",
+        "hover-grey": "#d6d4d4"
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          sm: "3rem",
-        },
-      },
+
     },
   },
   plugins: [],
