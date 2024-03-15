@@ -1,51 +1,39 @@
 // App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./component/navigation/Navbar";
 import Newsletter from "./component/newsletter";
 import Banner from "../src/component/banner/banner";
 import Product from "./component/product";
 import NewItem from "./component/newItems";
-import Corousal from "./component/corousal";
-// import Home from './Home';
-// import Consoles from "./component/Consoles";
-// import Laptops from "./component/Laptops";
-// import SmartPhones from "./component/SmartPhones";
-// import SpecialDeals from "./component/SpecialDeals";
+import Corousal from "../src/component/corousal/index";
+
+// Linking to componenets
+
+import Home from "./component/home/Home";
+import Consoles from "./component/consoles/Consoles";
+import Laptops from "./component/Laptop/Laptop";
+import LaptopOverview from "./component/Laptop-list/laptop-overview";
+
+import SmartPhones from "./component/smartphones/SmartPhones";
+import SpecialDeals from "./component/specialdeals/SpecialDeals";
 
 function App() {
   return (
     <Router>
-      {/* <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Consoles">Consoles</Link>
-            </li>
-            <li>
-              <Link to="/Laptops">Laptops</Link>
-            </li>
-            <li>
-              <Link to="/SmartPhones">SmartPhones</Link>
-            </li>
-            <li>
-              <Link to="/SpecialDeals">SpecialDeals</Link>
-            </li>
-          </ul>
-        </nav>
-        <Route path="/" exact component={Home} />
-        <Route path="/Consoles" component={Consoles} />
-        <Route path="/Laptops" component={Laptops} />
-        <Route path="/SmartPhones" component={SmartPhones} />
-        <Route path="/SpecialDeals" component={SpecialDeals} />
-      </div> */}
       <Navigation />
-      <Banner />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Consoles" element={<Consoles />} />
+        <Route path="/Laptops" element={<Laptops />} />
+        <Route path="/laptop/:id" component={<LaptopOverview />} />
+        <Route path="/SmartPhones" element={<SmartPhones />} />
+        <Route path="/SpecialDeals" element={<SpecialDeals />} />
+      </Routes>
       <Corousal />
       <NewItem />
+      <Banner />
       <Product />
       <Newsletter />
     </Router>
