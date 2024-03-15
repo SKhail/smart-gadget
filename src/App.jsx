@@ -17,24 +17,6 @@ import LaptopOverview from "./component/Laptop-list/laptop-overview";
 
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navigation from "./component/navigation/Navbar";
-import Newsletter from "./component/newsletter";
-import Banner from "../src/component/banner/banner";
-import Product from "./component/product";
-import NewItem from "./component/newItems";
-import Corousal from "../src/component/corousal/index";
-
-// Linking to componenets
-
-import Home from "./component/home/Home";
-import Consoles from "./component/consoles/Consoles";
-import Laptops from "./component/Laptop/Laptop";
-import LaptopOverview from "./component/Laptop-list/laptop-overview";
-
-import SmartPhones from "./component/smartphones/SmartPhones";
-import SpecialDeals from "./component/specialdeals/SpecialDeals";
 
 function App() {
   return (
