@@ -10,7 +10,7 @@ function Banner() {
         <img
           src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/5VYFQwxthpmehrmh4riGTC/1165bfb6dfc5bca0cf0eea6c145b2a86/GENERIC_HPBANNERS_iPhone13_Desktop_UK.jpeg"
           alt="image 1"
-          className="h-250 w-full object-cover"
+          className="h-full w-full object-cover"
         />
         <img
           src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/3Xpl0rtrXbBRIZDONnbeNm/8b75543ce78171c6ea538b8804dc7195/GENERIC_HPBANNERS_iPad2021_Desktop_UK.jpg"
