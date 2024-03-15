@@ -21,8 +21,7 @@ import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from '@material-tailwind/react'
 
-import SmartPhones from './component/smartphones/SmartPhones'
-import SpecialDeals from './component/specialdeals/SpecialDeals'
+
 
 function App() {
   const [cart, setCart] = useState([])
@@ -37,14 +36,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Consoles" element={<Consoles />} />
-        <Route path="/Laptops" element={<Laptops addtoCart={addtoCart} />} />
-        <Route path="/ShoppingCart" element={<ShoppingCart cart={cart} />} />
+        <Route path="/consoles" element={<Consoles />} />
+        <Route path="/laptops" element={<Laptops addtoCart={addtoCart} />} />
+        <Route path="/shoppingcart" element={<ShoppingCart cart={cart} />} />
 
 
        
-        <Route path="/SmartPhones" element={<SmartPhones />} />
-        <Route path="/SpecialDeals" element={<SpecialDeals />} />
+        <Route path="/smartphones" element={<SmartPhones />} />
+        <Route path="/specialdeals" element={<SpecialDeals />} />
       </Routes>
       <Banner />
       <Corousal />
