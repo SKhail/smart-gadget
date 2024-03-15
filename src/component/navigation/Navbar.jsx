@@ -27,6 +27,12 @@ const NavData = [
     name: 'SmartPhones ',
     link: '/smartphones',
   },
+  {
+    id: 5,
+    name: 'ShoppingCart',
+    link: '/shoppingcart',
+  },
+
 ]
 
 const DropbarData = [
