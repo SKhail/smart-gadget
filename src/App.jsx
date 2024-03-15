@@ -17,6 +17,8 @@ import LaptopOverview from "./component/Laptop-list/laptop-overview";
 
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
+import SmartPhones from "./component/smartphones/SmartPhones";
+import SpecialDeals from "./component/specialdeals/SpecialDeals";
 
 function App() {
   return (
@@ -30,10 +32,16 @@ function App() {
         <Route path="/laptop/:id" component={<LaptopOverview />} />
         <Route path="/SmartPhones" element={<SmartPhones />} />
         <Route path="/SpecialDeals" element={<SpecialDeals />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Consoles" element={<Consoles />} />
+        <Route path="/Laptops" element={<Laptops />} />
+        <Route path="/laptop/:id" component={<LaptopOverview />} />
+        <Route path="/SmartPhones" element={<SmartPhones />} />
+        <Route path="/SpecialDeals" element={<SpecialDeals />} />
       </Routes>
+      <Banner />
       <Corousal />
       <NewItem />
-      <Banner />
       <Product />
       <Newsletter />
     </Router>
