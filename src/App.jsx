@@ -12,7 +12,9 @@ import Corousal from '../src/component/corousal/index'
 
 import Home from "./component/home/Home";
 import Consoles from "./component/consoles/Consoles";
-import Laptops from "./component/laptops/Laptops";
+import Laptops from "./component/Laptop/Laptop";
+import LaptopOverview from "./component/Laptop-list/laptop-overview";
+
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Consoles" element={<Consoles />} />
         <Route path="/Laptops" element={<Laptops />} />
+        <Route path="/laptop/:id" component={<LaptopOverview/>} />
         <Route path="/SmartPhones" element={<SmartPhones />} />
         <Route path="/SpecialDeals" element={<SpecialDeals />} />
       </Routes>
