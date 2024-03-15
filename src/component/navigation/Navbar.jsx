@@ -87,7 +87,9 @@ const Navbar = ({ toggleLoginPage }) => {
             </Link>
           </li>
         ))}
+        
         {/* Special Deals dropdown */}
+
         <li className='group relative cursor-pointer'>
           <Link to='#' className='flex item-center gap-[2px] py-2'>
             Special Deals
