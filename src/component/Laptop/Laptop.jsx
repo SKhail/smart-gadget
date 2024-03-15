@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom"; // Import Link component
 import products from "../Laptop-list/laptop-list";
 
-export default function Laptop() {
+export default function Laptop(props) {
   // Function to add the item to the basket
   const handleAddToBasket = (productId) => {
+    const currentItem = products.find(itemObj =>itemObj.id === productId )
+    props.addtoCart(currentItem);
     // logic to add to the basket here
     console.log(`Added product with ID ${productId} to basket`);
   };
@@ -30,10 +32,12 @@ export default function Laptop() {
                   {/* Wrap the product name in a Link component */}
 
                   <h3 className="text-sm text-gray-700">
-                    <Link to={`/laptop/${product.id}`} className="group-hover:text-indigo-600">
+                    {/* <Link to={`/laptop/${product.id}`} 
+                    className="group-hover:text-indigo-600"
+                    >
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
-                    </Link>
+                    </Link> */}
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                 </div>
