@@ -1,0 +1,43 @@
+
+   [
+     {
+       "key": 1,
+       "brand": "Apple",
+       "model": "iPhone 13",
+       "color": "deep purple",
+       "size": 6.1,
+       "price": 999,
+       "storage": 256,
+       "ram": 6,
+       "camera": 12,
+       "image":"https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fexample2.jpeg?alt=media&token=dd319310-3eee-469f-8381-679be68277e9" 
+     },
+     {
+       "key": 2,
+       "brand": "Apple",
+       "model": "iPhone 13",
+       "color": "deep purple",
+       "size": 6.1,
+       "price": 999,
+       "storage": 256,
+       "ram": 6,
+       "camera": 12,
+       "image":"https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fexample2.jpeg?alt=media&token=dd319310-3eee-469f-8381-679be68277e9"
+         
+     },
+
+     {
+       "key": 3,
+       "brand": "Apple",
+       "model": "iPhone 13",
+       "color": "deep purple",
+       "size": 6.1,
+       "price": 999,
+       "storage": 256,
+       "ram": 6,
+       "camera": 12,
+       "image":"https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fexample2.jpeg?alt=media&token=dd319310-3eee-469f-8381-679be68277e9"
+     }
+   ]
+   
+  
