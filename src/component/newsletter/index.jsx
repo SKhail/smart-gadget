@@ -55,7 +55,7 @@ export default function Example() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
               Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore test.
+              velit quis. Duis tempor incididunt dolore test1.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               {/* <label htmlFor="email-address" className="sr-only">
@@ -104,7 +104,7 @@ export default function Example() {
               </div>
               <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
+                Non laboris consequat testt tstes cupidatat laborum magna. Eiusmod non irure
                 cupidatat duis commodo amet.
               </dd>
               {/* no spam */}
