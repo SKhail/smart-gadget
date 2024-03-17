@@ -28,13 +28,26 @@ import { SiKlarna } from "react-icons/si";
 
 import googleApp from "../../assets/images/google-play.svg";
 import AppStore from "../../assets/images/apple-store.svg";
+import Logo from "../../assets/Logos/white-logo.png";
 
 export default function Example() {
   return (
     <div className="relative isolate overflow-hidden footerStyle py-16 sm:py-24 lg:py-32">
+      <div className="grid grid-rows-3 grid-flow-col gap-4 mx-auto max-w-7xl px-6 lg:px-8"></div>
+      {/*{/* the whole width */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* the whole length */}
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-          <div className="max-w-xl lg:max-w-lg">
+          {/* the subscribe section */}
+          <div className="max-w-xl lg:max-w-lg ">
+            {/* logo */}
+            <img
+              src={Logo}
+              alt="Logo"
+              className="logo"
+              style={{ width: "100px", height: "auto" }}
+            />
+
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Subscribe to our newsletter.
             </h2>
@@ -62,52 +75,25 @@ export default function Example() {
                 Subscribe
               </button>
             </div>
-            <div className="bg-state-300 h-screan justify-start flex items-centre my-5">
-              {/* social Icons */}
-              <div className="flex flex-row space-x-5 text-4xl">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
-                >
-                  <FaFacebook className=" text-white  hover:text-blue-600" />
-                </a>
+            {/* section 2 our app */}
+            <dt className="mt-9 font-semibold text-white">About</dt>
+            <a href="">
+              {" "}
+              <dd className="mt-1 leading-7 text-gray-400">Our project</dd>
+            </a>
 
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
-                >
-                  <FaInstagram className=" text-white  hover:text-red-600" />
-                </a>
-
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
-                >
-                  <FaXTwitter className=" text-white  hover:text-blue-600" />
-                </a>
-
-                <a
-                  href="https://whatsApp.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-30"
-                >
-                  <FaWhatsapp className=" text-white  hover:text-green-600"  />
-                </a>
-              </div>
-            </div>
+            <a href="#">
+              <dd className="mt-0 leading-7 text-gray-400">Careers</dd>{" "}
+            </a>
           </div>
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-            <div className="flex flex-col items-start">
+
+          {/* the right section */}
+          <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:pt-2">
+            {/* section 1 weekly */}
+            <div className="flex flex-col col-span-1 items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <CalendarDaysIcon
-                  className="h-6 w-6 text-white"
+                  className="h-9 w-9 text-white"
                   aria-hidden="true"
                 />
               </div>
@@ -116,12 +102,10 @@ export default function Example() {
                 Non laboris consequat cupidatat laborum magna. Eiusmod non irure
                 cupidatat duis commodo amet.
               </dd>
-            </div>
-
-            <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+              {/* no spam */}
+              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10 mt-8">
                 <HandRaisedIcon
-                  className="h-6 w-6 text-white"
+                  className="h-9 w-9 text-white"
                   aria-hidden="true"
                 />
               </div>
@@ -132,60 +116,115 @@ export default function Example() {
               </dd>
             </div>
 
-            <div className="flex flex-col items-start">
-              <dt className="mt-4 font-semibold text-white">
-                Download Our App
-              </dt>
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <div className="flex flex-row space-x-1">
+            <div className="flex flex-col row-span-2 items-start">
+              {/* folow us */}
+              <div className="flex flex-col items-start">
+                <dt className="mt-0 font-semibold text-white">Follow us</dt>
+                <div className="mt-3 leading-7 flex flex-row space-x-5 text-4xl ">
+                  {/* social Icons */}
                   <a
-                    href="https://play.google.com/store/games?hl=en&gl=US"
+                    href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                    className="bg-state-200 box-content px-2 py-2 h-42 w-42 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
                   >
-                    <img src={googleApp} alt="google play store" />
+                    <FaFacebook className=" text-white  hover:text-blue-600" />
                   </a>
+
                   <a
-                    href="https://www.apple.com/uk/app-store/"
+                    href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                    className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
                   >
-                    <img src={AppStore} alt="App store" />
+                    <FaInstagram className=" text-white  hover:text-red-600" />
+                  </a>
+
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300"
+                  >
+                    <FaXTwitter className=" text-white  hover:text-blue-600" />
+                  </a>
+
+                  <a
+                    href="https://whatsApp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-30"
+                  >
+                    <FaWhatsapp className=" text-white  hover:text-green-600" />
                   </a>
                 </div>
               </div>
-            </div>
 
-            <div className="flex flex-col items-start">
-              <dd className="mt-2 leading-7 text-gray-400">
-                Payments 100% secured
-              </dd>
+              {/* downlowd our App */}
+              <div className="flex flex-col items-start">
+                <dt className="mt-12 font-semibold text-white">
+                  Download Our App
+                </dt>
+                <div className="rounded-md bg-white/5 p-2 mt-3 ring-1 ring-white/10">
+                  <div className="flex flex-row space-x-1">
+                    <a
+                      href="https://play.google.com/store/games?hl=en&gl=US"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                    >
+                      <img src={googleApp} alt="google play store" />
+                    </a>
+                    <a
+                      href="https://www.apple.com/uk/app-store/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                    >
+                      <img src={AppStore} alt="App store" />
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <div className="flex flex-row space-x-3">
-                  <RiVisaLine
-                    className="h-6 w-6 text-white"
-                    aria-hidden="true"
-                  />
-                  <FaCcMastercard
-                    className="h-6 w-6 text-white"
-                    aria-hidden="true"
-                  />
-                  <FaCcPaypal
-                    className="h-6 w-6 text-white"
-                    aria-hidden="true"
-                  />
-                  <FaApplePay
-                    className="h-6 w-6 text-white"
-                    aria-hidden="true"
-                  />
-                  <SiKlarna className="h-6 w-6 text-white" aria-hidden="true" />
+              {/* section 4  payment*/}
+
+              <div className="flex flex-col items-start">
+                <dt className="mt-12 font-semibold text-white">
+                  Payment methods
+                </dt>
+
+                <dd className="mt-1 leading-7 text-gray-400">
+                  Payments 100% secured
+                </dd>
+
+                <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                  <div className="flex flex-row space-x-3">
+                    <RiVisaLine
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                    <FaCcMastercard
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                    <FaCcPaypal
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                    <FaApplePay
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                    <SiKlarna
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </dl>
+          </div>
         </div>
       </div>
       <div
@@ -193,7 +232,7 @@ export default function Example() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#003566] to-[#ffc300] opacity-30"
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#003566] to-[#2a9d8f] opacity-30"
           style={{
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
