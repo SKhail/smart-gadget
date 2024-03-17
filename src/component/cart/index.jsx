@@ -28,7 +28,7 @@ export default function Cart() {
                   <img src={item.image} alt={item.model} className="h-10 w-10 object-cover rounded" />
                   <div className="ml-4">
                     <span className="text-lg font-medium text-gray-900">{item.model}</span>
-                    <span className="block text-sm text-gray-500">{item.description}</span>
+                    {/* <span className="block text-sm text-gray-500">{item.description}</span> */}
                   </div>
                 </div>
                 <div>
@@ -46,8 +46,8 @@ export default function Cart() {
           <span className="text-lg font-medium text-gray-900">${totalPrice.toLocaleString()}</span>
         </div>
 
-        {/* Checkout Button on the right side */}
-        <div className="mt-8 flex justify-end">
+        {/* Checkout Button */}
+        <div className="mt-8">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Checkout
           </button>

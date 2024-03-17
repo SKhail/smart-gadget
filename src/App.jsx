@@ -1,5 +1,4 @@
 // App.js
-
 import React, {useState} from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navigation from './component/navigation/Navbar'
@@ -8,7 +7,6 @@ import Banner from '../src/component/banner/banner'
 import Product from './component/product'
 import NewItem from './component/newItems'
 import Corousal from '../src/component/corousal/index'
-
 
 
 // Linking to componenets
@@ -23,7 +21,6 @@ import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from '@material-tailwind/react'
 import QuickView from "./component/quickview"
-
 
 
 function App() {
