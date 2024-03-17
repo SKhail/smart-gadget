@@ -29,6 +29,8 @@ import { SiKlarna } from "react-icons/si";
 import googleApp from "../../assets/images/google-play.svg";
 import AppStore from "../../assets/images/apple-store.svg";
 import Logo from "../../assets/Logos/white-logo.png";
+import SubscribeButton from './subscribeButton';
+
 
 export default function Example() {
   return (
@@ -45,7 +47,7 @@ export default function Example() {
               src={Logo}
               alt="Logo"
               className="logo"
-              style={{ width: "100px", height: "auto" }}
+              style={{ width: "100px", height: "100px" }}
             />
 
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -56,7 +58,7 @@ export default function Example() {
               velit quis. Duis tempor incididunt dolore test.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
-              <label htmlFor="email-address" className="sr-only">
+              {/* <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
               <input
@@ -64,16 +66,19 @@ export default function Example() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                onChange="handleEmailChange"
                 required
                 className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                 placeholder="Enter your email"
               />
               <button
                 type="submit"
+                onClick="handleSubscribe"
                 className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Subscribe
-              </button>
+              </button> */}
+              {<SubscribeButton/>}
             </div>
             {/* section 2 our app */}
             <dt className="mt-9 font-semibold text-white">About</dt>
@@ -88,7 +93,7 @@ export default function Example() {
           </div>
 
           {/* the right section */}
-          <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:pt-2">
+          <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:pt-7">
             {/* section 1 weekly */}
             <div className="flex flex-col col-span-1 items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
