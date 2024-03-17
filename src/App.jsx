@@ -21,7 +21,7 @@ import ShoppingCart from "./component/cart"
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from '@material-tailwind/react'
-
+import QuickView from "./component/quickview"
 
 
 function App() {
@@ -46,6 +46,8 @@ function App() {
         <Route path="/smartphones" element={<SmartPhones />} />
         <Route path="/specialdeals" element={<SpecialDeals />} />
       </Routes>
+
+      <QuickView />
       <Banner />
       <Corousal />
       <NewItem />

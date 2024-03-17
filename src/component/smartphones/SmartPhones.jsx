@@ -1,9 +1,9 @@
-// import React from "react";
-// import { Link } from "react-router-dom"; // Import Link component
-// import products from "../Laptop-list/laptop-list";
-import { getDatabase, ref, onValue, off } from 'firebase/database';
-import firebaseApp from '../corousal/firebase'; // Adjust the path as needed
+// SmartPhones.js
 import React, { useState, useEffect } from 'react';
+import { getDatabase, ref, onValue, off } from 'firebase/database';
+import firebaseApp from '../corousal/firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SmartPhones(props) {
   const [smartPhones, setSmartPhones] = useState([]);
@@ -16,31 +16,41 @@ export default function SmartPhones(props) {
       onValue(smartPhonesRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          setSmartPhones(data); // Set smartPhones state to the fetched data
+          setSmartPhones(data);
         } else {
-          setSmartPhones([]); // If data is null, set smartPhones state to an empty array
+          setSmartPhones([]);
         }
       });
     };
 
-    fetchData(); // Fetch data when component mounts
+    fetchData();
 
     return () => {
-      // Clean up the event listener when component unmounts
       off(smartPhonesRef);
     };
   }, []);
 
-  // Function to add the item to the basket
   const handleAddToBasket = (productId) => {
-    const currentItem = smartPhones.find(itemObj => itemObj.key === productId)
-    props.addToCart(currentItem);
-    // logic to add to the basket here
+    const selectedItem = smartPhones.find(item => item.key === productId);
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedItem]));
     console.log(`Added product with ID ${productId} to basket`);
+
+    // Show toast notification when item is added to cart
+    toast.success('Added to the cart', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
     <div className="bg-white">
+      <ToastContainer />
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Smartphones</h2>
 
@@ -57,15 +67,14 @@ export default function SmartPhones(props) {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">{product.model}</h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.price}</p>
+                  <p className="mt-1 text-sm text-gray-500"> $  {product.price}</p>
                 </div>
                 <div className="flex items-center flex-col">
-                  {/* Add button to add the item to the basket */}
                   <button
                     onClick={() => handleAddToBasket(product.key)}
                     className="mt-2 text-sm font-medium text-white bg-black px-3 py-1 rounded-md hover:bg-gray-900"
                   >
-                    Add to basket
+                    Add to Cart
                   </button>
                 </div>
               </div>

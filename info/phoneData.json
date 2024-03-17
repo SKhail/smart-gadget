@@ -1,131 +1,156 @@
 {
   "carousel": [
     {
-      "key": 1,
+      "key": "carousel_1",
       "model": "Samsung Galaxy S24",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-ultra-5g-256gb-titanium-grey-desktop-detail-1-WebP-Format-488.webp?alt=media&token=b7ef372f-00ed-4136-9167-a758d60074d3"
     },
     {
-      "key": 2,
+      "key": "carousel_2",
       "model": "iPhone 15 Pro Max",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488.webp?alt=media&token=7feac7f1-2be6-47ab-9920-d6cf9ab17ffb"
     },
     {
-      "key": 3,
+      "key": "carousel_3",
       "model": "Google Pixel 7a 5G",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776"
     },
     {
-      "key": 4,
+      "key": "carousel_4",
       "model": "Samsung Galaxy S24 5G",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-5g-s24-128gb-yellow-desktop1-WebP-Format-488.webp?alt=media&token=0fa1a37c-d4d4-42ee-bd21-61e0c2d6e4bd"
     },
     {
-      "key": 5, 
+      "key": "carousel_5", 
       "model": "iPhone 14 5G 128GB",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-14-5g-yellow-desktop-detail-1-WebP-Format-488.webp?alt=media&token=3ce18d9d-3d09-4b07-a2b0-d3601f997d48" 
     },
     {
-      "key":  6,  
+      "key":  "carousel_6",  
       "model": "Google Pixel 8 Pro 128GB Mint",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776" 
     },
     {
-      "key": 7,
+      "key": "carousel_7",
       "model": "Samsung Galaxy S24+",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-plus-5g-256gb-voilet-desktop1-WebP-Format-488.webp?alt=media&token=d487f47c-fc65-4aa7-a045-1acd42c53bd0" 
     },
     {
-      "key":8, 
+      "key": "carousel_8", 
       "model": "Samsung Galaxy Z Flip5",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-Flip5-512-mint-desktop-detail-1-WebP-Format-488.webp?alt=media&token=d8d83300-b07a-4554-9b99-1e9de29bdd3d" 
     },
     {
-      "key": 9,
+      "key": "carousel_9",
       "model": "Google Pixel Fold 5G",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F9.webp?alt=media&token=05d1668a-8f3d-481a-ba62-a905fb2d263a" 
     },
     {
-      "key": 10,
+      "key": "carousel_10",
       "model": "Sony Xperia 10 V",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05" 
     }
   ],
 
-  "laptops": [
+  "consoles": [
     {
       "id": 1,
-      "name": "",
-      "href": "#",
-      "imageSrc": "",
-      "imageAlt": "",
-      "price": "",
-      "color": "",
-      "description":""
-    }  
+      "name": "Xbox Series X",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc1.webp?alt=media&token=b2e36f52-4334-49a7-b336-f45a48ad2975",
+      "imageAlt": "Xbox Series X",
+      "price": " £ 450"
+    },
+    {
+      "id": 2,
+      "name": "Playstation 5",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc2.jpg?alt=media&token=eb8b12e1-51dd-459d-88e2-99df3fffb093",
+      "imageAlt": "Playstation 5",
+      "price": " £ 110"
+    },
+    {
+      "id": 3,
+      "name": "Xbox One",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc3.jpg?alt=media&token=1e5be68e-d952-4eda-be29-a83af60fbbdb",
+      "imageAlt": "Xbox One",
+      "price": " £ 300"
+    },
+    {
+      "id": 4,
+      "name": "Playstation 4",
+      "image":"https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc4.jpg?alt=media&token=4f37b614-effb-441c-9622-a157ad430f73",
+      "imageAlt": "Playstation 4",
+      "price": " £ 200"
+    },
+    {
+      "id": 5,
+      "name": "Nintendo Wii Sports",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc5.jpg?alt=media&token=17f86b77-535a-4441-b37a-1b4d6777572d",
+      "imageAlt": "Nintendo Wii Sports",
+      "price": " £ 100"
+    }
   ],
 
-  "smartphones": [
-    {
-      "key": 1,
-      "model": "Samsung Galaxy S24",
-      "price": "£ 453",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-ultra-5g-256gb-titanium-grey-desktop-detail-1-WebP-Format-488.webp?alt=media&token=b7ef372f-00ed-4136-9167-a758d60074d3"
-    },
-    {
-      "key": 2,
-      "model": "iPhone 15 Pro Max",
-      "price": "£ 200",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488.webp?alt=media&token=7feac7f1-2be6-47ab-9920-d6cf9ab17ffb"
-    },
-    {
-      "key": 3,
-      "model": "Google Pixel 7a 5G",
-      "price": "£ 500",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776"
-    },
-    {
-      "key": 4,
-      "model": "Samsung Galaxy S24 5G",
-      "price": "£ 300",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-5g-s24-128gb-yellow-desktop1-WebP-Format-488.webp?alt=media&token=0fa1a37c-d4d4-42ee-bd21-61e0c2d6e4bd"
-    },
-    {
-      "key": 5, 
-      "model": "iPhone 14 5G 128GB",
-      "price": "£ 100",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-14-5g-yellow-desktop-detail-1-WebP-Format-488.webp?alt=media&token=3ce18d9d-3d09-4b07-a2b0-d3601f997d48" 
-    },
-    {
-      "key":  6,  
-      "model": "Google Pixel 8 Pro 128GB Mint",
-      "price": "£ 700",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776" 
-    },
-    {
-      "key": 7,
-      "model": "Samsung Galaxy S24+",
-      "price": "£ 800",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-plus-5g-256gb-voilet-desktop1-WebP-Format-488.webp?alt=media&token=d487f47c-fc65-4aa7-a045-1acd42c53bd0" 
-    },
-    {
-      "key":8, 
-      "model": "Samsung Galaxy Z Flip5",
-      "price": "£ 900",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-Flip5-512-mint-desktop-detail-1-WebP-Format-488.webp?alt=media&token=d8d83300-b07a-4554-9b99-1e9de29bdd3d" 
-    },
-    {
-      "key": 9,
-      "model": "Google Pixel Fold 5G",
-      "price": "£ 1000",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F9.webp?alt=media&token=05d1668a-8f3d-481a-ba62-a905fb2d263a" 
-    },
-    {
-      "key": 10,
-      "model": "Sony Xperia 10 V",
-      "price": "£ 1100",
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05" 
-    }
-  ]
+    "smartphones": [
+      {
+        "key": "smartphone_1",
+        "model": "Samsung Galaxy S24",
+        "price": 453,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-ultra-5g-256gb-titanium-grey-desktop-detail-1-WebP-Format-488.webp?alt=media&token=b7ef372f-00ed-4136-9167-a758d60074d3"
+      },
+      {
+        "key": "smartphone_2",
+        "model": "iPhone 15 Pro Max",
+        "price": 200,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488.webp?alt=media&token=7feac7f1-2be6-47ab-9920-d6cf9ab17ffb"
+      },
+      {
+        "key": "smartphone_3",
+        "model": "Google Pixel 7a 5G",
+        "price": 500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776"
+      },
+      {
+        "key": "smartphone_4",
+        "model": "Samsung Galaxy S24 5G",
+        "price": 300,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-5g-s24-128gb-yellow-desktop1-WebP-Format-488.webp?alt=media&token=0fa1a37c-d4d4-42ee-bd21-61e0c2d6e4bd"
+      },
+      {
+        "key": "smartphone_5",
+        "model": "iPhone 14 5G 128GB",
+        "price": 100,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-14-5g-yellow-desktop-detail-1-WebP-Format-488.webp?alt=media&token=3ce18d9d-3d09-4b07-a2b0-d3601f997d48"
+      },
+      {
+        "key":  "smartphone_6",
+        "model": "Google Pixel 8 Pro 128GB Mint",
+        "price": 700,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fgoogle-pixel-7a-sea-gwp-desktop-WebP-Format-488.webp?alt=media&token=37e2e652-b0e1-46d8-9d39-4acbe6158776"
+      },
+      {
+        "key": "smartphone_7",
+        "model": "Samsung Galaxy S24+",
+        "price": 800,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-s24-plus-5g-256gb-voilet-desktop1-WebP-Format-488.webp?alt=media&token=d487f47c-fc65-4aa7-a045-1acd42c53bd0"
+      },
+      {
+        "key": "smartphone_8",
+        "model": "Samsung Galaxy Z Flip5",
+        "price": 900,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-Flip5-512-mint-desktop-detail-1-WebP-Format-488.webp?alt=media&token=d8d83300-b07a-4554-9b99-1e9de29bdd3d"
+      },
+      {
+        "key": "smartphone_9",
+        "model": "Google Pixel Fold 5G",
+        "price": 1000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F9.webp?alt=media&token=05d1668a-8f3d-481a-ba62-a905fb2d263a"
+      },
+      {
+        "key": "smartphone_10",
+        "model": "Sony Xperia 10 V",
+        "price": 1100,
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05"
+      }
+    ]
 
 }
