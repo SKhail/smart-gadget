@@ -1,67 +1,50 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: [
-    './src/**/*.html',
-    './src/**/*.js',
-    './src/**/*.jsx',
-    './src/**/*.ts',
-    './src/**/*.tsx',
+    "./src/**/*.html",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
   ],
-  darkMode: "class",   //Apply Dark Mode feature 
+  darkMode: "class", //Apply Dark Mode feature
   theme: {
     borderWidth: {
-      DEFAULT: '1px',
-      0: '0',
-      2: '2px',
-      3: '3px',
-      4: '4px',
-      6: '6px',
-      8: '8px',
-      10: '10px',
-      12: '12px',
-
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
+      10: "10px",
+      12: "12px",
     },
-
 
     extend: {
-      backgroundImage: {
-
-      },
+      backgroundImage: {},
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
 
-        'serif': ['Georgia', 'serif'],
+        serif: ["Georgia", "serif"],
 
-        'mono': ['ui-monospace', 'SFMono-Regular'],
+        mono: ["ui-monospace", "SFMono-Regular"],
 
-        'display': ['Oswald', 'sans-serif'],
+        display: ["Oswald", "sans-serif"],
 
-        'body': ['Inter', 'sans-serif'],
+        body: ["Inter", "sans-serif"],
       },
       colors: {
-        'primary': '#0f4c5c',
-        'secondary': 'ed8900',
-        'black': '#06113C',
-        'background-white': '#FFFBF5',
-        'teal': '#76ABAE',
-        'space-grey': '#EEEEEE'
+        "primary": "#0f4c5c",
+        "secondary": "ed8900",
+        "black": "#06113C",
+        "background-white": "#FFFBF5",
+        "teal": "#76ABAE",
+        "space-grey": "#EEEEEE",
+        "hover-grey": "#d6d4d4"
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '1rem',
-          sm: '3rem',
 
-        }
-      }
     },
-
   },
-  plugins: [
-
-
-  ],
-}
-
-// tai
-
+  plugins: [],
+});

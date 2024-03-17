@@ -1,17 +1,17 @@
-import {createClient} from '@sanity/client'
-// Import using ESM URL imports in environments that supports it:
-// import {createClient} from 'https://esm.sh/@sanity/client'
+import { createClient } from '@sanity/client';
+// import {data} from 'autoprefixer'
+
 
 export const client = createClient({
-  projectId: 'your-project-id',
-  dataset: 'your-dataset-name',
-  useCdn: true, // set to `false` to bypass the edge cache
-  apiVersion: '2023-05-03', // use current date (YYYY-MM-DD) to target the latest API version
-  // token: process.env.SANITY_SECRET_TOKEN // Only if you want to update content with the client
-})
+  projectId: '26pxy6vx',
+  dataset: 'production', 
+  useCdn: false,
+  apiVersion: '2023-05-03',
+});
 
-// uses GROQ to query content: https://www.sanity.io/docs/groq
+export default client
+
 export async function getHomepage() {
-  const data = await client.fetch('*[_type == "homepage"][0]')
-  return data
+  const data = await client.fetch('*[_type == "homepage"][0]');
+  return data;
 }

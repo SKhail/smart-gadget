@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default function ShoppingCart() {
+export default function ShoppingCart(props) {
+  console.log(props)
+  
   return (
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">

@@ -1,23 +1,29 @@
-import {defineField, defineType} from 'sanity'
+// carouselItem.js
+
+import { defineType, defineField } from 'sanity';
 
 export const homepage = defineType({
   name: 'homepage',
-  title: 'Home Page',
+  title: 'homepage',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
       type: 'string',
-      title: "Title",
+      title: 'Title',
     }),
     defineField({
-        name: 'carousel',
-        type: 'array',
-        title: 'Carousel',
-        of: [
-            {type: 'image'},
-        ]
-
-    })
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+      options: {
+        hotspot: true, 
+      },
+    }),
+    defineField({
+      name: 'link',
+      type: 'url',
+      title: 'Link',
+    }),
   ],
-})
+});
