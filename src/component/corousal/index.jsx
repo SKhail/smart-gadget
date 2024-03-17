@@ -1,32 +1,37 @@
-// import React from "react";
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { getDatabase, ref, onValue, off } from 'firebase/database';
+import firebaseApp from '../corousal/firebase'; // Adjust the path as per your file structure
+import './style.css';
 
-import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+function CarouselDefault() {
+  const [carouselData, setCarouselData] = useState([]);
 
-import './style.css'
-import image1 from '../../assets/images/example1.jpeg'
-import image2 from '../../assets/images/example2.jpeg'
-import image3 from '../../assets/images/example3.jpeg'
-import image4 from '../../assets/images/example4.jpeg'
-import image5 from '../../assets/images/example5.jpeg'
+  useEffect(() => {
+    const database = getDatabase(firebaseApp);
+    const carouselRef = ref(database, 'carousel');
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCL9xz44YkYgK53LC5cIKb6AHsQyJy9d3s',
-  authDomain: 'smartgadjet-e0ed3.firebaseapp.com',
-  projectId: 'smartgadjet-e0ed3',
-  storageBucket: 'smartgadjet-e0ed3.appspot.com',
-  messagingSenderId: '243610321397',
-  appId: '1:243610321397:web:aab8e94ff6a8a126bde0bc',
-  measurementId: 'G-RWYM8C1SKG',
-}
+    const fetchData = () => {
+      onValue(carouselRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          setCarouselData(Object.values(data)); // Convert object to array
+        } else {
+          setCarouselData([]);
+        }
+      });
+    };
 
-const app = initializeApp(firebaseConfig)
-const analytics = getAnalytics(app)
+    fetchData();
 
-export function CarouselDefault() {
+    return () => {
+      // Clean up the event listener when component unmounts
+      off(carouselRef);
+    };
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -55,81 +60,30 @@ export function CarouselDefault() {
         },
       },
     ],
-  }
+  };
 
   return (
     <div className='slider-container'>
       <Slider {...settings}>
-        <div>
-          <img src={image1} alt='image 1' className='object-fill h- w-60 carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
-          <a href=''>
-            <p
-              style={{ borderRadius: '15px', marginTop: '-25px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }}
-              className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '
-            >
-              View Details
-            </p>
-          </a>
-          <div>
+        {carouselData.map((item, index) => (
+          <div key={index}>
+            <img src={item.image} alt={`image ${index + 1}`} className='object-fill h- w-60 carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
             <a href=''>
-              {' '}
-              <p style={{ marginBottom: '10px', height: '40px' }}></p>
+              <p style={{ borderRadius: '15px', marginTop: '-25px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }} className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '>
+                {item.model}
+              </p>
             </a>
           </div>
-        </div>
-        <div>
-          <img src={image2} alt='image 2' className='object-fill h-48 w-96 carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
-          <a href=''>
-            <p
-              style={{ borderRadius: '15px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }}
-              className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '
-            >
-              View Details
-            </p>
-          </a>
-        </div>
-        <div>
-          <img src={image3} alt='image 3' className='h-48 w-96 object-cover carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
-          <a href=''>
-            <p
-              style={{ borderRadius: '15px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }}
-              className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '
-            >
-              View Details
-            </p>
-          </a>
-        </div>
-        <div>
-          <img src={image4} className='h-48 w-96 object-cover carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
-          <a href=''>
-            <p
-              style={{ borderRadius: '15px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }}
-              className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '
-            >
-              View Details
-            </p>
-          </a>
-        </div>
-        <div>
-          <img src={image5} alt='image 3' className='h-48 w-41 object-cover carousel-image' style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px' }} />
-          <a href=''>
-            <p
-              style={{ borderRadius: '15px', marginLeft: '20px', marginBottom: '10px', width: '200px', position: 'absolute' }}
-              className='text-center text-primary font-bold text-md cursor-pointer bg-gray-200 p-1 '
-            >
-              View Details
-            </p>
-          </a>
-        </div>
+        ))}
       </Slider>
     </div>
-  )
+  );
 }
 
 // Custom Next Arrow Component
 const NextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { className, style, onClick } = props
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
@@ -144,18 +98,21 @@ const NextArrow = (props) => {
         padding: '20px',
         borderRadius: '50%',
         cursor: 'pointer',
+        color: 'black', // Set button color to black
+        backgroundColor: 'transparent', // Make the background transparent
+        // border: '2px solid black', // Add border for better visibility
       }}
       onClick={onClick}
     >
       Next
     </div>
-  )
-}
+  );
+};
 
 // Custom Previous Arrow Component
 const PrevArrow = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { className, style, onClick } = props
+  const { className, style, onClick } = props;
   return (
     <div
       className={className}
@@ -170,12 +127,15 @@ const PrevArrow = (props) => {
         padding: '10px',
         borderRadius: '50%',
         cursor: 'pointer',
+        color: 'black', // Set button color to black
+        backgroundColor: 'transparent', // Make the background transparent
+        // border: '2px solid black', // Add border for better visibility
       }}
       onClick={onClick}
     >
       Prev
     </div>
-  )
-}
+  );
+};
 
-export default CarouselDefault
+export default CarouselDefault;
