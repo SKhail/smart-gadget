@@ -20,7 +20,7 @@ import ShoppingCart from "./component/cart/cart"
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from '@material-tailwind/react'
-
+import QuickView from "./component/quickview"
 
 
 function App() {
@@ -45,13 +45,15 @@ function App() {
         <Route path="/smartphones" element={<SmartPhones addtoCart={addtoCart} />} />
         <Route path="/specialdeals" element={<SpecialDeals />} />
       </Routes>
+
+      <QuickView />
       <Banner />
       <Corousal />
       <NewItem />
       <Product />
       <Newsletter />
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
