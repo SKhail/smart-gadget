@@ -14,8 +14,8 @@ import Corousal from '../src/component/corousal/index'
 import Home from "./component/home/Home";
 import Consoles from "./component/consoles/Consoles";
 import Laptops from "./component/Laptop/Laptop";
-import LaptopOverview from "./component/Laptop-list/laptop-overview";
-import ShoppingCart from "./component/cart"
+
+import ShoppingCart from "./component/cart/cart"
 
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
@@ -42,7 +42,7 @@ function App() {
 
 
        
-        <Route path="/smartphones" element={<SmartPhones />} />
+        <Route path="/smartphones" element={<SmartPhones addtoCart={addtoCart} />} />
         <Route path="/specialdeals" element={<SpecialDeals />} />
       </Routes>
 
