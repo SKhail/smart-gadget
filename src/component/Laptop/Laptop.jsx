@@ -1,15 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link component
-import products from "../Laptop-list/laptop-list";
+import products from "../Item-list/Item-list";
 
 export default function Laptop(props) {
   // Function to add the item to the basket
   const handleAddToBasket = (productId) => {
-    const currentItem = products.find(itemObj =>itemObj.id === productId )
+    const currentItem = products.find(itemObj => itemObj.id === productId )
     props.addtoCart(currentItem);
     // logic to add to the basket here
     console.log(`Added product with ID ${productId} to basket`);
   };
+
+  // Filter out only the items with the category "laptop"
+  const laptops = products.filter(product => product.category === 'laptop');
 
   return (
     <div className="bg-white">
@@ -17,7 +19,7 @@ export default function Laptop(props) {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Laptop</h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
+          {laptops.map((product) => (
             <div key={product.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
@@ -28,18 +30,9 @@ export default function Laptop(props) {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-
-                  {/* Wrap the product name in a Link component */}
-
-                  <h3 className="text-sm text-gray-700">
-                    {/* <Link to={`/laptop/${product.id}`} 
-                    className="group-hover:text-indigo-600"
-                    >
-                      <span aria-hidden="true" className="absolute inset-0" />
-                      {product.name}
-                    </Link> */}
-                  </h3>
+                  <h3 className="text-sm text-gray-700">{product.name}</h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="text-sm font-medium text-gray-900">{product.description}</p>
                 </div>
                 <div className="flex items-center flex-col">
                   <p className="text-sm font-medium text-gray-900">{product.price}</p>
