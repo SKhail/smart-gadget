@@ -383,8 +383,8 @@ export default function Example() {
           <div>
             <h1 className="flex justify-center mb-5 text-3xl font-bold tracking-tight  sm:text-4xl">Our favorite brands</h1>
           </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-3 gap-4 mb-12">
+          {/* <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
+            <div className="grid grid-cols-3 gap-4 mb-12 mx-auto max-w-7xl px-12 lg:px-48">
               <div className="flex justify-center items-center ourBrand w-72 h-24">
                 <img className="w-44 h-8 flex justify-center items-center	 " src={Samsung} alt="App store" />
               </div>
@@ -416,6 +416,6 @@ export default function Example() {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
