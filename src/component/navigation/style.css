@@ -2,11 +2,16 @@
   width: 100px;
 }
 
-/* .logo {
-  width: 100%;
-  height: auto;
-} */
+.search-bar {
+  display: block;
+}
 
-ul {
-  list-style-type: none;
+/* Media query to hide search bar on smaller screens */
+@media (max-width: 767px) {
+  .search-bar {
+    display: none;
+  }
+  .searchIcon {
+    display: none;
+  }
 }

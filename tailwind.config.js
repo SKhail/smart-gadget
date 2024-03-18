@@ -24,19 +24,11 @@ module.exports = withMT({
     extend: {
       backgroundImage: {},
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-
-        serif: ["Georgia", "serif"],
-
-        mono: ["ui-monospace", "SFMono-Regular"],
-
-        display: ["Oswald", "sans-serif"],
-
-        body: ["Inter", "sans-serif"],
+        'baloo': ['Baloo 2', 'sans-serif'],
       },
       colors: {
-        "primary": "#0f4c5c",
-        "secondary": "ed8900",
+        "primary": "#003f6f",
+        "hoverprimary": "#004080",
         "black": "#06113C",
         "background-white": "#FFFBF5",
         "teal": "#76ABAE",
@@ -47,6 +39,6 @@ module.exports = withMT({
     },
   },
   plugins: [
-    
+
   ],
 });
