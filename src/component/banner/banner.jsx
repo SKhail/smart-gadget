@@ -8,23 +8,23 @@ function Banner() {
     <div className="carousel-container relative overflow-hidden">
       <Carousel>
         <img
-          src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/5VYFQwxthpmehrmh4riGTC/1165bfb6dfc5bca0cf0eea6c145b2a86/GENERIC_HPBANNERS_iPhone13_Desktop_UK.jpeg"
+          src="https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2F1.png?alt=media&token=9fa16606-13b1-4a88-a630-dab31c66e3f5"
           alt="image 1"
           className="h-full w-full object-cover"
         />
         <img
-          src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/3Xpl0rtrXbBRIZDONnbeNm/8b75543ce78171c6ea538b8804dc7195/GENERIC_HPBANNERS_iPad2021_Desktop_UK.jpg"
+          src="https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2F2.png?alt=media&token=e894fb21-e5b5-4ceb-bb41-3cfd4ca41e5f"
           alt="image 2"
           className="h-full w-full object-cover"
         />
         <img
-          src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/7KNLXyQymHYYkmyLiDbbwN/b4a2d7a9ddb37e38b45d11fd9a070f0a/TRADEIN_HP_GENERICBANNERS_DESKTOP_1_UK.jpg"
+          src="https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2F3.png?alt=media&token=f1cf4324-55c8-4224-9ac8-7ab721f04fbc"
           alt="image 3"
           className="h-full w-full object-cover"
         />
         <img
-          src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D1920/https://images.ctfassets.net/mmeshd7gafk1/6ELnRuNVrOJPWU4LZmrQj2/b44ee518b578c85152d1d86eae8e85ac/SAMSUNG-S24-LAUNCH_HPBANNERS_DESKTOP_withCTA.jpg"
-          alt="image 3"
+          src="https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2F4.png?alt=media&token=6a7ec9bb-b8e6-4ba2-b81c-6a7112b5aee5"
+          alt="image 4"
           className="h-full w-full object-cover"
         />
       </Carousel>
