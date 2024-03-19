@@ -12,16 +12,9 @@ import Corousal from "../src/component/corousal/index";
 import Home from "./component/home/Home";
 import Consoles from "./component/consoles/Consoles";
 import Laptops from "./component/Laptop/Laptop";
-import Home from "./component/home/Home";
-import Consoles from "./component/consoles/Consoles";
-import Laptops from "./component/Laptop/Laptop";
 
 import ShoppingCart from "./component/cart/cart";
 
-import SmartPhones from "./component/smartphones/SmartPhones";
-import SpecialDeals from "./component/specialdeals/SpecialDeals";
-import { CardFooter } from "@material-tailwind/react";
-import QuickView from "./component/quickview";
 import SmartPhones from "./component/smartphones/SmartPhones";
 import SpecialDeals from "./component/specialdeals/SpecialDeals";
 import { CardFooter } from "@material-tailwind/react";
@@ -107,10 +100,10 @@ function App() {
       </div>
 
       <QuickView />
-      {/* <NewItem /> */}
+      <NewItem />
       <Corousal />
       <Banner />
-      {/* <Product /> */}
+      <Product />
       <Newsletter />
     </Router>
   );
