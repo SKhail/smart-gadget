@@ -98,10 +98,10 @@ function App() {
           />
         )}
       </div>
-
+      <Corousal />
       <QuickView />
       <NewItem />
-      <Corousal />
+      {/* <Corousal /> */}
       <Banner />
       <Product />
       <Newsletter />

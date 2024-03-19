@@ -103,7 +103,7 @@ function CarouselDefault() {
   };
 
   return (
-    <div className='slider-container w-10/12 mx-auto relative'>
+    <div className='slider-container w-10/12 mx-auto mt-24 relative'>
       <ToastContainer />
       <Slider ref={sliderRef} {...settings}>
         {carouselData.map((item, index) => (
@@ -139,7 +139,7 @@ function CarouselDefault() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
               </button>
-              {/* Product Image */}
+              
               <div className="flex-none w-full lg:w-1/2">
                 <img
                   src={selectedProduct.image}
@@ -175,10 +175,10 @@ function CarouselDefault() {
       )}
 
       {/* Previous and Next Buttons */}
-       <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full z-10" onClick={goToPrevSlide}>
+       <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-800 text-white px-3 py-2 rounded-full z-10" onClick={goToPrevSlide}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
-      <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full z-10" onClick={goToNextSlide}>
+      <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-800 text-white px-3 py-2 rounded-full z-10" onClick={goToNextSlide}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
