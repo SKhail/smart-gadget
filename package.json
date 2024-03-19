@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@fontsource/baloo-2": "^5.0.19",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.9",
@@ -28,10 +31,10 @@
     "react-script": "2.0.5",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
-    "rollup": "^4.13.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.1",
-    "tw-elements-react": "^1.0.0-alpha2"
+    "tw-elements-react": "^1.0.0-alpha2",
+    "twilio": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
