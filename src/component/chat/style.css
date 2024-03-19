@@ -1,0 +1,115 @@
+.chat-button {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 9999; /* Ensure the button is on top of other content */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-button:hover {
+    background-color: #0056b3;
+  }
+  
+ /* style.css */
+ .chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+  }
+
+/* Chat system container */
+.chat-system {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .close-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  
+  /* Chat header */
+  .chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #0056b3;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Chat window */
+  .chat-window {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  /* Individual message */
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  /* Sender name */
+  .message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Message text */
+  .message-text {
+    color: #333;
+  }
+  .chat-input {
+    display: flex;
+    align-items: self-end;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #007bff; /* Add border to the input field */
+    border-radius: 25px; /* Make the input field more rounded */
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Make the button more rounded */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add smooth transition for hover effect */
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
