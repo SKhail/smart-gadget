@@ -8,7 +8,7 @@ export default function Latest() {
 
 
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-24">
    Hello it's latest offers
     </div>
   );

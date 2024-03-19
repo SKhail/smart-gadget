@@ -96,12 +96,7 @@ function App() {
       )}
     </div>
 
-      <QuickView />
-      <NewItem />
-      <Corousal />
-      <Banner />
-      <Product />
-      <Newsletter />
+    <Newsletter />
     </Router>
   )
 }
