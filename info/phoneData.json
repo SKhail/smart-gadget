@@ -2,7 +2,7 @@
   "carousel": [
     {
       "key": "carousel_1",
-      "model": "Samsung Galaxy S24",
+      "model": "Samsung S24",
       "description":{
         "ram": "8GB",
         "storage": "256GB",
@@ -17,20 +17,20 @@
     {
       
       "key": "carousel_2",
-    "model": "Playstation 5",
+    "model": "HP Pavilion 15",
     "description": {
       "ram": "16GB GDDR6",
       "storage": "825GB Custom SSD",
       "processor": "Custom AMD Zen 2 CPU",
       "gpu": "Custom AMD RDNA 2 GPU"
     },
-    "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc2.jpg?alt=media&token=eb8b12e1-51dd-459d-88e2-99df3fffb093",
+    "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fl1.png?alt=media&token=8e2f451f-28e2-4c82-9207-65b603f83d01",
     "imageAlt": "Playstation 5",
     "price": 110
   },
     {
       "key": "carousel_3",
-      "model": "Samsung Galaxy S24 5G",
+      "model": "Samsung S24 5G",
       "price": 300,
       "description": {
         "ram": "6GB",
@@ -44,7 +44,7 @@
     },
     {
       "key": "carousel_4",
-      "model": "Sony Xperia 10 V",
+      "model": "Xperia 10 V",
           "price": 1100,
           "description": {
             "ram": "8GB",
@@ -59,20 +59,20 @@
     {
       "key": "carousel_5", 
       "id": 5,
-      "model": "Nintendo Wii Sports",
+      "model": "HP Envy x360",
       "description": {
         "ram": "88MB",
         "storage": "512MB",
         "processor": "Broadway",
         "gpu": "Hollywood"
       },
-      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc5.jpg?alt=media&token=17f86b77-535a-4441-b37a-1b4d6777572d",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fcs.png?alt=media&token=cc927bb2-3324-4530-bf14-1d4b208bf45a",
       "imageAlt": "Nintendo Wii Sports",
       "price": 100
     },
     {
       "key":  "carousel_6",  
-      "model": "iPhone 14 5G 128GB",
+      "model": "iPhone 14 5G",
       "price": 100,
       "description": {
         "ram": "4GB",
@@ -86,7 +86,7 @@
     },
     {
       "key": "carousel_7",
-      "model": "iPhone 15 Pro Max",
+      "model": "iPhone 15 Pro",
       "price": 200,
       "description": {
         "ram": "6GB",
@@ -101,7 +101,7 @@
     },
     {
       "key": "carousel_8", 
-      "model": "Samsung Galaxy Z Flip5",
+      "model": "Samsung Z Flip5",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-Flip5-512-mint-desktop-detail-1-WebP-Format-488.webp?alt=media&token=d8d83300-b07a-4554-9b99-1e9de29bdd3d" ,
       "imageAlt": "Samsung Galaxy Z Flip5",
       "price": 300,
@@ -117,7 +117,7 @@
     },
     {
       "key": "carousel_9",
-      "model": "Google Pixel Fold 5G",
+      "model": "Pixel Fold 5G",
       "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F9.webp?alt=media&token=05d1668a-8f3d-481a-ba62-a905fb2d263a",
       "imageAlt": "Google Pixel Fold 5G",
       "price": 1000,

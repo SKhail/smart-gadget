@@ -6,6 +6,8 @@ import { getDatabase, ref, onValue, off } from 'firebase/database';
 import firebaseApp from '../corousal/firebase'; // Adjust the path as per your file structure
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 function CarouselDefault() {
   const [carouselData, setCarouselData] = useState([]);
@@ -101,19 +103,21 @@ function CarouselDefault() {
   };
 
   return (
-    <div className='slider-container w-5/6 mx-auto relative'>
+    <div className='slider-container w-10/12 mx-auto relative'>
       <ToastContainer />
       <Slider ref={sliderRef} {...settings}>
         {carouselData.map((item, index) => (
-          <div key={index}>
-            <img
-              src={item.image}
-              alt={`image ${index + 1}`}
-              className='object-fill h-w-60 carousel-image'
-              style={{ marginLeft: '10px', margin: '10px 10px -40px', borderRadius: '15px', cursor: 'pointer' }}
-              onClick={() => openQuickView(item)} // Open quick view on image click
-            />
-            <p className="text-center text-primary font-bold">{item.model}</p> {/* Display the name of the phone */}
+          <div key={index} className="carousel-item">
+    <img
+    src={item.image} 
+    alt={`image ${index + 1}`}
+    className='object-cover h-40 w-40 carousel-image' // Set fixed height and width (e.g., h-40 and w-40)
+    onClick={() => openQuickView(item)} // Open quick view on image click
+/>
+
+            <p className="text-center text-white font-bold text-base bg-black py-1 px-2 rounded-lg shadow-lg border-2 border-primary inline-block">
+              {item.model}
+            </p>
           </div>
         ))}
       </Slider>
@@ -171,11 +175,11 @@ function CarouselDefault() {
       )}
 
       {/* Previous and Next Buttons */}
-      <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full z-10" onClick={goToPrevSlide}>
-        Prev
+       <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full z-10" onClick={goToPrevSlide}>
+        <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full z-10" onClick={goToNextSlide}>
-        Next
+        <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
   );
