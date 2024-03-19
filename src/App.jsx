@@ -23,11 +23,19 @@ import QuickView from './component/quickview'
 import './index.css'
 
 //link to chat
+import ChatWindow from './component/chat/ChatWindow'; // Import from Chat folder
+import ChatInput from './component/chat/ChatInput'; // Import from Chat folder
+import Sidebar from './component/chat/sidebar'; // Import from Sidebar folder
+import ChatButton from './component/chat/ChatButton';
+import ChatSystem from '../src/component/chat/chatsystem'; 
+import Latest from './component/latest/Latest'
+
 import ChatWindow from './component/chat/ChatWindow' // Import from Chat folder
 import ChatInput from './component/chat/ChatInput' // Import from Chat folder
 import Sidebar from './component/chat/sidebar' // Import from Sidebar folder
 import ChatButton from './component/chat/ChatButton'
 import ChatSystem from '../src/component/chat/chatsystem'
+
 
 import Home from "./component/home/Home";
 import Consoles from "./component/consoles/Consoles";
@@ -135,6 +143,24 @@ function App() {
         showModal={showModal}
       />
 
+
+        <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} />} />
+        <Route path='/specialdeals' element={<SpecialDeals />} />
+        <Route path='/latest' element={<Latest/>} />
+      </Routes>
+
+      <div className="app">
+      {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
+      {showChatSystem && (
+        <ChatSystem
+          messages={messages}
+          onSendMessage={handleSendMessage}
+          onClose={handleCloseChat}
+        />
+      )}
+    </div>
+
+    <Newsletter />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/consoles" element={<Consoles />} />
@@ -165,6 +191,7 @@ function App() {
       <Banner />
       <Product />
       <Newsletter />
+
 
     </Router>
   );
