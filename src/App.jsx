@@ -60,10 +60,10 @@ function App() {
       </Routes>
 
       <QuickView />
-      <NewItem />
+      {/* <NewItem /> */}
       <Corousal />
       <Banner />
-      <Product />
+      {/* <Product /> */}
       <Newsletter />
     </Router>
   )
