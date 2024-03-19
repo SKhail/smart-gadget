@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaSearch, FaUser, FaShoppingCart, FaHome, FaGamepad, FaLaptop, FaMobileAlt } from 'react-icons/fa'
 import { FaSun, FaMoon } from 'react-icons/fa' // Dark Mode Icons
-import DarkMode from '../Darkmode/DarkMode'
+import DarkMode from '../DarkMode/DarkMode'
 import LoginPage from '../LoginFeature/LoginPage' // Ensure correct import path
 import '../navigation/style.css' // Ensure correct import path
 
