@@ -1,11 +1,109 @@
-.slider-container {
-  width: 100%; /* Change to percentage to make it responsive */
-  max-width: 1300px; /* Set a maximum width */
-  margin: 0 auto; /* Center the container horizontally */
-  margin-top: 25px;
-  margin-bottom: 25px;
 
+
+
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
 }
 
-/* popover */
+/* .carousel-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 15px;
+} */
 
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%; /* Ensure equal width for all images */
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+.text-primary {
+  color: #007bff; /* Change color according to your preference */
+}
+
+.bg-gray-200 {
+  background-color: #f8f9fa; /* Change background color according to your preference */
+}
+
+.rounded-lg {
+  border-radius: 10px; /* Adjust border radius according to your preference */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow according to your preference */
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  margin-top: 100px;
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Prevent items from growing or shrinking */
+  margin-right: 10px; /* Adjust margin between items */
+}
+
+.carousel-image {
+  width: 100%; /* Ensure equal width for all images */
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+.text-primary {
+  color: #ffffff; /* Change color according to your preference */
+}
+
+.bg-gray-200 {
+  background-color: #047ffb; /* Change background color according to your preference */
+}
+
+.rounded-lg {
+  border-radius: 10px; /* Adjust border radius according to your preference */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(163, 44, 44, 0.1); /* Adjust shadow according to your preference */
+}
