@@ -224,7 +224,7 @@ export default function Example() {
           {/* div two */}
           <div className=" ">
             <Link to="/latest">
-            <dt className="my-2 font-baloo font-semibold text-center text-black">Latest Offers hello</dt>    
+            <dt className="my-2 font-baloo font-semibold text-center text-black">Latest Offers</dt>    
             </Link>
             
       
