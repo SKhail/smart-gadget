@@ -9,16 +9,18 @@ import { MdClose } from 'react-icons/md'
 import { FcGoogle } from 'react-icons/fc'
 
 // ripple effects on UI npm package
-import { TEInput, TERipple } from 'tw-elements-react'
+import { TERipple } from 'tw-elements-react'
 
-//Logo
+//importing
 import BlackLogo from '../../assets/Logos/black-smart-gadgets-high-resolution-logo.png'
+import Register from './Register'
 
 const LoginPage = () => {
   const [email, setEmail] = useState('') //Setting Email Address
   const [password, setPassword] = useState('') //Setting Password
   const [showLoginPage, setShowLoginPage] = useState(true) //Setting visbility to close
   const [user, setUser] = useState(null) //relations to the google authentication
+  const [showRegisterPage, setShowRegisterPage] = useState(false) // relations to Register Page for users
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -44,9 +46,13 @@ const LoginPage = () => {
   //Closing button
   const handleClose = () => {
     setShowLoginPage(false)
+    setShowRegisterPage(false)
   }
 
-  //To handle Google Authentication
+  //btn for Register using when signing up
+  const toggleSignUpPage = () => {
+    setShowRegisterPage(!showRegisterPage)
+  }
 
   return (
     <>
@@ -54,7 +60,7 @@ const LoginPage = () => {
         <div className='fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50'>
           <div className='bg-white rounded-2xl shadow-md overflow-hidden w-full max-w-md'>
             <div className='p-8 relative'>
-              {showLoginPage && ( // Wrap the close button with conditional rendering
+              {showLoginPage && (
                 <button className='absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 focus:outline-none z-10' onClick={handleClose}>
                   <MdClose className='h-6 w-6' />
                 </button>
@@ -91,6 +97,7 @@ const LoginPage = () => {
                       <button
                         className='w-full px-6 py-2.5 text-xs font-medium text-white bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900'
                         type='button'
+                        onClick={toggleSignUpPage} // be able to click the register button
                       >
                         Register
                       </button>
@@ -136,6 +143,7 @@ const LoginPage = () => {
           </div>
         </div>
       )}
+      {showRegisterPage && <Register handleClose={toggleSignUpPage} />} {/* renders the register page and closes it */}
     </>
   )
 }
