@@ -45,9 +45,9 @@ const Navbar = ({ toggleLoginPage, darkMode, toggleDarkMode, showModal }) => {
   const [isScrolled, setIsScrolled] = useState(false) // fixed Navbar
   const [isMobileOpen, setIsMobileOpen] = useState(false) //Toggle Hamburger
 
-  const handleDarkModeToggle = () => {
-    toggleDarkMode() // Toggle ability for dark mode
-  }
+  // const handleDarkModeToggle = () => {
+  //   toggleDarkMode()
+  // }
 
   // Scroll handler
   useEffect(() => {
@@ -75,7 +75,7 @@ const Navbar = ({ toggleLoginPage, darkMode, toggleDarkMode, showModal }) => {
   return (
     <nav className={`flex items-center justify-between px-4 py-2 lg:px-12 ${darkMode ? 'bg-gray-800' : 'bg-primary'} text-white fixed top-0 w-full z-10`}>
       {/* Dark Mode Feature */}
-      <button className='dark-mode' onClick={handleDarkModeToggle}>
+      <button className='dark-mode' onClick={toggleDarkMode}>
         {darkMode ? <FaMoon /> : <FaSun />}{' '}
       </button>
 
