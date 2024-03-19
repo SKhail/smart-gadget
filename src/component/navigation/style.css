@@ -1,18 +1,3 @@
-:root {
-  --primary-color-light: #007bff; /* Light mode primary color */
-  --primary-color-dark: #0a84ff; /* Dark mode primary color */
-}
-
-.navbar {
-  background-color: var(--primary-color-light); /* Use light mode primary color */
-  color: #fff; /* Light mode text color */
-}
-
-.dark-mode .navbar {
-  background-color: var(--primary-color-dark); /* Use dark mode primary color */
-  color: #ccc; /* Dark mode text color */
-}
-
 /* Media query to hide search bar on smaller screens */
 @media (max-width: 767px) {
   .search-bar {
@@ -22,4 +7,3 @@
     display: none;
   }
 }
-
