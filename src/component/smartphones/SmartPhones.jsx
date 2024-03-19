@@ -36,12 +36,8 @@ export default function SmartPhones(props) {
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {smartphones.map((product) => (
-            <div
-              key={product.id}
-              className="group relative"
-              onClick={() => openPreview(product)}
-            >
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <div key={product.id} className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80" onClick={() => openPreview(product)}>
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
@@ -76,10 +72,12 @@ export default function SmartPhones(props) {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-md relative">
             <button
+              className="absolute top-0 right-0 m-4 text-gray-500 transition duration-300 hover:text-gray-700"
               onClick={closePreview}
-              className="absolute top-0 right-0 m-2 z-10 text-gray-600 hover:text-gray-800"
             >
-              Close
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
             <div className="flex-none w-full lg:w-1/2">
               <img
