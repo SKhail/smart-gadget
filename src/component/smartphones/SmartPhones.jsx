@@ -38,7 +38,7 @@ export default function SmartPhones(props) {
                   <p className="text-sm font-medium text-gray-900">{product.description}</p>
                 </div>
                 <div className="flex items-center flex-col">
-                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                  <p className="text-sm font-medium text-gray-900">£{product.price}</p>
                   {/* Add button to add the item to the basket */}
                   <button
                     onClick={() => handleAddToBasket(product.id)}
