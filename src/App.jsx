@@ -95,10 +95,10 @@ function App() {
     </div>
 
       <QuickView />
-      <NewItem />
+      {/* <NewItem /> */}
       <Corousal />
       <Banner />
-      <Product />
+      {/* <Product /> */}
       <Newsletter />
     </Router>
   )
