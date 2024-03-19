@@ -30,6 +30,8 @@ import googleApp from "../../assets/images/google-play.svg";
 import AppStore from "../../assets/images/apple-store.svg";
 import Logo from "../../assets/Logos/white-logo.png";
 import SubscribeButton from './subscribeButton';
+import WhiteLogo from '../../assets/Logos/white-smart-gadgets-high-resolution-logo.png'
+
 
 
 export default function Example() {
@@ -44,10 +46,10 @@ export default function Example() {
           <div className="max-w-xl lg:max-w-lg ">
             {/* logo */}
             <img
-              src={Logo}
+              src={WhiteLogo}
               alt="Logo"
-              className="logo"
-              style={{ width: "100px", height: "100px" }}
+              className="logo mb-5 mt-10"
+              style={{ width: "130px", height: "30px" }}
             />
 
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

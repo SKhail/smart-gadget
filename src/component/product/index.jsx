@@ -19,6 +19,7 @@
   }
   ```
 */
+import {Link} from "react-router-dom";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
@@ -37,6 +38,7 @@ import phones from "../../assets/images/phones.jpg";
 import headphones from "../../assets/images/headphones.jpg";
 import sales from "../../assets/images/sales.jpg";
 import newgadgets from "../../assets/images/newgadgets.jpg";
+
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -221,11 +223,14 @@ export default function Example() {
           </div>
           {/* div two */}
           <div className=" ">
-            <dt className="my-2 font-semibold text-black">Latest Offers</dt>
-            <a href="">
-              <img className=" w-80 h-72" src={sales} alt="" />
-            </a>
+            <Link to="/latest">
+            <dt className="my-2 font-semibold text-black">Latest Offers hello</dt>    
+            </Link>
             
+      
+              <img className=" w-80 h-72" src={sales} alt="" />
+          
+        
           </div>
           {/* div three */}
           <div>
@@ -266,7 +271,7 @@ export default function Example() {
           </div>
           {/* div four */}
           <div className="w-80 h-96">
-            <dt className="my-2 font-semibold text-black">Latest Gadgets</dt>
+            <dt className="my-2 font-semibold text-black">Refurbished Gadget</dt>
             <a href="">
               <img
                 className="object-cover w-80 h-72 "
