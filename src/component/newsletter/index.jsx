@@ -104,7 +104,7 @@ export default function Example() {
               </div>
               <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat testt tstes cupidatat laborum magna. Eiusmod non irure
+                Non laboris consequat testt tstescupidatat laborum magna. Eiusmod non irure
                 cupidatat duis commodo amet.
               </dd>
               {/* no spam */}
@@ -170,13 +170,13 @@ export default function Example() {
                 <dt className="mt-12 font-semibold text-white">
                   Download Our App
                 </dt>
-                <div className="rounded-md bg-white/5 p-2 mt-3 ring-1 ring-white/10">
+                <div className="">
                   <div className="flex flex-row space-x-1">
                     <a
                       href="https://play.google.com/store/games?hl=en&gl=US"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                      className="bg-state-200 box-content  py-2 rounded-lg cursor-point"
                     >
                       <img src={googleApp} alt="google play store" />
                     </a>
@@ -184,7 +184,7 @@ export default function Example() {
                       href="https://www.apple.com/uk/app-store/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg shadow-white/30 cursor-pointer hover:shadow-inner hover:shadow-black/30 duration-300 hover:text-red-600"
+                      className="bg-state-200 box-content px-2 py-2 rounded-lg shadow-lg"
                     >
                       <img src={AppStore} alt="App store" />
                     </a>
