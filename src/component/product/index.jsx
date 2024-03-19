@@ -216,7 +216,7 @@ export default function Example() {
                     alt="App store"
                   />
                 </a>
-                <h3>Item</h3>
+                <h3>Itemq</h3>
               </div>
               
             </div>
