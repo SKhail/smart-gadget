@@ -41,13 +41,10 @@ const NavData = [
   },
 ]
 
-const Navbar = ({ toggleLoginPage, darkMode, toggleDarkMode, showModal }) => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false) // fixed Navbar
   const [isMobileOpen, setIsMobileOpen] = useState(false) //Toggle Hamburger
-
-  // const handleDarkModeToggle = () => {
-  //   toggleDarkMode()
-  // }
+  const [isShowModel, setShowModel] = useState(false)
 
   // Scroll handler
   useEffect(() => {
@@ -68,12 +65,16 @@ const Navbar = ({ toggleLoginPage, darkMode, toggleDarkMode, showModal }) => {
     setIsMobileOpen(!isMobileOpen)
   }
 
-  const handleLoginButtonCLick = () => {
-    toggleLoginPage() // Call the prop function to handle state updates
+  // Used for the Login Page
+  const handleLoginButtonClick = () => {
+    setShowModel(!isShowModel) // Toggle showModal state
   }
-
   return (
-    <nav className={`flex items-center justify-between px-4 py-2 lg:px-12 ${darkMode ? 'bg-gray-800' : 'bg-primary'} text-white fixed top-0 w-full z-10`}>
+    <nav
+      className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
+        darkMode ? 'bg-gray-800' : 'bg-gradient-to-r from-blue-800 to-blue-500'
+      } text-white fixed top-0 w-full z-10`}
+    >
       {/* Dark Mode Feature */}
       <button className='dark-mode' onClick={toggleDarkMode}>
         {darkMode ? <FaMoon /> : <FaSun />}{' '}
@@ -111,14 +112,14 @@ const Navbar = ({ toggleLoginPage, darkMode, toggleDarkMode, showModal }) => {
         <Link to='/shoppingcart' className='inline-block px-4 hover:text-space-grey duration-200 font-baloo'>
           <FaShoppingCart />
         </Link>
-        <button onClick={handleLoginButtonCLick} className='font-baloo hover:text-space-grey pl-2'>
+        <button onClick={handleLoginButtonClick} className='font-baloo hover:text-space-grey pl-2'>
           <FaUser />
         </button>
       </div>
 
       {/* Login Modal */}
 
-      {showModal && <LoginPage showLoginPage={showModal} onClose={handleLoginButtonCLick} />}
+      {isShowModel && <LoginPage showLoginPage={isShowModel} onClose={handleLoginButtonClick} />}
     </nav>
   )
 }
