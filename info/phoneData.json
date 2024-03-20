@@ -217,6 +217,147 @@
       }
     ],
 
+    "laptops": [
+      {
+         "key": "laptop_1",
+         "model": "Dell Latitude 5400 14-inch (2019)",
+         "description": {
+           "ram": "16GB GDDR6",
+           "storage": "1TB Custom NVMe SSD",
+           "processor": "Custom AMD Zen 2 CPU",
+           "gpu": "Custom AMD RDNA 2 GPU"
+         },
+         "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FDell%20Latitude%205400%2014-inch%20(2019).png?alt=media&token=5d506ed6-b45c-4356-b1ad-081ffb21b0e6",
+         "imageAlt": "Xbox Series X",
+         "price": 455
+        },
+        {
+          "key": "laptop_2",
+          "model": "Lenovo ThinkPad A285 12-inch (2018)",
+          "description": {
+            "ram": "16GB GDDR6",
+            "storage": "1TB Custom NVMe SSD",
+            "processor": "Custom AMD Zen 2 CPU",
+            "gpu": "Custom AMD RDNA 2 GPU"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FLenovo%20ThinkPad%20A285%2012-inch%20(2018).png?alt=media&token=40f42639-0013-4792-aa41-adf7ebfd1da8",
+          "imageAlt": "Xbox Series X",
+          "price": 455
+         },
+         {
+          "key": "laptop_3",
+          "model": "Microsoft Surface Pro 7 12-inch",
+          "description": {
+            "ram": "16GB GDDR6",
+            "storage": "1TB Custom NVMe SSD",
+            "processor": "Custom AMD Zen 2 CPU",
+            "gpu": "Custom AMD RDNA 2 GPU"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FMicrosoft%20Surface%20Pro%207%2012-inch.png?alt=media&token=658d5b61-f86b-4dc0-947a-d2b6ad840a3e",
+          "imageAlt": "Xbox Series X",
+          "price": 422
+         },
+         {
+          "key": "laptop_4",
+          "model": "HP EliteBook 840 G6 14-inch (2018)'",
+          "description": {
+            "ram": "16GB GDDR6",
+            "storage": "1TB Custom NVMe SSD",
+            "processor": "Custom AMD Zen 2 CPU",
+            "gpu": "Custom AMD RDNA 2 GPU"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FHP%20EliteBook%20840%20G6%2014-inch%20(2018).png?alt=media&token=00a63534-7ef2-4980-b986-1c5e8bc4c1a7",
+          "imageAlt": "Xbox Series X",
+          "price": 422
+         },
+         {
+          "key": "laptop_5",
+          "model": "Dell Latitude 7280 12-inch (2017)",
+          "description": {
+            "ram": "16GB GDDR6",
+            "storage": "1TB Custom NVMe SSD",
+            "processor": "Custom AMD Zen 2 CPU",
+            "gpu": "Custom AMD RDNA 2 GPU"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FDell%20Latitude%207280%2012-inch%20(2017).png?alt=media&token=dbad9657-358d-4315-b77d-23502bfdbd1e",
+          "imageAlt": "Xbox Series X",
+          "price": 422
+         }
+  ],
+
+    "specialdeals": [
+      {
+        "id": "specialdeal_1",
+        "model": "Nintendo Wii Sports",
+        "description": {
+          "ram": "88MB",
+          "storage": "512MB",
+          "processor": "Broadway",
+          "gpu": "Hollywood"
+        },
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc5.jpg?alt=media&token=17f86b77-535a-4441-b37a-1b4d6777572d",
+        "imageAlt": "Nintendo Wii Sports",
+        "price": 100
+      },
+      {
+        "id": "specialdeal_2",
+        "model": "Samsung Z Flip5",
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fsamsung-galaxy-Flip5-512-mint-desktop-detail-1-WebP-Format-488.webp?alt=media&token=d8d83300-b07a-4554-9b99-1e9de29bdd3d" ,
+      "imageAlt": "Samsung Galaxy Z Flip5",
+      "price": 300,
+      "description": {
+        "ram": "8GB",
+        "storage": "512GB",
+        "camera": "64MP",
+        "battery": "4500mAh",
+        "processor": "Snapdragon 888",
+        "os": "Android 12"
+      }
+      },
+      {
+        "id": "specialdeal_3",
+        "model": "Playstation 5",
+        "description": {
+          "ram": "16GB GDDR6",
+          "storage": "825GB Custom SSD",
+          "processor": "Custom AMD Zen 2 CPU",
+          "gpu": "Custom AMD RDNA 2 GPU"
+        },
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fc2.jpg?alt=media&token=eb8b12e1-51dd-459d-88e2-99df3fffb093",
+        "imageAlt": "Playstation 5",
+        "price": 110
+      },
+      {
+        "id": "specialdeal_4",
+        "model": "iPhone 15 Pro Max",
+          "price": 200,
+          "description": {
+            "ram": "6GB",
+            "storage": "128GB",
+            "camera": "12MP",
+            "battery": "4300mAh",
+            "processor": "A15 Bionic",
+            "os": "iOS 15"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488.webp?alt=media&token=7feac7f1-2be6-47ab-9920-d6cf9ab17ffb"
+      },
+      {
+        "id": "specialdeal_5",
+        "model": "iPhone 15 Pro Max",
+        "price": 200,
+        "description": {
+          "ram": "6GB",
+          "storage": "128GB",
+          "camera": "12MP",
+          "battery": "4300mAh",
+          "processor": "A15 Bionic",
+          "os": "iOS 15"
+        },
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2Fiphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488.webp?alt=media&token=7feac7f1-2be6-47ab-9920-d6cf9ab17ffb"
+      }
+
+    ],
+
     "smartphones": [
       {
         "key": "smartphone_1",
