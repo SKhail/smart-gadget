@@ -117,6 +117,8 @@ Search result and search history drop down
 
 This app was contribute to by:
 
+Said [**Click here**](https://github.com/SKhail) to view their git hub page 
+
 Rahmatullah [**Click here**](https://github.com/RahmatullahZadran) to view their git hub page
 
 Deborah [**Click here**](https://github.com/dalabi91) to view their git hub page
