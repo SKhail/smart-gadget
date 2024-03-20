@@ -160,7 +160,7 @@ function CarouselDefault() {
                     ))}
                   </ul>
                 </div>
-                <p className="text-gray-700 font-semibold">${selectedProduct.price}</p>
+                <p className="text-gray-700 font-semibold">£{selectedProduct.price}</p>
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToCart(selectedProduct.key)}

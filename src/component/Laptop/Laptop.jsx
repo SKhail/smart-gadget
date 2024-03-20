@@ -70,7 +70,7 @@ export default function Laptops(props) {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">{product.model}</h3>
-                  <p className="mt-1 text-sm text-gray-500"> ${product.price}</p>
+                  <p className="mt-1 text-sm text-gray-500"> £{product.price}</p>
                 </div>
                 <div className="flex items-center flex-col">
                   <button
@@ -123,7 +123,7 @@ export default function Laptops(props) {
                     ))}
                   </ul>
                 </div>
-                <p className="text-gray-700 font-semibold">${selectedProduct.price}</p>
+                <p className="text-gray-700 font-semibold">£{selectedProduct.price}</p>
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToBasket(selectedProduct.key)}
