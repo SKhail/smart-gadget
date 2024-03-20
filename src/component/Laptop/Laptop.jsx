@@ -25,7 +25,7 @@ export default function Laptop(props) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+        <h2 className="text-2xl font-bold tracking-tight text-baloo-900">
           Laptop
         </h2>
 
@@ -44,16 +44,16 @@ export default function Laptop(props) {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">{product.name}</h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <h3 className="text-sm text-baloo-700">{product.name}</h3>
+                  <p className="mt-1 text-sm text-baloo-500">{product.color}</p>
                 </div>
                 <div className="flex items-center flex-col">
-                  <p className="text-sm font-medium text-gray-900">
+                  <p className="text-sm font-medium text-baloo-900">
                     £{product.price}
                   </p>
                   <button
                     onClick={() => handleAddToBasket(product.id)}
-                    className="mt-2 text-sm font-medium text-white bg-black px-3 py-1 rounded-md hover:bg-gray-900"
+                    className="mt-2 text-sm font-medium text-baloo bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 px-3 py-1 rounded-md"
                   >
                     Add to cart
                   </button>
@@ -69,13 +69,24 @@ export default function Laptop(props) {
       {selectedProduct && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-md relative">
-          <button
-              className="absolute top-0 right-0 m-4 text-gray-500 transition duration-300 hover:text-gray-700"
+            <button
+              className="absolute top-0 right-0 m-4 text-baloo-500 transition duration-300 hover:text-baloo-700"
               onClick={closePreview}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
             </button>
             <div className="flex-none w-full lg:w-1/2">
               <img
@@ -86,7 +97,7 @@ export default function Laptop(props) {
             </div>
             <h2 className="text-xl font-bold mb-4">{selectedProduct.name}</h2>
             <p>{selectedProduct.description}</p>
-            <p className="text-gray-600 mt-2">
+            <p className="text-baloo-600 mt-2">
               Price: £{selectedProduct.price}
             </p>
             <button
@@ -94,7 +105,7 @@ export default function Laptop(props) {
                 handleAddToBasket(selectedProduct.id);
                 closePreview();
               }}
-              className="mt-4 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900"
+              className="mt-4 bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo px-4 py-2 rounded-md"
             >
               Add to Cart
             </button>
