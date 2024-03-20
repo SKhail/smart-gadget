@@ -11,7 +11,7 @@ import SpecialDeals from './component/specialdeals/SpecialDeals'
 import Home from './component/home/Home'
 import Consoles from './component/consoles/Consoles'
 import Laptops from './component/Laptop/Laptop'
-import ShoppingCart from './component/cart/cart'
+import ShoppingCart from './component/cart/index'
 import SmartPhones from './component/smartphones/SmartPhones'
 import QuickView from './component/quickview'
 
@@ -78,11 +78,11 @@ function App() {
           <Route path='/latest' element={<Latest />} />
         </Routes>
 
-        <div className='app'>
+        {/* <div className='app'>
           {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
           {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
-        </div>
+        </div> */}
 
         <QuickView />
         <NewItem />
@@ -92,6 +92,8 @@ function App() {
         <Newsletter />
       </div>
     </Router>
+
+    
   )
 }
 
