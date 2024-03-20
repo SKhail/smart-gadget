@@ -18,6 +18,7 @@
 
 Welcome to Smart Gadget App, your go-to ecommerce app for discovering and purchasing the latest gadgets, including smartphones, laptops, gaming consoles, earbuds, and more. With an extensive range of cutting-edge products and a user-friendly platform, Smart Gadget App offers an unparalleled shopping experience for tech enthusiasts and novice alike.
 
+
 ### Features
 
 - <u>Wide Selection</u>: Explore an extensive collection of gadgets from top brands worldwide, conveniently categorized for easy navigation.
@@ -43,6 +44,18 @@ We value your feedback! If you have any suggestions, questions, or concerns, ple
 Join the Smart Gadget App community on social media to stay connected with fellow tech enthusiasts and receive the latest updates and announcements. Follow us on Twitter, Facebook, and Instagram to be part of the conversation.
 
 Thank you for choosing Smart Gadget App for all your gadget needs. Happy shopping!
+
+### Table of contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [FutureDevelopment](#FutureDevelopment)
+- [Resorces](#resorces)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
+- [Lisence](#lisence)
+- [Badges](#badges)
+
 
 ## Installation
 
@@ -85,16 +98,26 @@ Search result and search history drop down
 - ...
 - ...
 
-## Resource
+## Resources
 
 - [**Tailwindcss**](https://tailwindcss.com/)
 - [**Material-Tailwind**](https://www.material-tailwind.com/docs/react/carousel#carousel-with-content)
 - [**Firebase**](https://console.firebase.google.com/u/2/)
 - [**Slick**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
 
+## Technologies
+
+- Nodejs
+- HTML
+- React 
+- Javascript 
+- CSS 
+
 ## Contributors
 
 This app was contribute to by:
+
+Said [**Click here**](https://github.com/SKhail) to view their git hub page 
 
 Rahmatullah [**Click here**](https://github.com/RahmatullahZadran) to view their git hub page
 
@@ -110,7 +133,7 @@ Rosemary [**Click here**](https://github.com/RoseBenson) to view their git hub p
 
 ## License
 
-Please refer to the license in the repo.
+![MIT License](./src/assets/images/License-MIT-blue.svg)
 
 ## Badges
 
