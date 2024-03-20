@@ -78,17 +78,13 @@ function App() {
           <Route path='/latest' element={<Latest />} />
         </Routes>
 
-        <div className='app'>
+        {/* <div className='app'>
           {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
           {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
-        </div>
+        </div> */}
 
-        <QuickView />
-        <NewItem />
-        <Corousal />
-        <Banner />
-        <Product />
+        
         <Newsletter />
       </div>
     </Router>
