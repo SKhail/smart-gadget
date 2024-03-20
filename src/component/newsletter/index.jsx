@@ -52,45 +52,28 @@ export default function Example() {
               style={{ width: "130px", height: "30px" }}
             />
 
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-baloo font-bold tracking-tight text-white sm:text-4xl">
               Subscribe to our newsletter.
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-300">
+            <p className="mt-4 text-lg font-baloo leading-8 text-gray-300">
               Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
               velit quis. Duis tempor incididunt dolore test1.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
-              {/* <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                onChange="handleEmailChange"
-                required
-                className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                placeholder="Enter your email"
-              />
-              <button
-                type="submit"
-                onClick="handleSubscribe"
-                className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Subscribe
-              </button> */}
               {<SubscribeButton/>}
             </div>
             {/* section 2 our app */}
-            <dt className="mt-9 font-semibold text-white">About</dt>
+            <dt className="mt-12 font-baloo font-semibold text-white">About</dt>
             <a href="">
               {" "}
-              <dd className="mt-1 leading-7 text-gray-400">Our project</dd>
+              <dd className="mt-1 leading-7 font-baloo  text-gray-400">Our project</dd>
             </a>
 
             <a href="#">
-              <dd className="mt-0 leading-7 text-gray-400">Careers</dd>{" "}
+              <dd className="mt-0 leading-7 font-baloo text-gray-400">Careers</dd>{" "}
+            </a>
+            <a href="#">
+              <dd className="mt-0 leading-7 font-baloo text-gray-400">Terms and conditions</dd>{" "}
             </a>
           </div>
 
@@ -104,8 +87,8 @@ export default function Example() {
                   aria-hidden="true"
                 />
               </div>
-              <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
-              <dd className="mt-2 leading-7 text-gray-400">
+              <dt className="mt-4 font-baloo font-semibold text-white">Weekly articles</dt>
+              <dd className="mt-2 leading-7 font-baloo  text-gray-400">
                 Non laboris consequat testt tstescupidatat laborum magna. Eiusmod non irure
                 cupidatat duis commodo amet.
               </dd>
@@ -116,8 +99,8 @@ export default function Example() {
                   aria-hidden="true"
                 />
               </div>
-              <dt className="mt-4 font-semibold text-white">No spam</dt>
-              <dd className="mt-2 leading-7 text-gray-400">
+              <dt className="mt-4 font-baloo font-semibold text-white">No spam</dt>
+              <dd className="mt-2 leading-7 font-baloo text-gray-400">
                 Officia excepteur ullamco ut sint duis proident non adipisicing.
                 Voluptate incididunt anim.
               </dd>
@@ -126,7 +109,7 @@ export default function Example() {
             <div className="flex flex-col row-span-2 items-start">
               {/* folow us */}
               <div className="flex flex-col items-start">
-                <dt className="mt-0 font-semibold text-white">Follow us</dt>
+                <dt className="mt-0 font-semibold font-baloo text-white">Follow us</dt>
                 <div className="mt-3 leading-7 flex flex-row space-x-5 text-4xl ">
                   {/* social Icons */}
                   <a
@@ -169,7 +152,7 @@ export default function Example() {
 
               {/* downlowd our App */}
               <div className="flex flex-col items-start">
-                <dt className="mt-12 font-semibold text-white">
+                <dt className="mt-20 font-semibold font-baloo text-white">
                   Download Our App
                 </dt>
                 <div className="">
@@ -197,11 +180,11 @@ export default function Example() {
               {/* section 4  payment*/}
 
               <div className="flex flex-col items-start">
-                <dt className="mt-12 font-semibold text-white">
+                <dt className="mt-16 font-semibold font-baloo text-white">
                   Payment methods
                 </dt>
 
-                <dd className="mt-1 leading-7 text-gray-400">
+                <dd className="mt-1 leading-7 font-baloo text-gray-400">
                   Payments 100% secured
                 </dd>
 

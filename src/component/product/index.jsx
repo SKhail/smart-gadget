@@ -182,33 +182,33 @@ export default function Example() {
         {/* <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-4 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16"> */}
 
         {/* New template */}
-        <div class=" mt-5  lg:gap-2 md:gap-8 sm:gap:12 mx-5  px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-                    {/* div one */}
-          <div>
-            <dt className="my-2 font-semibold text-black">
+        <div className=" mt-5  lg:gap-2 md:gap-8 sm:gap:12 mx-5  px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto">          
+              {/* div one */}
+          <div className="">
+            <dt className="my-2 font-semibold font-baloo text-black">
               Headphones and Speakers
             </dt>
 
             <div className=" grid grid-cols-2 gap-6 w-80 h-20">
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img className="h-28 w-44	" src={phones} alt="App store" />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img className="h-28 w-44 	" src={laptops} alt="App store" />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img className="h-28 w-44 	" src={tablets} alt="App store" />
                 </a>
                 <h3>Item</h3>
               </div>
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img
                     className="h-28 w-44 	"
@@ -224,7 +224,7 @@ export default function Example() {
           {/* div two */}
           <div className=" ">
             <Link to="/latest">
-            <dt className="my-2 font-baloo font-semibold text-center text-black">Latest Offers hello</dt>    
+            <dt className="my-2 font-baloo font-semibold text-black">Latest Offers</dt>    
             </Link>
             
       
@@ -234,30 +234,30 @@ export default function Example() {
           </div>
           {/* div three */}
           <div>
-            <dt className="my-2 font-semibold text-black">
+            <dt className="my-2 font-baloo font-semibold font-baloo font-semibold text-black">
               Headphones and Speakers
             </dt>
 
             <div className=" grid grid-cols-2 gap-6 w-80 h-20">
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img className="h-28 w-44	" src={phones} alt="App store" />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
+              <div className=" font-baloo">
                 <a href="">
                   <img className="h-28 w-44 	" src={laptops} alt="App store" />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
+              <div className=" font-baloo">
                 <a href="">
                   <img className="h-28 w-44 	" src={tablets} alt="App store" />
                 </a>
                 <h3>Item</h3>
               </div>
-              <div className="">
+              <div className="font-baloo">
                 <a href="">
                   <img
                     className="h-28 w-44 	"
@@ -271,7 +271,7 @@ export default function Example() {
           </div>
           {/* div four */}
           <div className="w-80 h-96">
-            <dt className="my-2 font-semibold text-black">Refurbished Gadget</dt>
+            <dt className="my-2 font-semibold text-black font-baloo font-semibold">Refurbished Gadget</dt>
             <a href="">
               <img
                 className="object-cover w-80 h-72 "
@@ -286,7 +286,7 @@ export default function Example() {
         <div>
           <div>
             <div>
-              <h1 className="  sm:hidden md:block text-center flex justify-center mb-5 text-3xl font-bold tracking-tight  sm:text-4xl">
+              <h1 className="  sm:hidden md:block text-center font-baloo flex justify-center mb-5 text-3xl font-bold tracking-tight  sm:text-4xl">
                 Our favorite brands
               </h1>
             </div>
