@@ -121,7 +121,7 @@ function CarouselDefault() {
               onClick={() => openQuickView(item)} // Open quick view on image click
             />
 
-            <p className="text-center text-baloo font-bold text-base bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 py-1 px-2 rounded-lg shadow-lg border-2 border-primary inline-block">
+            <p className="text-center text-white font-bold text-base bg-black py-1 px-2 rounded-lg shadow-lg border-2 border-primary inline-block">
               {item.model}
             </p>
           </div>
@@ -141,7 +141,9 @@ function CarouselDefault() {
             <div className="relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row">
               {/* Close Button */}
               <button
-                className="absolute top-0 right-0 m-4 text-gray-500 transition duration-300 hover:text-gray-700"
+                className="absolute top-0 right-0 m-4 text-gray-500  
+                
+                transition duration-300 hover:text-gray-700"
                 onClick={closeQuickView}
               >
                 <svg
@@ -177,20 +179,22 @@ function CarouselDefault() {
                   <ul className="list-disc list-inside">
                     {Object.entries(selectedProduct.description).map(
                       ([key, value]) => (
-                        <li key={key} className="text-gray-700">
+                        <li key={key} className="text-gray-700 text-baloo">
                           <span className="font-semibold">{key}:</span> {value}
                         </li>
                       )
                     )}
                   </ul>
                 </div>
-                <p className="text-gray-700 font-semibold">
+
+                <p className="text-gray-700 font-baloo font-semibold">
                   ${selectedProduct.price}
                 </p>
+
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToCart(selectedProduct.key)}
-                  className="block w-full py-2 text-center bg-gray-800 text-baloo font-semibold rounded-md hover:bg-gray-700 mt-4"
+                  className="block w-full py-2 text-center bg-gradient-to-r from-blue-800 to-blue-500 text-white font-semibold rounded-md hover:bg-gray-700 mt-4"
                 >
                   Add to Cart
                 </button>
@@ -202,13 +206,13 @@ function CarouselDefault() {
 
       {/* Previous and Next Buttons */}
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo px-3 py-2 rounded-full z-10"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gradient-to-r from-blue-800 to-blue-500 text-white px-3 py-2 rounded-full z-10"
         onClick={goToPrevSlide}
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo px-3 py-2 rounded-full z-10"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gradient-to-r from-blue-800 to-blue-500 text-white px-3 py-2 rounded-full z-10"
         onClick={goToNextSlide}
       >
         <FontAwesomeIcon icon={faChevronRight} />

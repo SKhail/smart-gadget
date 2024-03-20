@@ -82,10 +82,10 @@ export default function Consoles(props) {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-baloo-700">{product.model}</h3>
-                  <p className="mt-1 text-sm text-baloo-500">
+                  <h3 className="text-sm text-gray-700">{product.model}</h3>
+                  <p className="mt-1 text-sm text-gray-500">
                     {" "}
-                    ${product.price}
+                    £{product.price}
                   </p>
                 </div>
                 <div className="flex items-center flex-col">
@@ -158,8 +158,8 @@ export default function Consoles(props) {
                     )}
                   </ul>
                 </div>
-                <p className="text-baloo-700 font-semibold">
-                  ${selectedProduct.price}
+                <p className="text-gray-700 font-semibold">
+                  £{selectedProduct.price}
                 </p>
                 {/* Add to Cart Button */}
                 <button
