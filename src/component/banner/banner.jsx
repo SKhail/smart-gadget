@@ -6,7 +6,7 @@ import "./banner.css";
 function Banner() {
   return (
     <div className="carousel-container relative overflow-hidden">
-      <Carousel>
+      <Carousel autoplay={true} interval={1000}>
         <img
           src="https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2F1.png?alt=media&token=9fa16606-13b1-4a88-a630-dab31c66e3f5"
           alt="image 1"
