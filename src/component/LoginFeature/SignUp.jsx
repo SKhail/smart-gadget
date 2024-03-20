@@ -1,17 +1,42 @@
 import React, { useState } from 'react'
-
-//Importing Logo
+import { createUserWithEmailAndPassword } from 'firebase/auth' // Correct import statement for createUserWithEmailAndPassword
+import { auth } from '../corousal/firebase' // Assuming firebase is properly initialized and exported from 'firebase.js'
 import BlackLogo from '../../assets/Logos/black-smart-gadgets-high-resolution-logo.png'
-
-//Import Icons
 import { MdClose } from 'react-icons/md'
+import { toast } from 'react-toastify' // Assuming you have toast notification setup properly
 
-const Register = ({ handleClose }) => {
-  const [email, setEmail] = useState('') // Setting Email Address
-  const [password, setPassword] = useState('') // Setting Password
+const SignUp = ({ handleClose }) => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleRegister = async (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault()
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential)
+        toast.success('Account created successfully!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+        handleClose() //Close once the user has registered successfully
+      })
+      .catch((error) => {
+        console.log(error)
+        toast.error('Error creating account!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
+      })
   }
 
   return (
@@ -22,10 +47,8 @@ const Register = ({ handleClose }) => {
             <MdClose className='h-6 w-6' />
           </button>
           <img className='mx-auto w-48 py-1' src={BlackLogo} alt='logo' />
-
           <h1 className='text-2xl font-semibold mb-4'>Register</h1>
-
-          <form onSubmit={handleRegister}>
+          <form onSubmit={handleSignUp}>
             <div className='mb-2'>
               <input
                 type='text'
@@ -46,7 +69,6 @@ const Register = ({ handleClose }) => {
                 className='border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               />
             </div>
-
             <button
               type='submit'
               className='w-full px-6 py-2.5 text-xs font-medium text-white bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900'
@@ -60,4 +82,4 @@ const Register = ({ handleClose }) => {
   )
 }
 
-export default Register
+export default SignUp
