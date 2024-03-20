@@ -47,14 +47,14 @@ Thank you for choosing Smart Gadget App for all your gadget needs. Happy shoppin
 
 ### Table of contents
 
-- Installation
-- Usage
-- Future Development
-- Resorces 
-- Technologies
-- Contributors
-- Lisence 
-- Badges
+- [Installation](#installation)
+- [Usage](#usage)
+- [FutureDevelopment](#FutureDevelopment)
+- [Resorces](#resorces)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
+- [Lisence](#lisence)
+- [Badges](#badges)
 
 
 ## Installation
