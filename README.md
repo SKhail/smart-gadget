@@ -92,6 +92,14 @@ Search result and search history drop down
 - [**Firebase**](https://console.firebase.google.com/u/2/)
 - [**Slick**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
 
+## Technologies
+
+- Nodejs
+- HTML
+- React 
+- Javascript 
+- CSS 
+
 ## Contributors
 
 This app was contribute to by:
