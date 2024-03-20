@@ -133,7 +133,7 @@ Rosemary [**Click here**](https://github.com/RoseBenson) to view their git hub p
 
 ## License
 
-Please refer to the license in the repo.
+![MIT License](./src/assets/images/License-MIT-blue.svg)
 
 ## Badges
 
