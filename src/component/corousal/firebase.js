@@ -4,17 +4,15 @@ import { getAuth } from "firebase/auth"; // Import getAuth from Firebase Auth
 
 
 
-
 const firebaseConfig = {
-  // Your Firebase configuration
-  apiKey: "AIzaSyA-SHj4UOv6bKM3qvw6rcl2QPEWwSjnIDs",
-  authDomain: "smartgadget-7af95.firebaseapp.com",
-  databaseURL: "https://smartgadget-7af95-default-rtdb.firebaseio.com",
-  projectId: "smartgadget-7af95",
-  storageBucket: "smartgadget-7af95.appspot.com",
-  messagingSenderId: "904972970461",
-  appId: "1:904972970461:web:5b335f2658bd0d585d6e34",
-  measurementId: "G-XTG570J7TN"
+  apiKey: "AIzaSyBwG0-qvQn3Qph93_uJaFY9ufyZv4P_kJI",
+  authDomain: "smartgadget-e76bd.firebaseapp.com",
+  databaseURL: "https://smartgadget-e76bd-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "smartgadget-e76bd",
+  storageBucket: "smartgadget-e76bd.appspot.com",
+  messagingSenderId: "224274265516",
+  appId: "1:224274265516:web:ee57ce525be09694bcb609",
+  measurementId: "G-QX51V1KCPJ"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -30,4 +28,28 @@ export default firebaseApp;
 
 
 
+
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBwG0-qvQn3Qph93_uJaFY9ufyZv4P_kJI",
+//   authDomain: "smartgadget-e76bd.firebaseapp.com",
+//   databaseURL: "https://smartgadget-e76bd-default-rtdb.europe-west1.firebasedatabase.app",
+//   projectId: "smartgadget-e76bd",
+//   storageBucket: "smartgadget-e76bd.appspot.com",
+//   messagingSenderId: "224274265516",
+//   appId: "1:224274265516:web:ee57ce525be09694bcb609",
+//   measurementId: "G-QX51V1KCPJ"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
