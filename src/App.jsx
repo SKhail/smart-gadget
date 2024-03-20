@@ -11,7 +11,7 @@ import SpecialDeals from './component/specialdeals/SpecialDeals'
 import Home from './component/home/Home'
 import Consoles from './component/consoles/Consoles'
 import Laptops from './component/Laptop/Laptop'
-import ShoppingCart from './component/cart/cart'
+import ShoppingCart from './component/cart/index'
 import SmartPhones from './component/smartphones/SmartPhones'
 import QuickView from './component/quickview'
 
