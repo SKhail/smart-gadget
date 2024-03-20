@@ -1,6 +1,6 @@
 <div align="center">
 
-# Smart Gadget App App
+# Smart Gadget App
 
     Empower Your World: Embrace Innovation with Our Latest Smart Gadget App!
 
@@ -8,14 +8,11 @@
 
 ## User Story
 
-As a user,
-I want to be able to ....
+- To explore Products: Customers can easily browse Smart Gadgets website finding a wide range of products that suit their preferences and needs.
+- For effortless Shopping: Customers can effortlessly add items to their shopping cart and conveniently view the total cost of their order, allowing them to keep track of their purchases before proceeding to checkout.
+- Seemless Checkout: Customers can confidently complete their purchases knowing their transactions are safe and secure.
+- Registration/Login: Users to be able to easily register and log-in to their accounts.
 
-## Acceptance criteria
-
-An ecommance App that when ...
-
-- When a user ...
 
 ## Description
 
@@ -49,11 +46,25 @@ Thank you for choosing Smart Gadget App for all your gadget needs. Happy shoppin
 
 ## Installation
 
-....
+#### NPM Install
+
+#### Clone repository using SSH:
+    - Click on the "Code" button and select "SSH"
+    - Copy the SSH URL provided
+    - In your terminal, navigate to the directory where you want to clone the repository
+    - Run the command: git clone <SSH_URL> : replacing <SSH_URL> with the copied SSH URL.
+
+#### Clone repository using HTTPS:
+    - Click on the "Code" button and select "HTTPS"
+    - Copy the HTTPS URL provided
+    - In your terminal, navigate to the directory where you want to clone the repository
+    - Run the command: git clone <HTTPS_URL> : replacing <HTTPS_URL> with the copied HTTPS URL.
 
 ## Usage
 
 This webpage can be accessed by [**clicking here**](...)
+
+The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 
 <div align="center">
 
@@ -79,7 +90,7 @@ Search result and search history drop down
 - [**Tailwindcss**](https://tailwindcss.com/)
 - [**Material-Tailwind**](https://www.material-tailwind.com/docs/react/carousel#carousel-with-content)
 - [**Firebase**](https://console.firebase.google.com/u/2/)
-- [**Slick**]() need to add link
+- [**Slick**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
 
 ## Contributors
 
