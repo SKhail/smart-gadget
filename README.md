@@ -18,6 +18,7 @@
 
 Welcome to Smart Gadget App, your go-to ecommerce app for discovering and purchasing the latest gadgets, including smartphones, laptops, gaming consoles, earbuds, and more. With an extensive range of cutting-edge products and a user-friendly platform, Smart Gadget App offers an unparalleled shopping experience for tech enthusiasts and novice alike.
 
+
 ### Features
 
 - <u>Wide Selection</u>: Explore an extensive collection of gadgets from top brands worldwide, conveniently categorized for easy navigation.
@@ -43,6 +44,18 @@ We value your feedback! If you have any suggestions, questions, or concerns, ple
 Join the Smart Gadget App community on social media to stay connected with fellow tech enthusiasts and receive the latest updates and announcements. Follow us on Twitter, Facebook, and Instagram to be part of the conversation.
 
 Thank you for choosing Smart Gadget App for all your gadget needs. Happy shopping!
+
+### Table of contents
+
+- Installation
+- Usage
+- Future Development
+- Resorces 
+- Technologies
+- Contributors
+- Lisence 
+- Badges
+
 
 ## Installation
 
@@ -85,7 +98,7 @@ Search result and search history drop down
 - ...
 - ...
 
-## Resource
+## Resources
 
 - [**Tailwindcss**](https://tailwindcss.com/)
 - [**Material-Tailwind**](https://www.material-tailwind.com/docs/react/carousel#carousel-with-content)
