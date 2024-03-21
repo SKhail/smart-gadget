@@ -97,13 +97,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({ darkMode }) {
-  console.log(darkMode, 'is working ')
+export default function Example() {
   // const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   // const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className={`bg-${darkMode ? 'gray-800' : 'white'}`}>
+    <div className='bg-white'>
       <div className='pt-6'>
         {/* <nav aria-label="Breadcrumb">
           <ol
