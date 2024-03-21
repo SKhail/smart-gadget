@@ -88,11 +88,10 @@ The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 
 ### Screenshot of App function
 
-Landing Page
-![](...)
+![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
 
 Search result and search history drop down
-![](...)
+![Search reselts]()
 
 ... add more screenshot as needed
 
