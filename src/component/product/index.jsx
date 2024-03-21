@@ -62,7 +62,7 @@ export default function Example() {
                 </Link>
               </div>
               <div className=" font-baloo">
-                <Link to='/Laptop'>
+                <Link to='/Laptops'>
                   <img
                     className="h-28 w-44 rounded-lg	"
                     src="https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/workPC.jpg?alt=media&token=3c0c6e13-8713-462e-bec8-a78156f17ba8"

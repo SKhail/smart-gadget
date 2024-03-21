@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { FaSearch, FaUser, FaShoppingCart, FaHome, FaGamepad, FaLaptop, FaMobileAlt } from 'react-icons/fa'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { FaSun, FaMoon } from 'react-icons/fa' // Dark Mode Icons
@@ -94,9 +94,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <ul className={`lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col' : 'hidden lg:flex'}`}>
         {NavData.map((data, index) => (
           <li key={index}>
-            <Link to={data.link} className='inline-block px-7 hover:text-space-grey duration-200 font-baloo'>
+            <NavLink to={data.link} className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}`}>
               {window.innerWidth < 768 ? <span className='font-baloo'>{data.icon}</span> : data.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -106,6 +106,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar' />
         <FaSearch className='searchIcon absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-baloo' />
       </div>
+
+      {/* className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            } */}
 
       {/* Shopping Cart and Login Button */}
       <div className='hidden lg:block'>
