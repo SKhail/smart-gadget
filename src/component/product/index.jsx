@@ -88,7 +88,7 @@ export default function Example() {
           <div className=" ">
             <Link to="/specialdeals">
               <dt className="my-2 font-baloo font-semibold text-black flex justify-center">
-                Latest Offers test
+                Latest Offers
               </dt>
             </Link>
 
