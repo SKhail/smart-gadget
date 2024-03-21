@@ -19,26 +19,25 @@
   }
   ```
 */
-import {Link} from "react-router-dom";
-import { useState } from "react";
-import { StarIcon } from "@heroicons/react/20/solid";
-import { RadioGroup } from "@headlessui/react";
-import Samsung from "../../assets/Logos/samsung_brl.webp";
-import Apple from "../../assets/Logos/apple_brl.webp";
-import Google from "../../assets/Logos/google9a.webp";
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { StarIcon } from '@heroicons/react/20/solid'
+import { RadioGroup } from '@headlessui/react'
+import Samsung from '../../assets/Logos/samsung_brl.webp'
+import Apple from '../../assets/Logos/apple_brl.webp'
+import Google from '../../assets/Logos/google9a.webp'
 // import Bose from "../../assets/Logos";
-import Dyson from "../../assets/Logos/dyson-logo-white.webp";
-import LG from "../../assets/Logos/lg_brl_23.webp";
-import Sonny from "../../assets/Logos/sony_brl.webp";
-import Bosh from "../../assets/Logos/bosch-logo-brl.webp";
-import Microsoft from "../../assets/Logos/microsoft_brl.webp";
-import tablets from "../../assets/images/tablets.jpg";
-import laptops from "../../assets/images/laptopssm.jpg";
-import phones from "../../assets/images/phones.jpg";
-import headphones from "../../assets/images/headphones.jpg";
-import sales from "../../assets/images/sales.jpg";
-import newgadgets from "../../assets/images/newgadgets.jpg";
-
+import Dyson from '../../assets/Logos/dyson-logo-white.webp'
+import LG from '../../assets/Logos/lg_brl_23.webp'
+import Sonny from '../../assets/Logos/sony_brl.webp'
+import Bosh from '../../assets/Logos/bosch-logo-brl.webp'
+import Microsoft from '../../assets/Logos/microsoft_brl.webp'
+import tablets from '../../assets/images/tablets.jpg'
+import laptops from '../../assets/images/laptopssm.jpg'
+import phones from '../../assets/images/phones.jpg'
+import headphones from '../../assets/images/headphones.jpg'
+import sales from '../../assets/images/sales.jpg'
+import newgadgets from '../../assets/images/newgadgets.jpg'
 
 // const product = {
 //   name: "Basic Tee 6-Pack",
@@ -92,19 +91,20 @@ import newgadgets from "../../assets/images/newgadgets.jpg";
 //   details:
 //     'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 // };
-const reviews = { href: "#", average: 4, totalCount: 117 };
+const reviews = { href: '#', average: 4, totalCount: 117 }
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example({ darkMode }) {
+  console.log(darkMode, 'is working ')
   // const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   // const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className="bg-white">
-      <div className="pt-6">
+    <div className={`bg-${darkMode ? 'gray-800' : 'white'}`}>
+      <div className='pt-6'>
         {/* <nav aria-label="Breadcrumb">
           <ol
             role="list"
@@ -182,102 +182,82 @@ export default function Example() {
         {/* <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-4 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16"> */}
 
         {/* New template */}
-        <div class=" mt-5  lg:gap-2 md:gap-8 sm:gap:12 mx-5  px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-                    {/* div one */}
+        <div class=' mt-5  lg:gap-2 md:gap-8 sm:gap:12 mx-5  px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 '>
+          {/* div one */}
           <div>
-            <dt className="my-2 font-semibold text-black">
-              Headphones and Speakers
-            </dt>
+            <dt className='my-2 font-semibold text-black'>Headphones and Speakers</dt>
 
-            <div className=" grid grid-cols-2 gap-6 w-80 h-20">
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44	" src={phones} alt="App store" />
+            <div className=' grid grid-cols-2 gap-6 w-80 h-20'>
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44	' src={phones} alt='App store' />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44 	" src={laptops} alt="App store" />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={laptops} alt='App store' />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44 	" src={tablets} alt="App store" />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={tablets} alt='App store' />
                 </a>
                 <h3>Item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img
-                    className="h-28 w-44 	"
-                    src={headphones}
-                    alt="App store"
-                  />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={headphones} alt='App store' />
                 </a>
                 <h3>Itemq</h3>
               </div>
-              
             </div>
           </div>
           {/* div two */}
-          <div className=" ">
-            <Link to="/latest">
-            <dt className="my-2 font-baloo font-semibold text-center text-black">Latest Offers hello</dt>    
+          <div className=' '>
+            <Link to='/latest'>
+              <dt className='my-2 font-baloo font-semibold text-center text-black'>Latest Offers hello</dt>
             </Link>
-            
-      
-              <img className=" w-80 h-72" src={sales} alt="" />
-          
-        
+
+            <img className=' w-80 h-72' src={sales} alt='' />
           </div>
           {/* div three */}
           <div>
-            <dt className="my-2 font-semibold text-black">
-              Headphones and Speakers
-            </dt>
+            <dt className='my-2 font-semibold text-black'>Headphones and Speakers</dt>
 
-            <div className=" grid grid-cols-2 gap-6 w-80 h-20">
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44	" src={phones} alt="App store" />
+            <div className=' grid grid-cols-2 gap-6 w-80 h-20'>
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44	' src={phones} alt='App store' />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44 	" src={laptops} alt="App store" />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={laptops} alt='App store' />
                 </a>
                 <h3>item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img className="h-28 w-44 	" src={tablets} alt="App store" />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={tablets} alt='App store' />
                 </a>
                 <h3>Item</h3>
               </div>
-              <div className="">
-                <a href="">
-                  <img
-                    className="h-28 w-44 	"
-                    src={headphones}
-                    alt="App store"
-                  />
+              <div className=''>
+                <a href=''>
+                  <img className='h-28 w-44 	' src={headphones} alt='App store' />
                 </a>
                 <h3>Item</h3>
               </div>
             </div>
           </div>
           {/* div four */}
-          <div className="w-80 h-96">
-            <dt className="my-2 font-semibold text-black">Refurbished Gadget</dt>
-            <a href="">
-              <img
-                className="object-cover w-80 h-72 "
-                src={newgadgets}
-                alt=""
-              />
+          <div className='w-80 h-96'>
+            <dt className='my-2 font-semibold text-black'>Refurbished Gadget</dt>
+            <a href=''>
+              <img className='object-cover w-80 h-72 ' src={newgadgets} alt='' />
             </a>
           </div>
         </div>
@@ -286,47 +266,41 @@ export default function Example() {
         <div>
           <div>
             <div>
-              <h1 className="  sm:hidden md:block text-center flex justify-center mb-5 text-3xl font-bold tracking-tight  sm:text-4xl">
-                Our favorite brands
-              </h1>
+              <h1 className='  sm:hidden md:block text-center flex justify-center mb-5 text-3xl font-bold tracking-tight  sm:text-4xl'>Our favorite brands</h1>
             </div>
             {/* <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
-            <div className=" hidden md:grid md:grid-cols-3 gap-4 mb-12 mx-auto max-w-7xl px-12 lg:px-48">
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img
-                  className="w-44 h-8 flex justify-center items-center	 "
-                  src={Sonny}
-                  alt="App store"
-                />
+            <div className=' hidden md:grid md:grid-cols-3 gap-4 mb-12 mx-auto max-w-7xl px-12 lg:px-48'>
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='w-44 h-8 flex justify-center items-center	 ' src={Sonny} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="h-20 w-20 " src={Apple} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='h-20 w-20 ' src={Apple} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="w-44 h-8 " src={Samsung} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='w-44 h-8 ' src={Samsung} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="h-12 w-36 	" src={Bosh} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='h-12 w-36 	' src={Bosh} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="w-44 h-8 	" src={Microsoft} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='w-44 h-8 	' src={Microsoft} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="h-14 w-32" src={LG} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='h-14 w-32' src={LG} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="h-12 w-36" src={Google} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='h-12 w-36' src={Google} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="w-44 h-8" src={Samsung} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='w-44 h-8' src={Samsung} alt='App store' />
               </div>
-              <div className="flex justify-center items-center ourBrand w-72 h-24">
-                <img className="w-44 h-10" src={Dyson} alt="App store" />
+              <div className='flex justify-center items-center ourBrand w-72 h-24'>
+                <img className='w-44 h-10' src={Dyson} alt='App store' />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

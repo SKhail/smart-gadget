@@ -1,11 +1,13 @@
-export default function Example() {
+export default function Example({ darkMode }) {
   return (
-    <div className='relative overflow-hidden my-20'>
+    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <div className='pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40'>
         <div className='relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8'>
           <div className='sm:max-w-lg'>
-            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>Your favorite gadget!</h1>
-            <p className='mt-4 text-xl text-gray-500'>
+            <h1 className={`text-4xl font-bold tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>
+              <span className='font-special'>Your favorite gadget!</span>
+            </h1>
+            <p className={`mt-4 text-xl ${darkMode ? 'text-white' : 'text-gray-500'}`}>
               Step into the future with our newest gadget, your ultimate companion in navigating the unpredictable landscape of modern life, providing you with unparalleled
               protection and peace of mind every step of the way.
             </p>

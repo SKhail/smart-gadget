@@ -3,14 +3,4 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-.app {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Dark mode styles */
-.app.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
+@import 'animate.css';

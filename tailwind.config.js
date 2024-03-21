@@ -7,7 +7,9 @@ module.exports = withMT({
     "./src/**/*.ts",
     "./src/**/*.tsx",
   ],
-  darkMode: "class", //Apply Dark Mode feature
+
+  darkMode: 'class',
+
   theme: {
     borderWidth: {
       DEFAULT: "1px",
