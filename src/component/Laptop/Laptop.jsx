@@ -4,7 +4,7 @@ import firebaseApp from '../corousal/firebase'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function Laptops(props) {
+export default function Laptops({ darkMode }) {
   const [laptops, setLaptops] = useState([])
   const [selectedProduct, setSelectedProduct] = useState(null) // To store the selected product for quick view
   useEffect(() => {
@@ -51,7 +51,8 @@ export default function Laptops(props) {
     <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Laptops</h2>
+        <h2 className={`text-2xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Laptops</h2>
+
         <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
           {Object.values(laptops).map((product) => (
             <div key={product.key} className='group relative'>
@@ -63,14 +64,11 @@ export default function Laptops(props) {
               </div>
               <div className='mt-4 flex justify-between'>
                 <div>
-                  <h3 className='text-sm text-gray-700'>{product.model}</h3>
-                  <p className='mt-1 text-sm text-gray-500'> £{product.price}</p>
+                  <h3 className={`text-sm ${darkMode ? 'text-white' : 'text-gray-700'}`}>{product.model}</h3>
+                  <p className={`mt-1 text-sm ${darkMode ? 'text-white' : 'text-gray-500'}`}> ${product.price}</p>
                 </div>
                 <div className='flex items-center flex-col'>
-                  <button
-                    onClick={() => handleAddToBasket(product.key)}
-                    className={`mt-2 text-sm font-medium ${darkMode ? 'text-white bg-black hover:bg-gray-900' : 'text-black bg-white hover:bg-gray-200'} px-3 py-1 rounded-md`}
-                  >
+                  <button onClick={() => handleAddToBasket(product.key)} className='mt-2 text-sm font-medium text-white bg-black px-3 py-1 rounded-md hover:bg-gray-900'>
                     Add to Cart
                   </button>
                 </div>
@@ -114,7 +112,7 @@ export default function Laptops(props) {
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToBasket(selectedProduct.key)}
-                  className={`block w-full py-2 text-center ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-900 text-white'} font-semibold rounded-md hover:bg-gray-700 mt-4`}
+                  className='block w-full py-2 text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4'
                 >
                   Add to Cart
                 </button>

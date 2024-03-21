@@ -16,9 +16,7 @@ import SmartPhones from './component/smartphones/SmartPhones'
 import Computerstablets from './component/computerstablets/Computerstablets'
 import Refurbished from './component/refurbished/Refurbished'
 
-
 import QuickView from './component/quickview'
-
 
 import './index.css'
 
@@ -70,14 +68,13 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home darkMode={darkMode} />} />
-          <Route path='/consoles' element={<Consoles />} />
+          <Route path='/consoles' element={<Consoles />} darkMode={darkMode} />
           <Route path='/laptops' element={<Laptops addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/shoppingcart' element={<ShoppingCart cart={cart} />} />
-          <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} />} />
+          <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/specialdeals' element={<SpecialDeals />} />
           <Route path='/latest' element={<Latest />} />
           <Route path='/computerstablets' element={<Computerstablets />} />
-
         </Routes>
 
         {/* <div className='app'>
