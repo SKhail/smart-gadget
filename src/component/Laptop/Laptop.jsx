@@ -52,7 +52,6 @@ export default function Laptops({ darkMode }) {
       <ToastContainer />
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
         <h2 className={`text-2xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Laptops</h2>
-
         <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
           {Object.values(laptops).map((product) => (
             <div key={product.key} className='group relative'>
