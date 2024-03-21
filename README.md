@@ -97,10 +97,6 @@ Search result and search history drop down
 
 ![full cart](./src/assets/images/full%20cart.JPG)
 
-
-
-... add more screenshot as needed
-
 </div>
 
 ## Future Development
