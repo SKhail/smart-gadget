@@ -75,6 +75,10 @@ function App() {
           <Route path='/specialdeals' element={<SpecialDeals />} />
           <Route path='/latest' element={<Latest />} />
           <Route path='/computerstablets' element={<Computerstablets />} />
+          <Route path='/refurbished' element={<Refurbished />} />
+
+          
+          
 
         </Routes>
 

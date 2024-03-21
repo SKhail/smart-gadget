@@ -75,14 +75,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '
       } text-white fixed top-0 w-full z-10`}
     >
-      {/* Dark Mode Feature */}
-      <button className='dark-mode' onClick={toggleDarkMode}>
-        {darkMode ? <FaMoon /> : <FaSun />}{' '}
-      </button>
+      
 
       {/* Company Name (Logo) */}
       <Link to='/' className='flex items-center flex-grow'>
-        <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto' />
+        <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto flex justify-start' />
       </Link>
 
       {/* Hamburger Button for Mobile */}
@@ -119,6 +116,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <button onClick={handleLoginButtonClick} className='font-baloo hover:text-space-grey pl-2'>
           <FaUser />
         </button>
+        {/* Dark Mode Feature */}
+      <button className='dark-mode ms-4' onClick={toggleDarkMode}>
+        {darkMode ? <FaMoon /> : <FaSun />}{' '}
+      </button>
       </div>
 
       {/* Login Modal */}

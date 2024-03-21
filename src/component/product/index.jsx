@@ -105,31 +105,31 @@ export default function Example() {
                 <a href="">
                   <img
                     className="h-28 w-44	rounded-lg"
-                    src={phones}
-                    alt="App store"
+                    src="https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/speaker.jpg?alt=media&token=37b043ac-e31c-4087-9498-09d91ba32ed8"
+                    alt="Speaker photo"
                   />
                 </a>
-                <h3 className="flex justify-center">Item</h3>
+                <h3 className="flex justify-center">Speaker</h3>
               </div>
               <div className=" font-baloo">
                 <a href="">
                   <img
                     className="h-28 w-44 rounded-lg	"
-                    src={laptops}
+                    src="https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/smallspeaker.jpg?alt=media&token=dd7ba59a-b86f-428a-8a6f-01f92760c72d"
                     alt="App store"
                   />
                 </a>
-                <h3 className="flex justify-center">Item</h3>
+                <h3 className="flex justify-center">Mini Speakers</h3>
               </div>
               <div className=" font-baloo">
                 <a href="">
                   <img
                     className="h-28 w-44 rounded-lg	"
-                    src={tablets}
+                    src="https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/headphones.jpg?alt=media&token=8244d104-e497-47bb-ac00-e69cabe6ad98"
                     alt="App store"
                   />
                 </a>
-                <h3 className="flex justify-center">Item</h3>
+                <h3 className="flex justify-center">Headphones</h3>
               </div>
               <div className="font-baloo">
                 <a href="">
@@ -139,7 +139,7 @@ export default function Example() {
                     alt="App store"
                   />
                 </a>
-                <h3 className="flex justify-center">Item</h3>
+                <h3 className="flex justify-center">In ear headphones</h3>
               </div>
             </div>
           </div>
