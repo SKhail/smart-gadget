@@ -73,7 +73,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     <nav
       className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
         darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '
-      } text-white fixed top-0 w-full z-10`}
+      } text-white fixed top-0 w-full z-10 animate__animated animate__fadeIn`}
     >
       {/* Dark Mode Feature */}
       <button className='dark-mode' onClick={toggleDarkMode}>
@@ -94,7 +94,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <ul className={`lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col' : 'hidden lg:flex'}`}>
         {NavData.map((data, index) => (
           <li key={index}>
-            <NavLink to={data.link} className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}`}>
+            <NavLink
+              to={data.link}
+              className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}`}
+            >
               {window.innerWidth < 768 ? <span className='font-baloo'>{data.icon}</span> : data.name}
             </NavLink>
           </li>
@@ -106,10 +109,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar' />
         <FaSearch className='searchIcon absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-baloo' />
       </div>
-
-      {/* className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
-            } */}
 
       {/* Shopping Cart and Login Button */}
       <div className='hidden lg:block'>
