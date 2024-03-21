@@ -6,6 +6,11 @@
 
 </div>
 
+Landing Page
+![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
+![mid landing page](./src/assets/images/smart%20ga%20landing2.JPG)
+![bottom landing footer](./src/assets/images/landing%20three.JPG)
+
 ## User Story
 
 - To explore Products: Customers can easily browse Smart Gadgets website finding a wide range of products that suit their preferences and needs.
