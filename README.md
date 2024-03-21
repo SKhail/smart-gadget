@@ -115,7 +115,7 @@ Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to
 - [**Tailwindcss**](https://tailwindcss.com/)
 - [**Material-Tailwind**](https://www.material-tailwind.com/docs/react/carousel#carousel-with-content)
 - [**Firebase**](https://console.firebase.google.com/u/2/)
-- [**Slick**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- [**Sanity**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
 
 ## Technologies
 
