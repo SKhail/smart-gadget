@@ -4,7 +4,7 @@ import firebaseApp from '../corousal/firebase'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function Laptops({ darkMode }) {
+export default function Laptops(props) {
   const [laptops, setLaptops] = useState([])
   const [selectedProduct, setSelectedProduct] = useState(null) // To store the selected product for quick view
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Laptops({ darkMode }) {
     <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <h2 className={`text-2xl font-bold tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>Laptops</h2>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>Laptops</h2>
         <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
           {Object.values(laptops).map((product) => (
             <div key={product.key} className='group relative'>
@@ -63,8 +63,8 @@ export default function Laptops({ darkMode }) {
               </div>
               <div className='mt-4 flex justify-between'>
                 <div>
-                  <h3 className={`text-sm ${darkMode ? 'text-white' : 'text-gray-700'}`}>{product.model}</h3>
-                  <p className={`mt-1 text-sm ${darkMode ? 'text-white' : 'text-gray-500'}`}> ${product.price}</p>
+                  <h3 className='text-sm text-gray-700'>{product.model}</h3>
+                  <p className='mt-1 text-sm text-gray-500'> £{product.price}</p>
                 </div>
                 <div className='flex items-center flex-col'>
                   <button
@@ -99,18 +99,18 @@ export default function Laptops({ darkMode }) {
               </div>
               {/* Product Details */}
               <div className='p-8 w-full lg:w-1/2'>
-                <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>{selectedProduct.model}</h2>
+                <h2 className='text-xl font-semibold mb-4'>{selectedProduct.model}</h2>
                 <div className='mb-4'>
-                  <h3 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>Description:</h3>
-                  <ul className={`list-disc list-inside ${darkMode ? 'text-white' : 'text-black'}`}>
+                  <h3 className='text-lg font-semibold'>Description:</h3>
+                  <ul className='list-disc list-inside'>
                     {Object.entries(selectedProduct.description).map(([key, value]) => (
-                      <li key={key} className={`text-gray-700 ${darkMode ? 'text-white' : 'text-black'}`}>
+                      <li key={key} className='text-gray-700'>
                         <span className='font-semibold'>{key}:</span> {value}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <p className={`text-gray-700 font-semibold ${darkMode ? 'text-white' : 'text-black'}`}>${selectedProduct.price}</p>
+                <p className='text-gray-700 font-semibold'>£{selectedProduct.price}</p>
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToBasket(selectedProduct.key)}

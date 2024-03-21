@@ -1,15 +1,12 @@
-export default function Example({ darkMode }) {
+export default function Example() {
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
+    <div className='relative overflow-hidden bg-white'>
       <div className='pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40'>
         <div className='relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8'>
           <div className='sm:max-w-lg'>
-            <h1 className={`text-4xl font-bold tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>
-              <span className='font-special'>Your favorite gadget!</span>
-            </h1>
-            <p className={`mt-4 text-xl ${darkMode ? 'text-white' : 'text-gray-500'}`}>
-              Step into the future with our newest gadget, your ultimate companion in navigating the unpredictable landscape of modern life, providing you with unparalleled
-              protection and peace of mind every step of the way.
+            <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>Summer styles are finally here</h1>
+            <p className='mt-4 text-xl text-gray-500'>
+              This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.
             </p>
           </div>
           <div>
@@ -20,57 +17,29 @@ export default function Example({ darkMode }) {
                   <div className='flex items-center space-x-6 lg:space-x-8'>
                     <div className='grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8'>
                       <div className='h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2Fearbud.jpg?alt=media&token=f256b557-88b0-42d8-bc9a-7ddccdef05f9'
-                          alt='earbud'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2FAsusLaptop.png?alt=media&token=fefd4e94-f659-4aae-b3d1-f13e8e71c488'
-                          alt='Asus Laptop'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                     </div>
                     <div className='grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8'>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2Fone%2B.png?alt=media&token=9f5ab6c4-884a-4035-9a83-4ffb93bb3776'
-                          alt='one+ phone'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2FPixel8.png?alt=media&token=f05f50de-1d49-4d9f-996d-7b116b7b637b'
-                          alt='pixel8'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2Fplaystation.jpg?alt=media&token=efa87d1b-45c9-4512-8d82-6e585ed2b453'
-                          alt='playstation'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                     </div>
                     <div className='grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8'>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2FsamPhone.jpg?alt=media&token=0b904e35-0f9e-4c1d-80a6-b8f88b308859'
-                          alt='samsung phone'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                       <div className='h-64 w-44 overflow-hidden rounded-lg'>
-                        <img
-                          src='https://firebasestorage.googleapis.com/v0/b/smartgadget-7af95.appspot.com/o/P2-Banner-pix%2Fspeaker.jpg?alt=media&token=3486635f-df2f-4081-a128-447b464a14d7'
-                          alt='speaker'
-                          className='h-full w-full object-cover object-center'
-                        />
+                        <img src='https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg' alt='' className='h-full w-full object-cover object-center' />
                       </div>
                     </div>
                   </div>

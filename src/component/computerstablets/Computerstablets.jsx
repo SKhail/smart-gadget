@@ -3,7 +3,7 @@ import { getDatabase, ref, onValue, off } from "firebase/database";
 import firebaseApp from "../corousal/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-export default function Smartphones(props) {
+export default function Computerstablets(props) {
   const [smartphones, setSmartphones] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Smartphones(props) {
                 onClick={() => openQuickView(product)}
               >
                 <img
-                  src={product.image}
+                  src="https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/acer.webp?alt=media&token=d8af05b0-ef07-45cd-9c1f-639e9b149c89"
                   alt={product.model}
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
@@ -157,6 +157,7 @@ export default function Smartphones(props) {
                   Add to Cart
                 </button>
               </div>
+              
             </div>
           </div>
         </div>

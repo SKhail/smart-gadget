@@ -3,7 +3,7 @@ import { getDatabase, ref, onValue, off } from "firebase/database";
 import firebaseApp from "../corousal/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-export default function Smartphones(props) {
+export default function Refurbished(props) {
   const [smartphones, setSmartphones] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
   useEffect(() => {

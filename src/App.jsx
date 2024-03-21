@@ -13,7 +13,12 @@ import Consoles from './component/consoles/Consoles'
 import Laptops from './component/Laptop/Laptop'
 import ShoppingCart from './component/cart/index'
 import SmartPhones from './component/smartphones/SmartPhones'
+import Computerstablets from './component/computerstablets/Computerstablets'
+import Refurbished from './component/refurbished/Refurbished'
+
+
 import QuickView from './component/quickview'
+
 
 import './index.css'
 
@@ -71,6 +76,8 @@ function App() {
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} />} />
           <Route path='/specialdeals' element={<SpecialDeals />} />
           <Route path='/latest' element={<Latest />} />
+          <Route path='/computerstablets' element={<Computerstablets />} />
+
         </Routes>
 
         {/* <div className='app'>
