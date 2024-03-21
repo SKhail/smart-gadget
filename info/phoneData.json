@@ -217,6 +217,51 @@
       }
     ],
 
+    "audioProducts": [
+
+      {
+        "key": "audioProduct_1",
+        "model": "Aukey EP-T21S Earbud",
+        "description": "Noise-Cancelling Bluetooth Earphones - Black",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_1.png?alt=media&token=7413f1a9-c95b-4bc2-b98b-65de6da23b41",
+        "imageAlt": "Aukey Erabud",
+        "price": 35
+       },
+       {
+        "key": "audioProduct_2",
+        "model": "Samsung Galaxy Buds 2 Pro",
+        "description": "Earbud Noise-Cancelling Bluetooth Earphones - Black",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_2.png?alt=media&token=7092cf4f-5d33-4e36-bd62-a09be3d60688",
+        "imageAlt": "Samsung Galaxy Buds",
+        "price": 130
+       },
+       {
+        "key": "audioProduct_3",
+        "model": "Sony WH-CH520",
+        "description": "wireless Headphones with microphone - Black",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_3.png?alt=media&token=09ab39f8-77a0-4e91-8edc-a690d8f12202",
+        "imageAlt": "Sony Headphones",
+        "price": 39
+       },
+       {
+        "key": "audioProduct_4",
+        "model": "Apple AirPods Pro 2nd gen (2022)",
+        "description": "2nd gen (2022) - MagSafe Charging case - White",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_4.png?alt=media&token=44accdf8-e467-41d9-b99b-7188a12a2bfe",
+        "imageAlt": "Apple Airpods",
+        "price": 225
+       },
+       {
+        "key": "audioProduct_5",
+        "model": "Beats",
+        "description": "By Dr. Dre Studio Buds Earbud Noise-Cancelling Bluetooth Earphones - Red",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_5.png?alt=media&token=2c111370-0800-460b-a39f-138be07f2646",
+        "imageAlt": "Beats by Dr. Dre Studio Buds",
+        "price": 85
+       }
+
+    ],
+
     "laptops": [
       {
          "key": "laptop_1",
