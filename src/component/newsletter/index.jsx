@@ -1,17 +1,4 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 import "../newsletter/style.css";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import {
@@ -36,7 +23,7 @@ import WhiteLogo from '../../assets/Logos/white-smart-gadgets-high-resolution-lo
 
 export default function Example() {
   return (
-    <div className="relative isolate overflow-hidden footerStyle py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden footerStyle pb-12">
       <div className="grid grid-rows-3 grid-flow-col gap-4 mx-auto max-w-7xl px-6 lg:px-8"></div>
       {/*{/* the whole width */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -3,30 +3,29 @@ import { getDatabase, ref, onValue, off } from "firebase/database";
 import firebaseApp from "../corousal/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-export default function Laptops(props) {
-  const [laptops, setLaptops] = useState([]);
+export default function Refurbished(props) {
+  const [smartphones, setSmartphones] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
   useEffect(() => {
     const database = getDatabase(firebaseApp);
-    const laptopsRef = ref(database, "laptops"); // Assuming your database reference for laptops is 'laptops'
+    const smartphonesRef = ref(database, "smartphones");
     const fetchData = () => {
-      onValue(laptopsRef, (snapshot) => {
+      onValue(smartphonesRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          setLaptops(data);
+          setSmartphones(data);
         } else {
-          setLaptops([]);
+          setSmartphones([]);
         }
       });
     };
     fetchData();
     return () => {
-      off(laptopsRef);
+      off(smartphonesRef);
     };
   }, []);
   const handleAddToBasket = (productId) => {
-    const selectedItem = laptops.find((item) => item.key === productId);
+    const selectedItem = smartphones.find((item) => item.key === productId);
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     localStorage.setItem(
       "cartItems",
@@ -55,10 +54,10 @@ export default function Laptops(props) {
       <ToastContainer />
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Laptops
+          Smartphones
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {Object.values(laptops).map((product) => (
+          {smartphones.map((product) => (
             <div key={product.key} className="group relative">
               <div
                 className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 cursor-pointer"

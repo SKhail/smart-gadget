@@ -11,22 +11,32 @@ import SpecialDeals from './component/specialdeals/SpecialDeals'
 import Home from './component/home/Home'
 import Consoles from './component/consoles/Consoles'
 import Laptops from './component/Laptop/Laptop'
-import ShoppingCart from './component/cart/cart'
+import ShoppingCart from './component/cart/index'
 import SmartPhones from './component/smartphones/SmartPhones'
+import Computerstablets from './component/computerstablets/Computerstablets'
+import Refurbished from './component/refurbished/Refurbished'
+
+
 import QuickView from './component/quickview'
+
 
 import './index.css'
 
+//Importing ChatBot
 import ChatWindow from './component/chat/ChatWindow' // Import from Chat folder
 import ChatInput from './component/chat/ChatInput' // Import from Chat folder
 import Sidebar from './component/chat/sidebar' // Import from Sidebar folder
 import ChatButton from './component/chat/ChatButton'
 import ChatSystem from '../src/component/chat/chatsystem'
 
+//Login Page
+// import { initializeApp } from './component/corousal/firebase.js'
+// const app = initializeApp(firebaseConfiguration)
+
 function App() {
   const [cart, setCart] = useState([])
   const [darkMode, setDarkMode] = useState(getInitialMode()) // Initialize dark mode from localStorage
-  const [showModal, setShowModal] = useState(false)
+
   const [showChatSystem, setShowChatSystem] = useState(false)
   const [messages, setMessages] = useState([])
 
@@ -34,11 +44,6 @@ function App() {
   function getInitialMode() {
     const savedMode = JSON.parse(localStorage.getItem('darkMode'))
     return savedMode || false
-  }
-
-  // Used for the Login Page
-  const handleLoginButtonClick = () => {
-    setShowModal(!showModal) // Toggle showModal state
   }
 
   // Toggle dark mode
@@ -66,7 +71,7 @@ function App() {
   return (
     <Router>
       <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
-        <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleLoginPage={handleLoginButtonClick} showModal={showModal} />
+        <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         <Routes>
           <Route path='/' element={<Home />} />
@@ -76,6 +81,8 @@ function App() {
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} />} />
           <Route path='/specialdeals' element={<SpecialDeals />} />
           <Route path='/latest' element={<Latest />} />
+          <Route path='/computerstablets' element={<Computerstablets />} />
+
         </Routes>
 
         {/* <div className='app'>
@@ -84,7 +91,6 @@ function App() {
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
         </div> */}
 
-        
         <Newsletter />
       </div>
     </Router>

@@ -32,7 +32,7 @@ export default function Cart() {
                   </div>
                 </div>
                 <div>
-                  <span className="text-lg font-medium text-gray-900">${item.price}</span>
+                  <span className="text-lg font-medium text-gray-900">£{item.price}</span>
                   <button onClick={() => removeFromCart(index)} className="ml-4 text-sm font-medium text-red-500">Remove</button>
                 </div>
               </li>
@@ -43,7 +43,7 @@ export default function Cart() {
         {/* Total */}
         <div className="mt-8 flex items-center justify-between">
           <span className="text-lg font-medium text-gray-900">Total</span>
-          <span className="text-lg font-medium text-gray-900">${totalPrice.toLocaleString()}</span>
+          <span className="text-lg font-medium text-gray-900">£{totalPrice.toLocaleString()}</span>
         </div>
 
         {/* Checkout Button */}
