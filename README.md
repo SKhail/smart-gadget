@@ -93,8 +93,6 @@ The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 Search result and search history drop down
 ![Search results](./src/assets/images/smartphoness.JPG)
 
-![Search results](./src/assets/images/laptopssm.jpg)
-
 ![Login Page](./src/assets/images/loginnn.JPG)
 
 ![full cart](./src/assets/images/full%20cart.JPG)
@@ -107,8 +105,10 @@ Search result and search history drop down
 
 ## Future Development
 
-- ...
-- ...
+- For future development, one of our priorities is to implement Google Authentication on the login page. Unfortunately, due to time constraints, we weren't able to accomplish this task during the initial development phase.
+- Personalized Recommendations: Implement machine learning algorithms to analyse user behavior and preferences, then provide personalized product recommendations tailored to each user's interests.
+Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to browse and purchase products using voice commands through virtual assistants like Amazon Alexa / Google Assistant.
+
 
 ## Resources
 
