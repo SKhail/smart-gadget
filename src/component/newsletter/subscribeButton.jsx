@@ -33,8 +33,7 @@ export default function SubscribeButton() {
       <button
         type="button"
         onClick={handleSubscribe}
-        className="flex-none w-24 rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-      >
+        className="text-baloo bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded w-28 shadow-md hover:shadow-lg hover:bg-blue-600">
         Subscribe
       </button>
     </div>

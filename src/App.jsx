@@ -11,8 +11,11 @@ import SpecialDeals from './component/specialdeals/SpecialDeals'
 import Home from './component/home/Home'
 import Consoles from './component/consoles/Consoles'
 import Laptops from './component/Laptop/Laptop'
-import ShoppingCart from './component/cart/index'
+import ShoppingCart from './component/cart'
 import SmartPhones from './component/smartphones/SmartPhones'
+import Computerstablets from './component/computerstablets/Computerstablets'
+import Refurbished from './component/refurbished/Refurbished'
+
 import QuickView from './component/quickview'
 
 import './index.css'
@@ -24,27 +27,22 @@ import Sidebar from './component/chat/sidebar' // Import from Sidebar folder
 import ChatButton from './component/chat/ChatButton'
 import ChatSystem from '../src/component/chat/chatsystem'
 
-//Login Page
-// import { initializeApp } from './component/corousal/firebase.js'
-// const app = initializeApp(firebaseConfiguration)
-
 function App() {
   const [cart, setCart] = useState([])
-  const [darkMode, setDarkMode] = useState(getInitialMode()) // Initialize dark mode from localStorage
+  const [darkMode, setDarkMode] = useState(false)
 
   const [showChatSystem, setShowChatSystem] = useState(false)
   const [messages, setMessages] = useState([])
 
-  // Helper function to get initial mode
-  function getInitialMode() {
-    const savedMode = JSON.parse(localStorage.getItem('darkMode'))
-    return savedMode || false
-  }
-
-  // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode)
-    localStorage.setItem('darkMode', !darkMode) // Save dark mode state in localStorage
+    if (!darkMode) {
+      document.documentElement.classList.add('dark') // Add 'dark' class to element
+    } else {
+      document.documentElement.classList.remove('dark') // Remove 'dark' class from element
+    }
+
+    localStorage.setItem('darkMode', !darkMode)
   }
 
   const handleChatButtonClick = () => {
@@ -69,13 +67,15 @@ function App() {
         <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/consoles' element={<Consoles />} />
-          <Route path='/laptops' element={<Laptops addtoCart={addtoCart} />} />
+          <Route path='/' element={<Home darkMode={darkMode} />} />
+          <Route path='/consoles' element={<Consoles />} darkMode={darkMode} />
+          <Route path='/laptops' element={<Laptops addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/shoppingcart' element={<ShoppingCart cart={cart} />} />
-          <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} />} />
+          <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/specialdeals' element={<SpecialDeals />} />
           <Route path='/latest' element={<Latest />} />
+          <Route path='/computerstablets' element={<Computerstablets />} />
+
         </Routes>
 
         {/* <div className='app'>
@@ -84,7 +84,7 @@ function App() {
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
         </div> */}
 
-        <Newsletter />
+        <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
     </Router>
 
