@@ -6,6 +6,11 @@
 
 </div>
 
+Landing Page
+![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
+![mid landing page](./src/assets/images/smart%20ga%20landing2.JPG)
+![bottom landing footer](./src/assets/images/landing%20three.JPG)
+
 ## User Story
 
 - To explore Products: Customers can easily browse Smart Gadgets website finding a wide range of products that suit their preferences and needs.
@@ -83,27 +88,31 @@ The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 
 ### Screenshot of App function
 
-Landing Page
-![](...)
+![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
 
 Search result and search history drop down
-![](...)
+![Search results](./src/assets/images/smartphoness.JPG)
 
-... add more screenshot as needed
+![Login Page](./src/assets/images/loginnn.JPG)
+
+![full cart](./src/assets/images/full%20cart.JPG)
 
 </div>
 
 ## Future Development
 
-- ...
-- ...
+- For future development, one of our priorities is to implement Google Authentication on the login page. Unfortunately, due to time constraints, we weren't able to accomplish this task during the initial development phase.
+- Personalized Recommendations: Implement machine learning algorithms to analyse user behavior and preferences, then provide personalized product recommendations tailored to each user's interests.
+Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to browse and purchase products using voice commands through virtual assistants like Amazon Alexa / Google Assistant.
+
 
 ## Resources
 
 - [**Tailwindcss**](https://tailwindcss.com/)
 - [**Material-Tailwind**](https://www.material-tailwind.com/docs/react/carousel#carousel-with-content)
 - [**Firebase**](https://console.firebase.google.com/u/2/)
-- [**Slick**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- [**Sanity**](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- [**Slick**](https://react-slick.neostack.com/)
 
 ## Technologies
 

@@ -1,0 +1,66 @@
+/* style.css */
+/* Animation for remove action */
+@keyframes scaleDown {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+    animation: scaleDown 0.3s ease-in-out forwards;
+  }
+  
+  /* Animation for checkout button */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .bounce {
+    animation: bounce 1s ease infinite;
+  }
+  
+
+  /* style.css */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  

@@ -8,5 +8,8 @@
   }
 }
 a.active {
-  color: #000814;
+  color: #acabab;
+}
+.animate-faster {
+  animation-duration: 0.5s;
 }

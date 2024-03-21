@@ -91,6 +91,8 @@ function App() {
         <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
     </Router>
+
+    
   )
 }
 
