@@ -17,16 +17,21 @@ import QuickView from './component/quickview'
 
 import './index.css'
 
+//Importing ChatBot
 import ChatWindow from './component/chat/ChatWindow' // Import from Chat folder
 import ChatInput from './component/chat/ChatInput' // Import from Chat folder
 import Sidebar from './component/chat/sidebar' // Import from Sidebar folder
 import ChatButton from './component/chat/ChatButton'
 import ChatSystem from '../src/component/chat/chatsystem'
 
+//Login Page
+// import { initializeApp } from './component/corousal/firebase.js'
+// const app = initializeApp(firebaseConfiguration)
+
 function App() {
   const [cart, setCart] = useState([])
   const [darkMode, setDarkMode] = useState(getInitialMode()) // Initialize dark mode from localStorage
-  const [showModal, setShowModal] = useState(false)
+
   const [showChatSystem, setShowChatSystem] = useState(false)
   const [messages, setMessages] = useState([])
 
@@ -34,11 +39,6 @@ function App() {
   function getInitialMode() {
     const savedMode = JSON.parse(localStorage.getItem('darkMode'))
     return savedMode || false
-  }
-
-  // Used for the Login Page
-  const handleLoginButtonClick = () => {
-    setShowModal(!showModal) // Toggle showModal state
   }
 
   // Toggle dark mode
@@ -66,7 +66,7 @@ function App() {
   return (
     <Router>
       <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
-        <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleLoginPage={handleLoginButtonClick} showModal={showModal} />
+        <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         <Routes>
           <Route path='/' element={<Home />} />
@@ -84,11 +84,6 @@ function App() {
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
         </div> */}
 
-        <QuickView />
-        <NewItem />
-        <Corousal />
-        <Banner />
-        <Product />
         <Newsletter />
       </div>
     </Router>
