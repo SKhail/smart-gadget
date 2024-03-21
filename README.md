@@ -91,7 +91,15 @@ The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 ![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
 
 Search result and search history drop down
-![Search reselts]()
+![Search results](./src/assets/images/smartphoness.JPG)
+
+![Search results](./src/assets/images/laptopssm.jpg)
+
+![Login Page](./src/assets/images/loginnn.JPG)
+
+![full cart](./src/assets/images/full%20cart.JPG)
+
+
 
 ... add more screenshot as needed
 
