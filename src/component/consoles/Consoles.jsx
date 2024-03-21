@@ -79,7 +79,7 @@ export default function Consoles({ darkMode }) {
                 <div className='flex items-center flex-col'>
                   <button
                     onClick={() => handleAddToBasket(product.key)}
-                    className='mt-2 text-sm font-medium text-baloo bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 px-3 py-1 rounded-md '
+                    className='mt-2 text-sm font-medium text-baloo bg-gradient-to-r from-blue-800 to-blue-500 shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 px-3 py-1 rounded-md '
                   >
                     Add to Cart
                   </button>
@@ -125,7 +125,7 @@ export default function Consoles({ darkMode }) {
                 {/* Add to Cart Button */}
                 <button
                   onClick={() => handleAddToBasket(selectedProduct.key)}
-                  className='block w-full py-2 text-center bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo font-semibold rounded-md mt-4'
+                  className='block w-full py-2 text-center bg-gradient-to-r from-blue-800 to-blue-500 shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo font-semibold rounded-md mt-4'
                 >
                   Add to Cart
                 </button>

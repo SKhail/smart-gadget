@@ -33,7 +33,7 @@ export default function Example({ darkMode }) {
           {/* div one */}
           <div>
             <Link to='/computerstablets'>
-              <dt className={`my-2 font-baloo font-semibold font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Computers and Tablets</dt>
+              <dt className={`my-2 font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Computers and Tablets</dt>
             </Link>
 
             <div className=' grid grid-cols-2 gap-6'>
@@ -85,7 +85,7 @@ export default function Example({ darkMode }) {
           {/* div two */}
           <div className=' '>
             <Link to='/specialdeals'>
-              <dt className={`my-2 font-baloo font-semibold font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Latest Offers</dt>
+              <dt className={`my-2 font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Latest Offers</dt>
             </Link>
 
             <img
@@ -96,7 +96,7 @@ export default function Example({ darkMode }) {
           </div>
           {/* div three */}
           <div>
-            <dt className={`my-2 font-baloo font-semibold font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Headphones and Speakers</dt>
+            <dt className={`my-2 font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Headphones and Speakers</dt>
 
             <div className=' grid grid-cols-2 gap-6'>
               <div className='font-baloo'>
@@ -128,7 +128,7 @@ export default function Example({ darkMode }) {
           {/* div four */}
           <div className=''>
             <Link to='/refurbished'>
-              <dt className={`my-2 font-baloo font-semibold font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Refurbshed Gadgets</dt>
+              <dt className={`my-2 font-baloo font-semibold flex justify-center ${darkMode ? 'text-white' : 'text-black'}`}>Refurbshed Gadgets</dt>
               <img
                 className='object-cover h-72 w-full rounded-lg '
                 src='https://firebasestorage.googleapis.com/v0/b/smartgadget-369ae.appspot.com/o/newgadgets.jpg?alt=media&token=a2cfc5e3-c27e-41d5-baf8-7015da241c32'
