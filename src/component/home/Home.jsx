@@ -1,22 +1,22 @@
 // Home.js
 import React from 'react'
-import Newsletter from "../newsletter";
-import Banner from "../banner/banner";
-import Product from "../product";
-import NewItem from "../newItems";
-import Corousal from "../corousal/index";
-import QuickView from "../quickview";
+import Newsletter from '../newsletter'
+import Banner from '../banner/banner'
+import Product from '../product'
+import NewItem from '../newItems'
+import Corousal from '../corousal/index'
+import QuickView from '../quickview'
 
-function Home() {
+function Home({ darkMode }) {
   return (
-  <>
-
-  <QuickView />
-      <NewItem />
+    <>
+      <QuickView />
+      <NewItem darkMode={darkMode} />
       <Corousal />
       <Banner />
-      <Product />
-  </>)
+      <Product darkMode={darkMode} />
+    </>
+  )
 }
 
 export default Home

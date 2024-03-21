@@ -72,7 +72,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
     <nav
       className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
-        darkMode ? 'bg-gray-800' : 'bg-gradient-to-r from-blue-800 to-blue-500'
+        darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '
       } text-white fixed top-0 w-full z-10`}
     >
       {/* Dark Mode Feature */}
