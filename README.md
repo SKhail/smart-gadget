@@ -2,14 +2,19 @@
 
 # Smart Gadget App
 
-    Empower Your World: Embrace Innovation with Our Latest Smart Gadget App!
+Empower Your World: Embrace Innovation with Our Latest Smart Gadget App!
+
+## Landing Page
+
+Light Mode
+
+![Home Page](./src/assets/images/Screenshoot/Landing%20Light.png)
+
+Dark mode
+
+![Home Page](./src/assets/images/Screenshoot/landing%20Dark.png)
 
 </div>
-
-Landing Page
-![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
-![mid landing page](./src/assets/images/smart%20ga%20landing2.JPG)
-![bottom landing footer](./src/assets/images/landing%20three.JPG)
 
 ## User Story
 
@@ -18,11 +23,9 @@ Landing Page
 - Seemless Checkout: Customers can confidently complete their purchases knowing their transactions are safe and secure.
 - Registration/Login: Users to be able to easily register and log-in to their accounts.
 
-
 ## Description
 
 Welcome to Smart Gadget App, your go-to ecommerce app for discovering and purchasing the latest gadgets, including smartphones, laptops, gaming consoles, earbuds, and more. With an extensive range of cutting-edge products and a user-friendly platform, Smart Gadget App offers an unparalleled shopping experience for tech enthusiasts and novice alike.
-
 
 ### Features
 
@@ -61,18 +64,19 @@ Thank you for choosing Smart Gadget App for all your gadget needs. Happy shoppin
 - [Lisence](#lisence)
 - [Badges](#badges)
 
-
 ## Installation
 
 #### NPM Install
 
 #### Clone repository using SSH:
+
     - Click on the "Code" button and select "SSH"
     - Copy the SSH URL provided
     - In your terminal, navigate to the directory where you want to clone the repository
     - Run the command: git clone <SSH_URL> : replacing <SSH_URL> with the copied SSH URL.
 
 #### Clone repository using HTTPS:
+
     - Click on the "Code" button and select "HTTPS"
     - Copy the HTTPS URL provided
     - In your terminal, navigate to the directory where you want to clone the repository
@@ -86,11 +90,12 @@ The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 
 <div align="center">
 
-### Screenshot of App function
+## Screenshot of App function
 
 ![Home Page](./src/assets/images/home%20page%20readme%20smart.JPG)
 
 Search result and search history drop down
+
 ![Search results](./src/assets/images/smartphoness.JPG)
 
 ![Login Page](./src/assets/images/loginnn.JPG)
@@ -103,8 +108,7 @@ Search result and search history drop down
 
 - For future development, one of our priorities is to implement Google Authentication on the login page. Unfortunately, due to time constraints, we weren't able to accomplish this task during the initial development phase.
 - Personalized Recommendations: Implement machine learning algorithms to analyse user behavior and preferences, then provide personalized product recommendations tailored to each user's interests.
-Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to browse and purchase products using voice commands through virtual assistants like Amazon Alexa / Google Assistant.
-
+  Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to browse and purchase products using voice commands through virtual assistants like Amazon Alexa / Google Assistant.
 
 ## Resources
 
@@ -118,15 +122,15 @@ Voice Commerce: Implement voice-enabled shopping capabilities, enabling users to
 
 - Nodejs
 - HTML
-- React 
-- Javascript 
-- CSS 
+- React
+- Javascript
+- CSS
 
 ## Contributors
 
 This app was contribute to by:
 
-Said [**Click here**](https://github.com/SKhail) to view their git hub page 
+Said [**Click here**](https://github.com/SKhail) to view their git hub page
 
 Rahmatullah [**Click here**](https://github.com/RahmatullahZadran) to view their git hub page
 
