@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { FaSearch, FaUser, FaShoppingCart, FaHome, FaGamepad, FaLaptop, FaMobileAlt } from 'react-icons/fa'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import { FaSun, FaMoon } from 'react-icons/fa' // Dark Mode Icons
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { FaSearch, FaUser, FaShoppingCart, FaHome, FaGamepad, FaLaptop, FaMobileAlt } from 'react-icons/fa';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { FaSun, FaMoon } from 'react-icons/fa'; // Dark Mode Icons
 
-import LoginPage from '../LoginFeature/LoginPage' // Ensure correct import path
-import '../navigation/style.css' // Ensure correct import path
+import LoginPage from '../LoginFeature/LoginPage'; // Ensure correct import path
+import '../navigation/style.css'; // Ensure correct import path
 
-import WhiteLogo from '../../assets/Logos/white-smart-gadgets-high-resolution-logo.png'
+import WhiteLogo from '../../assets/Logos/white-smart-gadgets-high-resolution-logo.png';
 
 const NavData = [
   {
@@ -39,62 +39,40 @@ const NavData = [
     icon: <FaShoppingCart />,
     link: '/shoppingcart',
   },
-]
+];
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-  const [isScrolled, setIsScrolled] = useState(false) // fixed Navbar
-  const [isMobileOpen, setIsMobileOpen] = useState(false) //Toggle Hamburger
-  const [isShowModel, setShowModel] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Scroll handler
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      setIsScrolled(scrollPosition > 0)
-    }
+  // Handler for search input change
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-    window.addEventListener('scroll', handleScroll)
+  // Handler for search form submission
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // Perform search logic here with searchTerm
+    console.log('Searching for:', searchTerm);
+  };
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
-  // For Mobile devices
-  const toggleHamburger = () => {
-    setIsMobileOpen(!isMobileOpen)
-  }
-
-  // Used for the Login Page
-  const handleLoginButtonClick = () => {
-    setShowModel(!isShowModel) // Toggle showModal state
-  }
   return (
-    <nav
-      className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
-        darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '
-      } text-white fixed top-0 w-full z-10 animate__animated animate__fadeIn`}
-    >
-      
-
+    <nav className={`flex items-center justify-between px-4 py-2 lg:px-12 ${darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '} text-white fixed top-0 w-full z-10 animate__animated animate__fadeIn`}>
       {/* Company Name (Logo) */}
       <Link to='/' className='flex items-center flex-start'>
         <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto flex justify-start' />
       </Link>
 
       {/* Hamburger Button for Mobile */}
-      <button onClick={toggleHamburger} className={`lg:hidden text-2xl ${isMobileOpen ? 'ml-auto' : ''}`}>
-        {isMobileOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+      <button className={`lg:hidden text-2xl`}>
+        <AiOutlineMenu />
       </button>
 
       {/* Navigation Links */}
-      <ul className={`lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col' : 'hidden lg:flex'}`}>
+      <ul className={`lg:flex items-center gap-4 list-none`}>
         {NavData.map((data, index) => (
           <li key={index}>
-            <NavLink
-              to={data.link}
-              className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}`}
-            >
+            <NavLink to={data.link} className='inline-block px-7 hover:text-space-grey duration-200 font-baloo'>
               {window.innerWidth < 768 ? <span className='font-baloo'>{data.icon}</span> : data.name}
             </NavLink>
           </li>
@@ -102,30 +80,37 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </ul>
 
       {/* SearchBar */}
-      <div className='relative search-container'>
-        <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar' />
-        <FaSearch className='searchIcon absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-baloo' />
-      </div>
+      <form onSubmit={handleSearchSubmit} className='relative'>
+        <input
+          type='text'
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder='Search...'
+          className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar text-black'
+        />
+        <button type="submit" className="absolute left-0 top-0 bottom-0 ml-2">
+          <FaSearch className='searchIcon text-gray-500 font-baloo' />
+        </button>
+      </form>
 
       {/* Shopping Cart and Login Button */}
       <div className='hidden lg:block'>
         <Link to='/shoppingcart' className='inline-block px-4 hover:text-space-grey duration-200 font-baloo'>
           <FaShoppingCart />
         </Link>
-        <button onClick={handleLoginButtonClick} className='font-baloo hover:text-space-grey pl-2'>
+        <button className='font-baloo hover:text-space-grey pl-2'>
           <FaUser />
         </button>
         {/* Dark Mode Feature */}
-      <button className='dark-mode ms-4' onClick={toggleDarkMode}>
-        {darkMode ? <FaMoon /> : <FaSun />}{' '}
-      </button>
+        <button className='dark-mode ms-4' onClick={toggleDarkMode}>
+          {darkMode ? <FaMoon /> : <FaSun />}{' '}
+        </button>
       </div>
 
       {/* Login Modal */}
-
-      {isShowModel && <LoginPage showLoginPage={isShowModel} onClose={handleLoginButtonClick} />}
+      {false && <LoginPage showLoginPage={false} onClose={() => {}} />}
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
