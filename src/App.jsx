@@ -18,10 +18,6 @@ import Refurbished from './component/refurbished/Refurbished'
 import HeadphonesSpeakers from './component/headphonesSpeakers/HeadphonesSpeakers'
 import Favoritegadget from './component/favoritegadgets/Favoritegadget'
 
-
-
-
-
 import QuickView from './component/quickview'
 
 import './index.css'
@@ -80,28 +76,21 @@ function App() {
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/specialdeals' element={<SpecialDeals />} darkMode={darkMode} />
           <Route path='/latest' element={<Latest />} darkMode={darkMode} />
-          <Route path='/computerstablets' element={<Computerstablets />} darkMode={darkMode}/>
-          <Route path='/refurbished' element={<Refurbished />} darkMode={darkMode}/>
-          <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode}/>} />
-          <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode}/>
-
-
-          
-          
-
+          <Route path='/computerstablets' element={<Computerstablets />} darkMode={darkMode} />
+          <Route path='/refurbished' element={<Refurbished />} darkMode={darkMode} />
+          <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode} />} />
+          <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode} />
         </Routes>
 
-        {/* <div className='app'>
+        <div className='app'>
           {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
           {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
           <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
-        </div> */}
+        </div>
 
         <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
     </Router>
-
-    
   )
 }
 
