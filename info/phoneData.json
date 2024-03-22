@@ -330,24 +330,140 @@
          }
   ],
 
-    "computersAndTablets" : [
-      {
-        "key": "computer_1",
-        "model": "Apple MacBook Air",
-        "description": {
-          "ram": "8GB",
-          "storage": "256GB",
-          "processor": "Intel Core i5",
-          "gpu": "Intel Iris Plus Graphics 645"
-        },
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2Flaptop_5.png?alt=media&token=3aa91c92-de90-4da4-ba2a-03f28e555b2d",
-        "imageAlt": "Apple MacBook Air",
-        "price": 100
+  "headphonesSpeakers" : [
+    {
+      "key": "headphones_1",
+      "model": "Beats Studio 3",
+      "price": 85,
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "64MP",
+        "battery": "4500mAh",
+        "processor": "Exynos 2200",
+        "os": "Android 12"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2Fheadphones_1.png?alt=media&token=6b7e0a6c-1b9a-4b4e-8f4c-6a9b4b9b4b4b"
 
-      }
+    } 
+
+
+  ],
+
+   "refurbished": [
+    {
+      "key": "refurbished_1",
+      "model": "Apple MacBook Air",
+      "price": 100,
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2Flaptop_5.png?alt=media&token=3aa91c92-de90-4da4-ba2a-03f28e555b2d",
+      "imageAlt": "Apple MacBook Air"
+    }
+
+  ],
+
+
+  "computersAndTablets": [
+    {
+      "key": "tablets_1",
+      "model": "ADMI Gaming PC",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Fcom1.jpg?alt=media&token=14730ef6-26b6-44f2-a76c-453e1ae117a6",
+      "price": 100
+    },
+    {
+      "key": "tablets_2",
+      "model": "ADMI Gaming PC: Intel Core i9 ",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Fcom2.webp?alt=media&token=82f9b6c3-9964-400d-b526-249e6b4bfb70",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    },
+    {
+      "key": "tablets_3",
+      "model": "DMI Gaming PC, Ryzen 5700X",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Fcom4.webp?alt=media&token=932b78e4-be7c-42b3-a189-71a5eeab287b",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    },
+    {
+      "key": "tablets_4",
+      "model": "Lenovo IdeaCentre Gaming 5",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Ftab1.webp?alt=media&token=e19d939d-f458-4e8a-82d3-60fcc906c2a1",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    },
+    {
+      "key": "tablets_5",
+      "model": "TECLAST T40 Air Gaming",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Ftab2.webp?alt=media&token=180a2c32-46e0-421c-bfb3-a5abc2053c57",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    },
+    {
+      "key": "tablets_6",
+      "model": "TECLAST P26T Tablet Android",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Ftab3.webp?alt=media&token=e4d2a111-ec77-4d18-bb3f-fbc0fcc9b8f6",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    },
+    {
+      "key": "tablets_7",
+      "model": "Android 13 Tablet,10.1 ",
+      "description": {
+        "ram": "8GB",
+        "storage": "256GB",
+        "processor": "Intel Core i5",
+        "gpu": "Intel Iris Plus Graphics 645"
+      },
+      "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/computerandtablets%2Ftab4.webp?alt=media&token=19d9e6d4-f30a-43aa-9a00-686a93c25a49",
+      "imageAlt": "Apple MacBook Air",
+      "price": 100
+    }
 
     ],
     
+
+
     "specialDeals": [
       {
         "id": "specialdeal_1",
@@ -549,9 +665,30 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05"
         }
         
-    ]
+    ],
 
+    "search" : [
+      {
+        "key": "smartphone_10",
+        "model": "Sony Xperia 10 V",
+        "price": 1100,
+        "description": {
+          "ram": "8GB",
+          "storage": "128GB",
+          "camera": "12MP",
+          "battery": "4500mAh",
+          "processor": "Snapdragon 690",
+          "os": "Android 11"
+        },
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05"
+      }
+
+    ]
   }
+
+
+
+  
 
     
       
