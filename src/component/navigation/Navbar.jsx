@@ -78,7 +78,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       
 
       {/* Company Name (Logo) */}
-      <Link to='/' className='flex items-center flex-grow'>
+      <Link to='/' className='flex items-center flex-start'>
         <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto flex justify-start' />
       </Link>
 

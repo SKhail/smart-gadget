@@ -12,7 +12,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-function CarouselDefault() {
+function CarouselDefault({ darkMode }) {
   const [carouselData, setCarouselData] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
   const sliderRef = useRef(null);
@@ -109,7 +109,8 @@ function CarouselDefault() {
   };
 
   return (
-    <div className="slider-container w-10/12 mx-auto mt-24 relative">
+    <div className={` py-6 bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
+    <div className={`slider-container w-10/12 mx-auto my-6 relative bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
       <Slider ref={sliderRef} {...settings}>
         {carouselData.map((item, index) => (
@@ -217,6 +218,7 @@ function CarouselDefault() {
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
+    </div>
     </div>
   );
 }
