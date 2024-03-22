@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { getDatabase, ref, onValue, off } from 'firebase/database';
-import firebaseApp from '../corousal/firebase';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState, useEffect } from 'react'
+import { getDatabase, ref, onValue, off } from 'firebase/database'
+import firebaseApp from '../corousal/firebase'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Laptops({ darkMode }) {
-  const [laptops, setLaptops] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [previousProduct, setPreviousProduct] = useState(null);
+  const [laptops, setLaptops] = useState([])
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [previousProduct, setPreviousProduct] = useState(null)
 
   useEffect(() => {
-    const database = getDatabase(firebaseApp);
-    const laptopsRef = ref(database, 'laptops');
+    const database = getDatabase(firebaseApp)
+    const laptopsRef = ref(database, 'laptops')
 
     const fetchData = () => {
       onValue(laptopsRef, (snapshot) => {
-        const data = snapshot.val();
+        const data = snapshot.val()
         if (data) {
-          setLaptops(data);
+          setLaptops(data)
         } else {
-          setLaptops([]);
+          setLaptops([])
         }
-      });
-    };
+      })
+    }
 
-    fetchData();
+    fetchData()
 
     return () => {
-      off(laptopsRef);
-    };
-  }, []);
+      off(laptopsRef)
+    }
+  }, [])
 
   const handleAddToBasket = (productId) => {
-    const selectedItem = laptops.find((item) => item.key === productId);
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedItem]));
-    console.log(`Added product with ID ${productId} to basket`);
+    const selectedItem = laptops.find((item) => item.key === productId)
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
+    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedItem]))
+    console.log(`Added product with ID ${productId} to basket`)
 
     toast.success('Added to the cart', {
       position: 'top-right',
@@ -45,21 +45,21 @@ export default function Laptops({ darkMode }) {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-    });
-  };
+    })
+  }
 
   const openQuickView = (product) => {
-    setSelectedProduct(product);
+    setSelectedProduct(product)
     // Set previous product only if a product is currently selected
     if (selectedProduct) {
-      setPreviousProduct(selectedProduct);
+      setPreviousProduct(selectedProduct)
     }
-  };
+  }
 
   const closeQuickView = () => {
-    setSelectedProduct(null);
-    setPreviousProduct(null);
-  };
+    setSelectedProduct(null)
+    setPreviousProduct(null)
+  }
 
   return (
     <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
@@ -69,8 +69,7 @@ export default function Laptops({ darkMode }) {
         <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
           {laptops.map((product) => (
             <div key={product.key} className='group relative overflow-hidden'>
-              <div
-                className='aspect-w-2 aspect-h-3 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 cursor-pointer'>
+              <div className='aspect-w-2 aspect-h-3 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 cursor-pointer'>
                 <img
                   src={product.image}
                   alt={product.model}
@@ -134,31 +133,31 @@ export default function Laptops({ darkMode }) {
                   <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousProduct.model}</h2>
                   <div className='mb-6'>
                     <h3 className='text-lg font-semibold'>Description:</h3>
-                    <ul className='list-disc list-ins
-ide'>
-{Object.entries(previousProduct.description).map(([key, value]) => (
-  <li key={key} className='text-gray-700'>
-    <span className='font-semibold'>{key}:</span> {
-value}
-
-</li>
-))}
-</ul>
-</div>
-<p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
-{/* Assuming you want to add a button to add the previous product to the cart */}
-<button
-onClick={() => handleAddToBasket(previousProduct.key)}
-className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
->
-Add Previous to Cart
-</button>
-</div>
-)}
-</div>
-</div>
-</div>
-)}
-</div>
-);
+                    <ul
+                      className='list-disc list-ins
+ide'
+                    >
+                      {Object.entries(previousProduct.description).map(([key, value]) => (
+                        <li key={key} className='text-gray-700'>
+                          <span className='font-semibold'>{key}:</span> {value}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
+                  {/* Assuming you want to add a button to add the previous product to the cart */}
+                  <button
+                    onClick={() => handleAddToBasket(previousProduct.key)}
+                    className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
+                  >
+                    Add Previous to Cart
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
