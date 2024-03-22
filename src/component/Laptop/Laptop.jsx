@@ -76,6 +76,7 @@ export default function Laptops({ darkMode }) {
                   alt={product.model}
                   className='object-cover object-center w-full h-full transition-transform transform hover:scale-105'
                   onClick={() => openQuickView(product)}
+                  style={{ width: '100%', height: '300px' }}
                 />
               </div>
               <div className='mt-4 flex justify-between items-center'>

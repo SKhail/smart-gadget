@@ -43,21 +43,16 @@ export default function Example() {
               Subscribe to our newsletter.
             </h2>
             <p className="mt-4 text-lg font-baloo leading-8 text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore test1.
+            Join for exclusive updates, offers and early access. Stay informed, subscribe now for the latest!
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               {<SubscribeButton/>}
             </div>
             {/* section 2 our app */}
-            <dt className="mt-12 font-baloo font-semibold text-white">About</dt>
+            <dt className="mt-10 font-baloo font-semibold text-white">About</dt>
             <a href="">
               {" "}
               <dd className="mt-1 leading-7 font-baloo  text-gray-400">Our project</dd>
-            </a>
-
-            <a href="#">
-              <dd className="mt-0 leading-7 font-baloo text-gray-400">Careers</dd>{" "}
             </a>
             <a href="#">
               <dd className="mt-0 leading-7 font-baloo text-gray-400">Terms and conditions</dd>{" "}
@@ -76,8 +71,7 @@ export default function Example() {
               </div>
               <dt className="mt-4 font-baloo font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 leading-7 font-baloo  text-gray-400">
-                Non laboris consequat testt tstescupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+              Explore our weekly articles for insightful content on various topics.
               </dd>
               {/* no spam */}
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10 mt-8">
@@ -86,10 +80,9 @@ export default function Example() {
                   aria-hidden="true"
                 />
               </div>
-              <dt className="mt-4 font-baloo font-semibold text-white">No spam</dt>
+              <dt className="mt-6 font-baloo font-semibold text-white">No spam</dt>
               <dd className="mt-2 leading-7 font-baloo text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+              Our subscription guarantee: No spam, just consistent quality content delivered directly to your inbox. Subscribe worry-free today!
               </dd>
             </div>
 

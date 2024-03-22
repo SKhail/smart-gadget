@@ -12,7 +12,7 @@ function Home({ darkMode }) {
     <>
       <QuickView />
       <NewItem darkMode={darkMode} />
-      <Corousal />
+      <Corousal darkMode={darkMode} />
       <Banner />
       <Product darkMode={darkMode} />
     </>
