@@ -17,6 +17,7 @@ import Computerstablets from './component/computerstablets/Computerstablets'
 import Refurbished from './component/refurbished/Refurbished'
 import HeadphonesSpeakers from './component/headphonesSpeakers/HeadphonesSpeakers'
 import Favoritegadget from './component/favoritegadgets/Favoritegadget'
+import Search from './component/search'
 
 
 
@@ -84,6 +85,7 @@ function App() {
           <Route path='/refurbished' element={<Refurbished darkMode={darkMode}/>} />
           <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode}/>} />
           <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode}/>
+          <Route path='/search' element={<Search />} />
 
 
           

@@ -462,6 +462,8 @@
 
     ],
     
+
+
     "specialDeals": [
       {
         "id": "specialdeal_1",
@@ -663,9 +665,30 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05"
         }
         
-    ]
+    ],
 
+    "search" : [
+      {
+        "key": "smartphone_10",
+        "model": "Sony Xperia 10 V",
+        "price": 1100,
+        "description": {
+          "ram": "8GB",
+          "storage": "128GB",
+          "camera": "12MP",
+          "battery": "4500mAh",
+          "processor": "Snapdragon 690",
+          "os": "Android 11"
+        },
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadjet-e0ed3.appspot.com/o/PhoneData%2Fpictures%2F10.webp?alt=media&token=ff67c3b8-27f5-4020-8b82-574d92ae8a05"
+      }
+
+    ]
   }
+
+
+
+  
 
     
       
