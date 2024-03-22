@@ -23,9 +23,27 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
+
+    // Password validation regex
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+    if (!passwordRegex.test(password)) {
+      // let the user about the password requirements
+      toast.error('Password must contain at least one uppercase letter, one number, and one special character and be at least 8 characters long.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      return // If it doesnt meet end it
+    }
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential)
+        // console.log(userCredential)
         toast.success('Login successful!', {
           position: 'top-right',
           autoClose: 3000,
@@ -38,7 +56,7 @@ const LoginPage = () => {
         handleClose() //Close once the user has registered successfully
       })
       .catch((error) => {
-        console.log(error)
+        // console.log(error)
         toast.error('Error logging in!', {
           position: 'top-right',
           autoClose: 3000,
