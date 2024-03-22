@@ -4,22 +4,22 @@ import firebaseApp from '../corousal/firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function SpecialDeals({ darkMode }) {
-  const [specialDeals, setSpecialDeals] = useState([]);
-  const [selectedDeal, setSelectedDeal] = useState(null);
-  const [previousDeal, setPreviousDeal] = useState(null);
+export default function HeadphonesSpeakers({ darkMode }) {
+  const [headphonesSpeakers, setHeadphonesSpeakers] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [previousProduct, setPreviousProduct] = useState(null);
 
   useEffect(() => {
     const database = getDatabase(firebaseApp);
-    const dealsRef = ref(database, 'specialDeals');
+    const headphonesSpeakersRef = ref(database, 'headphonesSpeakers');
 
     const fetchData = () => {
-      onValue(dealsRef, (snapshot) => {
+      onValue(headphonesSpeakersRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          setSpecialDeals(data);
+          setHeadphonesSpeakers(data);
         } else {
-          setSpecialDeals([]);
+          setHeadphonesSpeakers([]);
         }
       });
     };
@@ -27,15 +27,15 @@ export default function SpecialDeals({ darkMode }) {
     fetchData();
 
     return () => {
-      off(dealsRef);
+      off(headphonesSpeakersRef);
     };
   }, []);
 
-  const handleAddToBasket = (dealId) => {
-    const selectedDealItem = specialDeals.find((item) => item.key === dealId);
+  const handleAddToBasket = (productId) => {
+    const selectedItem = headphonesSpeakers.find((item) => item.key === productId);
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedDealItem]));
-    console.log(`Added deal with ID ${dealId} to basket`);
+    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedItem]));
+    console.log(`Added product with ID ${productId} to basket`);
 
     toast.success('Added to the cart', {
       position: 'top-right',
@@ -48,55 +48,55 @@ export default function SpecialDeals({ darkMode }) {
     });
   };
 
-  const openQuickView = (deal) => {
-    setSelectedDeal(deal);
-    // Set previous deal only if a deal is currently selected
-    if (selectedDeal) {
-      setPreviousDeal(selectedDeal);
+  const openQuickView = (product) => {
+    setSelectedProduct(product);
+    // Set previous product only if a product is currently selected
+    if (selectedProduct) {
+      setPreviousProduct(selectedProduct);
     }
   };
 
   const closeQuickView = () => {
-    setSelectedDeal(null);
-    setPreviousDeal(null);
+    setSelectedProduct(null);
+    setPreviousProduct(null);
   };
 
   return (
     <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
       <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-        <h2 className={`text-3xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Special Deals</h2>
+        <h2 className={`text-3xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Headphones & Speakers</h2>
         <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
-          {specialDeals.map((deal) => (
-            <div key={deal.key} className='group relative overflow-hidden'>
-              <div
-                className='aspect-w-2 aspect-h-3 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 cursor-pointer'>
-                <img
-                  src={deal.image}
-                  alt={deal.name}
-                  className='object-cover object-center w-full h-full transition-transform transform hover:scale-105'
-                  onClick={() => openQuickView(deal)}
-                  style={{ width: '100%', height: '300px' }}
-                />
-              </div>
-              <div className='mt-4 flex justify-between items-center'>
-                <div>
-                  <h3 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>{deal.name}</h3>
-                  <p className={`mt-1 text-sm font-medium text-lg  ${darkMode ? 'text-white' : 'text-gray-700'}`}>£{deal.price}</p>
-                </div>
-                <button
-                  onClick={() => handleAddToBasket(deal.key)}
-                  className={`$ ml-4 px-2 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-900 hover:bg-gray-900 transition-colors duration-300 ease-in-out`}
-                >
-                  Add to Cart
-                </button>
-              </div>
+        {headphonesSpeakers.map((product) => (
+    <div key={product.key} className='group relative overflow-hidden'>
+        <div className='aspect-w-2 aspect-h-3 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 cursor-pointer'>
+            <img
+                src={product.image}
+                alt={product.model}
+                className='object-cover object-center w-full h-full transition-transform transform hover:scale-105'
+                style={{ width: '100%', height: '300px' }}
+                onClick={() => openQuickView(product)}
+            />
+        </div>
+        <div className='mt-4 flex justify-between items-center'>
+            <div>
+                <h3 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>{product.model}</h3>
+                <p className={`mt-1 text-sm font-medium text-lg  ${darkMode ? 'text-white' : 'text-gray-700'}`}>£{product.price}</p>
             </div>
-          ))}
+            <button
+                onClick={() => handleAddToBasket(product.key)}
+                className={`$ ml-4 px-2 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-900 hover:bg-gray-900 transition-colors duration-300 ease-in-out`}
+            >
+                Add to Cart
+            </button>
+        </div>
+    </div>
+))}
+
         </div>
       </div>
 
-      {selectedDeal && (
+      {selectedProduct && (
         <div className='fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none'>
           <div className='fixed inset-0 bg-black opacity-50' onClick={closeQuickView}></div>
           <div className='relative w-full max-w-3xl p-4 mx-auto my-12'>
@@ -107,46 +107,45 @@ export default function SpecialDeals({ darkMode }) {
                 </svg>
               </button>
               <div className='flex-none w-full lg:w-1/2'>
-                <img src={selectedDeal.image} alt={selectedDeal.name} className='h-full w-full object-cover object-center' />
+                <img src={selectedProduct.image} alt={selectedProduct.model} className='h-full w-full object-cover object-center' />
               </div>
               <div className='p-8 w-full lg:w-1/2'>
-                <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{selectedDeal.name}</h2>
+                <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{selectedProduct.model}</h2>
                 <div className='mb-6'>
                   <h3 className='text-lg font-semibold'>Description:</h3>
                   <ul className='list-disc list-inside'>
-                    {Object.entries(selectedDeal.description).map(([key, value]) => (
+                    {Object.entries(selectedProduct.description).map(([key, value]) => (
                       <li key={key} className='text-gray-700'>
                         <span className='font-semibold'>{key}:</span> {value}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{selectedDeal.price}</p>
+                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{selectedProduct.price}</p>
                 <button
-                  onClick={() => handleAddToBasket(selectedDeal.key)}
+                  onClick={() => handleAddToBasket(selectedProduct.key)}
                   className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
                 >
                   Add to Cart
                 </button>
               </div>
-              {previousDeal && (
+              {previousProduct && (
                 <div className='p-8 w-full lg:w-1/2'>
-                  <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousDeal.name}</h2>
+                  <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousProduct.model}</h2>
                   <div className='mb-6'>
                     <h3 className='text-lg font-semibold'>Description:</h3>
                     <ul className='list-disc list-inside'>
-                      {Object.entries(previousDeal.description).map(([key, value]) => (
-                        <li key={key} className='
-                        text-gray-700'>
+                      {Object.entries(previousProduct.description).map(([key, value]) => (
+                        <li key={key} className='text-gray-700'>
                         <span className='font-semibold'>{key}:</span> {value}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousDeal.price}</p>
-                {/* Assuming you want to add a button to add the previous deal to the cart */}
+                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
+                {/* Assuming you want to add a button to add the previous product to the cart */}
                 <button
-                  onClick={() => handleAddToBasket(previousDeal.key)}
+                  onClick={() => handleAddToBasket(previousProduct.key)}
                   className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
                 >
                   Add Previous to Cart
@@ -160,5 +159,3 @@ export default function SpecialDeals({ darkMode }) {
   </div>
 );
 }
-
-

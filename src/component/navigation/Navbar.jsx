@@ -44,8 +44,8 @@ const NavData = [
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false) // fixed Navbar
   const [isMobileOpen, setIsMobileOpen] = useState(false) //Toggle Hamburger
-  const [isShowModel, setShowModel] = useState(false)
-
+  const [isShowModel, setShowModel] = useState(false) // model opener/close
+  const [buttonClicked, setButtonClicked] = useState(false) // hide once clicked
   // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
@@ -73,28 +73,26 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     <nav
       className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
         darkMode ? 'bg-blue-900' : 'bg-gradient-to-r from-blue-800 to-blue-500 '
-      } text-white fixed top-0 w-full z-10`}
+      } text-white fixed top-0 w-full z-10 animate__animated animate__fadeIn`}
     >
-      {/* Dark Mode Feature */}
-      <button className='dark-mode' onClick={toggleDarkMode}>
-        {darkMode ? <FaMoon /> : <FaSun />}{' '}
-      </button>
-
-      {/* Company Name (Logo) */}
-      <Link to='/' className='flex items-center flex-grow'>
-        <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto' />
-      </Link>
-
       {/* Hamburger Button for Mobile */}
       <button onClick={toggleHamburger} className={`lg:hidden text-2xl ${isMobileOpen ? 'ml-auto' : ''}`}>
         {isMobileOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
       </button>
 
+      {/* Company Name (Logo) */}
+      <Link to='/' className='flex items-center flex-start'>
+        <img src={WhiteLogo} alt='SmartGadget' className='h-auto w-32 md:w-40 mx-auto flex justify-start' />
+      </Link>
+
       {/* Navigation Links */}
       <ul className={`lg:flex items-center gap-4 list-none ${isMobileOpen ? 'flex flex-col' : 'hidden lg:flex'}`}>
         {NavData.map((data, index) => (
           <li key={index}>
-            <NavLink to={data.link} className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}`}>
+            <NavLink
+              to={data.link}
+              className={`inline-block px-7 hover:text-space-grey duration-200 font-baloo ${({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}`}
+            >
               {window.innerWidth < 768 ? <span className='font-baloo'>{data.icon}</span> : data.name}
             </NavLink>
           </li>
@@ -103,21 +101,29 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       {/* SearchBar */}
       <div className='relative search-container'>
-        <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar' />
+        <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar text-black' />
         <FaSearch className='searchIcon absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-baloo' />
       </div>
-
-      {/* className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
-            } */}
 
       {/* Shopping Cart and Login Button */}
       <div className='hidden lg:block'>
         <Link to='/shoppingcart' className='inline-block px-4 hover:text-space-grey duration-200 font-baloo'>
           <FaShoppingCart />
         </Link>
-        <button onClick={handleLoginButtonClick} className='font-baloo hover:text-space-grey pl-2'>
-          <FaUser />
+        {!buttonClicked && (
+          <button
+            onClick={() => {
+              handleLoginButtonClick()
+              setButtonClicked(true)
+            }}
+            className='font-baloo hover:text-space-grey pl-2'
+          >
+            <FaUser />
+          </button>
+        )}
+        {/* Dark Mode Feature */}
+        <button className='dark-mode ms-4' onClick={toggleDarkMode}>
+          {darkMode ? <FaMoon /> : <FaSun />}{' '}
         </button>
       </div>
 

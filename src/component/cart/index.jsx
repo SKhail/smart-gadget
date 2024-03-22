@@ -1,10 +1,16 @@
-// Cart.js
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import CurrencySelector from '../curencyselector';
+import CheckoutForm from '../checkout';
+import './style.css';
 
 export default function Cart() {
-  const [cartItems, setCartItems] = React.useState(JSON.parse(localStorage.getItem('cartItems')) || []);
+  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
+  const [selectedCurrency, setSelectedCurrency] = useState('GBP'); // Default currency is GBP
+  const [checkoutVisible, setCheckoutVisible] = useState(false); // State to manage checkout form visibility
 
-  // Function to remove item from cart
   const removeFromCart = (index) => {
     const updatedCart = [...cartItems];
     updatedCart.splice(index, 1);
@@ -12,8 +18,27 @@ export default function Cart() {
     localStorage.setItem('cartItems', JSON.stringify(updatedCart));
   };
 
-  // Calculate total price
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  
+  // Function to convert price to selected currency
+  const convertToSelectedCurrency = (price) => {
+    switch (selectedCurrency) {
+      case 'USD':
+        return (price * 1.15).toFixed(2); // Conversion rate for USD (example)
+      case 'EUR':
+        return (price * 1.12).toFixed(2); // Conversion rate for EUR (example)
+      default:
+        return price.toFixed(2); // GBP is default, no conversion needed
+    }
+  };
+
+  const handleCheckout = () => {
+    setCheckoutVisible(true); // Show checkout form
+  };
+
+  const handleCloseCheckout = () => {
+    setCheckoutVisible(false); // Hide checkout form
+  };
 
   return (
     <div className="bg-white">
@@ -21,37 +46,54 @@ export default function Cart() {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Cart</h2>
 
         <div className="mt-6">
-          <ul className="divide-y divide-gray-200">
+          <TransitionGroup component={null}>
             {cartItems.map((item, index) => (
-              <li key={index} className="py-4 flex items-center justify-between">
-                <div className="flex items-center">
-                  <img src={item.image} alt={item.model} className="h-10 w-10 object-cover rounded" />
-                  <div className="ml-4">
-                    <span className="text-lg font-medium text-gray-900">{item.model}</span>
-                    {/* <span className="block text-sm text-gray-500">{item.description}</span> */}
+              <CSSTransition key={index} classNames="fade" timeout={300}>
+                <li className="py-4 flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img src={item.image} alt={item.model} className="h-10 w-10 object-cover rounded" />
+                    <div className="ml-4">
+                      <span className="text-lg font-medium text-gray-900">{item.model}</span>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <span className="text-lg font-medium text-gray-900">£{item.price}</span>
-                  <button onClick={() => removeFromCart(index)} className="ml-4 text-sm font-medium text-red-500">Remove</button>
-                </div>
-              </li>
+                  <div>
+                    <span className="text-lg font-medium text-gray-900">
+                      {selectedCurrency} {convertToSelectedCurrency(item.price)}
+                    </span>
+                    <button onClick={() => removeFromCart(index)} className="ml-4 text-sm font-medium text-red-500">
+                      <FontAwesomeIcon icon={faTrashAlt} /> 
+                    </button>
+                  </div>
+                </li>
+              </CSSTransition>
             ))}
-          </ul>
+          </TransitionGroup>
         </div>
 
-        {/* Total */}
-        <div className="mt-8 flex items-center justify-between">
-          <span className="text-lg font-medium text-gray-900">Total</span>
-          <span className="text-lg font-medium text-gray-900">£{totalPrice.toLocaleString()}</span>
+        <div className="mt-8 flex items-center justify-between border-t border-gray-200 pt-4">
+          <div className="flex items-center">
+            <span className="text-lg font-medium text-gray-900">Total:</span>
+            <CurrencySelector selectedCurrency={selectedCurrency} onChange={setSelectedCurrency} />
+          </div>
+          <span className="text-3xl font-bold text-gray-900">
+            {selectedCurrency} {convertToSelectedCurrency(totalPrice)}
+          </span>
         </div>
 
-        {/* Checkout Button */}
         <div className="mt-8">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Checkout
+          <button onClick={handleCheckout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bounce">
+            <FontAwesomeIcon icon={faShoppingCart} /> Checkout
           </button>
         </div>
+
+        {/* Render checkout form modal */}
+        {checkoutVisible && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-8 border rounded">
+              <CheckoutForm onClose={handleCloseCheckout} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

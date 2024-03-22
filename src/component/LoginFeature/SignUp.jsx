@@ -11,6 +11,23 @@ const SignUp = ({ handleClose }) => {
 
   const handleSignUp = (e) => {
     e.preventDefault()
+
+    // Password validation regex
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+    if (!passwordRegex.test(password)) {
+      // let the user about the password requirements
+      toast.error('Password must contain at least one uppercase letter, one number, and one special character and be at least 8 characters long.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      return // If it doesnt meet end it
+    }
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential)

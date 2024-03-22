@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { getDatabase, ref, onValue, off } from "firebase/database";
-import firebaseApp from "../corousal/firebase";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useState, useEffect } from 'react';
+import { getDatabase, ref, onValue, off } from 'firebase/database';
+import firebaseApp from '../corousal/firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function Consoles(props) {
+export default function Consoles({ darkMode }) {
   const [consoles, setConsoles] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [previousProduct, setPreviousProduct] = useState(null);
 
   useEffect(() => {
     const database = getDatabase(firebaseApp);
-    const consolesRef = ref(database, "consoles"); // Assuming your database reference for consoles is 'consoles'
+    const consolesRef = ref(database, 'consoles');
 
     const fetchData = () => {
       onValue(consolesRef, (snapshot) => {
@@ -32,16 +33,12 @@ export default function Consoles(props) {
 
   const handleAddToBasket = (productId) => {
     const selectedItem = consoles.find((item) => item.key === productId);
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    localStorage.setItem(
-      "cartItems",
-      JSON.stringify([...cartItems, selectedItem])
-    );
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    localStorage.setItem('cartItems', JSON.stringify([...cartItems, selectedItem]));
     console.log(`Added product with ID ${productId} to basket`);
 
-    // Show toast notification when item is added to cart
-    toast.success("Added to the cart", {
-      position: "top-right",
+    toast.success('Added to the cart', {
+      position: 'top-right',
       autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -53,49 +50,46 @@ export default function Consoles(props) {
 
   const openQuickView = (product) => {
     setSelectedProduct(product);
+    // Set previous product only if a product is currently selected
+    if (selectedProduct) {
+      setPreviousProduct(selectedProduct);
+    }
   };
 
   const closeQuickView = () => {
     setSelectedProduct(null);
+    setPreviousProduct(null);
   };
 
   return (
-    <div className="bg-white">
+    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-baloo-900">
-          Consoles
-        </h2>
-
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {Object.values(consoles).map((product, index) => (
-            <div key={index} className="group relative">
+      <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
+        <h2 className={`text-3xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Consoles</h2>
+        <div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          {consoles.map((product) => (
+            <div key={product.key} className='group relative overflow-hidden'>
               <div
-                className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 cursor-pointer"
-                onClick={() => openQuickView(product)}
-              >
+                className='aspect-w-2 aspect-h-3 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 cursor-pointer'>
                 <img
                   src={product.image}
                   alt={product.model}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  className='object-cover object-center w-full h-full transition-transform transform hover:scale-105'
+                  onClick={() => openQuickView(product)}
+                  style={{ width: '100%', height: '300px' }}
                 />
               </div>
-              <div className="mt-4 flex justify-between">
+              <div className='mt-4 flex justify-between items-center'>
                 <div>
-                  <h3 className="text-sm text-gray-700">{product.model}</h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    {" "}
-                    £{product.price}
-                  </p>
+                  <h3 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>{product.model}</h3>
+                  <p className={`mt-1 text-sm font-medium text-lg  ${darkMode ? 'text-white' : 'text-gray-700'}`}>£{product.price}</p>
                 </div>
-                <div className="flex items-center flex-col">
-                  <button
-                    onClick={() => handleAddToBasket(product.key)}
-                    className="mt-2 text-sm font-medium text-baloo bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 px-3 py-1 rounded-md "
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+                <button
+                  onClick={() => handleAddToBasket(product.key)}
+                  className={`$ ml-4 px-2 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-900 hover:bg-gray-900 transition-colors duration-300 ease-in-out`}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}
@@ -103,76 +97,68 @@ export default function Consoles(props) {
       </div>
 
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-          {/* Overlay */}
-          <div
-            className="fixed inset-0 bg-black opacity-50"
-            onClick={closeQuickView}
-          ></div>
-          {/* Quick View Dialog */}
-          <div className="relative w-full max-w-3xl p-4 mx-auto my-12">
-            {/* Content */}
-            <div className="relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row">
-              {/* Close Button */}
-              <button
-                className="absolute top-0 right-0 m-4 text-baloo-500 transition duration-300 hover:text-baloo-700"
-                onClick={closeQuickView}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
+        <div className='fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none'>
+          <div className='fixed inset-0 bg-black opacity-50' onClick={closeQuickView}></div>
+          <div className='relative w-full max-w-3xl p-4 mx-auto my-12'>
+            <div className='relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row'>
+              <button className='absolute top-0 right-0 m-4 text-gray-500 transition duration-300 hover:text-gray-700' onClick={closeQuickView}>
+                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
                 </svg>
               </button>
-              {/* Product Image */}
-              <div className="flex-none w-full lg:w-1/2">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.model}
-                  className="h-full w-full object-cover object-center"
-                />
+              <div className='flex-none w-full lg:w-1/2'>
+                <img src={selectedProduct.image} alt={selectedProduct.model} className='h-full w-full object-cover object-center' />
               </div>
-              {/* Product Details */}
-              <div className="p-8 w-full lg:w-1/2">
-                <h2 className="text-xl font-semibold mb-4">
-                  {selectedProduct.model}
-                </h2>
-                <div className="mb-4">
-                  <h3 className="text-lg font-semibold">Description:</h3>
-                  <ul className="list-disc list-inside">
-                    {Object.entries(selectedProduct.description).map(
-                      ([key, value]) => (
-                        <li key={key} className="text-baloo-700">
-                          <span className="font-semibold">{key}:</span> {value}
-                        </li>
-                      )
-                    )}
+              <div className='p-8 w-full lg:w-1/2'>
+                <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{selectedProduct.model}</h2>
+                <div className='mb-6'>
+                  <h3 className='text-lg font-semibold'>Description:</h3>
+                  <ul className='list-disc list-inside'>
+                    {Object.entries(selectedProduct.description).map(([key, value]) => (
+                      <li key={key} className='text-gray-700'>
+                        <span className='font-semibold'>{key}:</span> {value}
+                      </li>
+                    ))}
                   </ul>
                 </div>
-                <p className="text-gray-700 font-semibold">
-                  £{selectedProduct.price}
-                </p>
-                {/* Add to Cart Button */}
+                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{selectedProduct.price}</p>
                 <button
                   onClick={() => handleAddToBasket(selectedProduct.key)}
-                  className="block w-full py-2 text-center bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900 text-baloo font-semibold rounded-md mt-4"
+                  className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
                 >
                   Add to Cart
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+              {previousProduct && (
+                <div className='p-8 w-full lg:w-1/2'>
+                  <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousProduct.model}</h2>
+                  <div className='mb-6'>
+                    <h3 className='text-lg font-semibold'>Description:</h3>
+                    <ul className='list-disc list-ins
+ide'>
+{Object.entries(previousProduct.description).map(([key, value]) => (
+  <li key={key} className='text-gray-700'>
+    <span className='font-semibold'>{key}:</span> {value}
+  </li>
+))}
+</ul>
+</
+div>
+
+<p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
+{/* Assuming you want to add a button to add the previous product to the cart */}
+<button
+onClick={() => handleAddToBasket(previousProduct.key)}
+className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
+>
+Add Previous to Cart
+</button>
+</div>
+)}
+</div>
+</div>
+</div>
+)}
+</div>
+);
 }

@@ -12,7 +12,9 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-function CarouselDefault() {
+import "./style.css";
+
+function CarouselDefault({ darkMode }) {
   const [carouselData, setCarouselData] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
   const sliderRef = useRef(null);
@@ -109,7 +111,8 @@ function CarouselDefault() {
   };
 
   return (
-    <div className="slider-container w-10/12 mx-auto mt-24 relative">
+    <div className={` py-6 bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
+    <div className={`slider-container w-10/12 mx-auto my-6 relative bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
       <ToastContainer />
       <Slider ref={sliderRef} {...settings}>
         {carouselData.map((item, index) => (
@@ -117,8 +120,9 @@ function CarouselDefault() {
             <img
               src={item.image}
               alt={`image ${index + 1}`}
-              className="object-cover h-40 w-40 carousel-image" // Set fixed height and width (e.g., h-40 and w-40)
-              onClick={() => openQuickView(item)} // Open quick view on image click
+              className="object-cover h-40 w-40 carousel-image" 
+              style={{ cursor: "pointer"   }} 
+              onClick={() => openQuickView(item)} 
             />
 
             <p className="text-center text-white font-bold text-base bg-black py-1 px-2 rounded-lg shadow-lg border-2 border-primary inline-block">
@@ -217,6 +221,7 @@ function CarouselDefault() {
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
+    </div>
     </div>
   );
 }

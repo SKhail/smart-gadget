@@ -10,6 +10,7 @@ import { auth } from '../corousal/firebase'
 import { MdClose } from 'react-icons/md' //Icons
 import { FcGoogle } from 'react-icons/fc' //Icons
 import { MdAccountCircle } from 'react-icons/md' // Icons
+import { RiLogoutCircleLine } from 'react-icons/ri' // Import the logout icon from react-icons library
 
 import { TERipple } from 'tw-elements-react' // ripple effects on UI npm package
 import { ToastContainer, toast } from 'react-toastify' // Alert Feature
@@ -20,9 +21,28 @@ const LoginPage = () => {
   const [showLoginPage, setShowLoginPage] = useState(true) //Setting visbility to close
   const [showRegisterPage, setShowRegisterPage] = useState(false) // relations to Register Page for users
   const [registrationSuccess, setRegistrationSuccess] = useState(false) //Close once successful
+  const [isLoggedIn, setIsLoggedIn] = useState(false) // Track login status to show
 
   const handleLogin = (e) => {
     e.preventDefault()
+
+    // Password validation regex
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+    if (!passwordRegex.test(password)) {
+      // let the user about the password requirements
+      toast.error('Password must contain at least one uppercase letter, one number, and one special character and be at least 8 characters long.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+      return // If it doesnt meet end it
+    }
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential)
@@ -35,10 +55,12 @@ const LoginPage = () => {
           draggable: true,
           progress: undefined,
         })
+
+        setIsLoggedIn(true) // Set is LoggedIn to true after successful login
         handleClose() //Close once the user has registered successfully
       })
       .catch((error) => {
-        console.log(error)
+        // console.log(error)
         toast.error('Error logging in!', {
           position: 'top-right',
           autoClose: 3000,
@@ -71,6 +93,20 @@ const LoginPage = () => {
   return (
     <>
       <ToastContainer />
+      {/* Button will show if the user is logged in and if they are Log out */}
+      {isLoggedIn ? (
+        <button onClick={() => setIsLoggedIn(false)} className='flex items-center gap-1'>
+          <RiLogoutCircleLine />
+          Log out
+        </button>
+      ) : (
+        <button onClick={handleLogin} className='flex items-center gap-1'>
+          <MdAccountCircle />
+          Log in
+        </button>
+      )}
+
+      {/* Check if showLoginPage is true and registrationSuccess is false */}
       {showLoginPage && !registrationSuccess && (
         <div className='fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 z-50'>
           <div className='bg-white rounded-2xl shadow-md overflow-hidden w-full max-w-md'>
@@ -107,8 +143,7 @@ const LoginPage = () => {
                 </div>
                 <button
                   className='w-full px-6 py-2.5 text-xs font-medium text-white bg-gradient-to-r from-blue-800 to-blue-500 rounded shadow-md hover:shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-900'
-                  type='button'
-                  onClick={handleLogin}
+                  type='submit'
                 >
                   Log in
                 </button>
@@ -147,6 +182,7 @@ const LoginPage = () => {
           </div>
         </div>
       )}
+
       {showRegisterPage && <SignUp handleClose={toggleSignUpPage} handleRegistrationSuccess={handleRegistrationSuccess} />}
     </>
   )
