@@ -223,7 +223,7 @@
         "key": "audioProduct_1",
         "model": "Aukey EP-T21S Earbud",
         "description": "Noise-Cancelling Bluetooth Earphones - Black",
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_1.png?alt=media&token=7413f1a9-c95b-4bc2-b98b-65de6da23b41",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_1.png?alt=media&token=0b561375-47d7-4351-bd30-8728bf4df25e",
         "imageAlt": "Aukey Erabud",
         "price": 35
        },
@@ -231,7 +231,7 @@
         "key": "audioProduct_2",
         "model": "Samsung Galaxy Buds 2 Pro",
         "description": "Earbud Noise-Cancelling Bluetooth Earphones - Black",
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_2.png?alt=media&token=7092cf4f-5d33-4e36-bd62-a09be3d60688",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_2.png?alt=media&token=5994ade1-8d7d-4a12-bb7c-94a69226d083",
         "imageAlt": "Samsung Galaxy Buds",
         "price": 130
        },
@@ -239,7 +239,7 @@
         "key": "audioProduct_3",
         "model": "Sony WH-CH520",
         "description": "wireless Headphones with microphone - Black",
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_3.png?alt=media&token=09ab39f8-77a0-4e91-8edc-a690d8f12202",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_3.png?alt=media&token=1f49718f-d46a-41cf-bbc0-14ebb1bdbe6c",
         "imageAlt": "Sony Headphones",
         "price": 39
        },
@@ -247,7 +247,7 @@
         "key": "audioProduct_4",
         "model": "Apple AirPods Pro 2nd gen (2022)",
         "description": "2nd gen (2022) - MagSafe Charging case - White",
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_4.png?alt=media&token=44accdf8-e467-41d9-b99b-7188a12a2bfe",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_4.png?alt=media&token=44ed0b7f-07bf-4f79-857c-125b1ff0b0db",
         "imageAlt": "Apple Airpods",
         "price": 225
        },
@@ -255,14 +255,14 @@
         "key": "audioProduct_5",
         "model": "Beats",
         "description": "By Dr. Dre Studio Buds Earbud Noise-Cancelling Bluetooth Earphones - Red",
-        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_5.png?alt=media&token=2c111370-0800-460b-a39f-138be07f2646",
+        "image": "https://firebasestorage.googleapis.com/v0/b/smartgadget-e76bd.appspot.com/o/Items-list%2FaudioProduct_5.png?alt=media&token=d9491b79-8f28-41df-a63e-2b9cbaf103c5",
         "imageAlt": "Beats by Dr. Dre Studio Buds",
         "price": 85
        }
 
     ],
 
-    "laptops": [
+    "laptop": [
       {
          "key": "laptop_1",
          "model": "Dell Latitude 5400 14-inch (2019)",

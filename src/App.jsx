@@ -19,10 +19,6 @@ import HeadphonesSpeakers from './component/headphonesSpeakers/HeadphonesSpeaker
 import Favoritegadget from './component/favoritegadgets/Favoritegadget'
 import Search from './component/search'
 
-
-
-
-
 import QuickView from './component/quickview'
 
 import './index.css'
@@ -81,29 +77,21 @@ function App() {
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/specialdeals' element={<SpecialDeals addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/latest' element={<Latest />} darkMode={darkMode} />
-          <Route path='/computerstablets' element={<Computerstablets darkMode={darkMode}/>} />
-          <Route path='/refurbished' element={<Refurbished darkMode={darkMode}/>} />
-          <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode}/>} />
-          <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode}/>
+          <Route path='/computerstablets' element={<Computerstablets darkMode={darkMode} />} />
+          <Route path='/refurbished' element={<Refurbished darkMode={darkMode} />} />
+          <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode} />} />
+          <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode} />
           <Route path='/search' element={<Search />} />
-
-
-          
-          
-
         </Routes>
 
         <div className='app'>
-  {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
-  {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
-</div>
-
+          {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
+          {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
+        </div>
 
         <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
     </Router>
-
-    
   )
 }
 
