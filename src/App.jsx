@@ -15,6 +15,12 @@ import ShoppingCart from './component/cart'
 import SmartPhones from './component/smartphones/SmartPhones'
 import Computerstablets from './component/computerstablets/Computerstablets'
 import Refurbished from './component/refurbished/Refurbished'
+import HeadphonesSpeakers from './component/headphonesSpeakers/HeadphonesSpeakers'
+import Favoritegadget from './component/favoritegadgets/Favoritegadget'
+
+
+
+
 
 import QuickView from './component/quickview'
 
@@ -72,9 +78,16 @@ function App() {
           <Route path='/laptops' element={<Laptops addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/shoppingcart' element={<ShoppingCart cart={cart} />} />
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
-          <Route path='/specialdeals' element={<SpecialDeals />} />
-          <Route path='/latest' element={<Latest />} />
-          <Route path='/computerstablets' element={<Computerstablets />} />
+          <Route path='/specialdeals' element={<SpecialDeals />} darkMode={darkMode} />
+          <Route path='/latest' element={<Latest />} darkMode={darkMode} />
+          <Route path='/computerstablets' element={<Computerstablets />} darkMode={darkMode}/>
+          <Route path='/refurbished' element={<Refurbished />} darkMode={darkMode}/>
+          <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode}/>} />
+          <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode}/>
+
+
+          
+          
 
         </Routes>
 
