@@ -11,7 +11,7 @@ export default function Favoritegadget({ darkMode }) {
 
   useEffect(() => {
     const database = getDatabase(firebaseApp);
-    const refurbishedRef = ref(database, 'refurbished');
+    const refurbishedRef = ref(database, 'refurbished' + 'smartphones' + 'laptops' + 'consoles'); 
 
     const fetchData = () => {
       onValue(refurbishedRef, (snapshot) => {
