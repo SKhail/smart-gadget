@@ -15,11 +15,11 @@ export default function Laptops({ darkMode }) {
 
     const fetchData = () => {
       onValue(laptopsRef, (snapshot) => {
-        const data = snapshot.val()
+        const data = snapshot.val();
         if (data) {
-          setLaptops(data)
+          setLaptops(data);
         } else {
-          setLaptops([])
+          setLaptops([]);
         }
       })
     }
@@ -38,7 +38,7 @@ export default function Laptops({ darkMode }) {
     console.log(`Added product with ID ${productId} to basket`)
 
     toast.success('Added to the cart', {
-      position: 'top-right',
+      position: "top-right",
       autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -62,7 +62,7 @@ export default function Laptops({ darkMode }) {
   }
 
   return (
-    <div className={`bg-${darkMode ? 'black' : 'white'} text-${darkMode ? 'white' : 'black'}`}>
+    <div className="bg-white">
       <ToastContainer />
       <div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
         <h2 className={`text-3xl font-bold tracking-tight text-center ${darkMode ? 'text-white' : 'text-gray-900'} animate__animated animate__fadeIn`}>Laptops</h2>
@@ -159,5 +159,11 @@ ide'
         </div>
       )}
     </div>
-  )
+  );
 }
+
+
+
+
+
+
