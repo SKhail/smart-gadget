@@ -80,7 +80,7 @@ Thank you for choosing Smart Gadget App for all your gadget needs. Happy shoppin
 
 ## Usage
 
-This webpage can be accessed by [**clicking here**](...)
+This webpage can be accessed by [**clicking here**](https://smart-gadget123.netlify.app/)
 
 The page repository [**clicking here**](https://github.com/SKhail/smart-gadget)
 
