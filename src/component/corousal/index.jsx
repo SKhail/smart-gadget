@@ -12,6 +12,8 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+import "./style.css";
+
 function CarouselDefault({ darkMode }) {
   const [carouselData, setCarouselData] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product for quick view
@@ -118,8 +120,9 @@ function CarouselDefault({ darkMode }) {
             <img
               src={item.image}
               alt={`image ${index + 1}`}
-              className="object-cover h-40 w-40 carousel-image" // Set fixed height and width (e.g., h-40 and w-40)
-              onClick={() => openQuickView(item)} // Open quick view on image click
+              className="object-cover h-40 w-40 carousel-image" 
+              style={{ cursor: "pointer"   }} 
+              onClick={() => openQuickView(item)} 
             />
 
             <p className="text-center text-white font-bold text-base bg-black py-1 px-2 rounded-lg shadow-lg border-2 border-primary inline-block">
