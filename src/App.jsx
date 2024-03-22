@@ -68,21 +68,22 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home darkMode={darkMode} />} />
-          <Route path='/consoles' element={<Consoles />} darkMode={darkMode} />
+          <Route path='/Consoles' element={<Consoles addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/laptops' element={<Laptops addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/shoppingcart' element={<ShoppingCart cart={cart} />} />
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
-          <Route path='/specialdeals' element={<SpecialDeals />} />
+          <Route path='/specialdeals' element={<SpecialDeals addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/latest' element={<Latest />} />
-          <Route path='/computerstablets' element={<Computerstablets />} />
+          <Route path='/computerstablets' element={<Computerstablets addtoCart={addtoCart} darkMode={darkMode} />} />
+
 
         </Routes>
 
-        {/* <div className='app'>
-          {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
-          {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
-          <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
-        </div> */}
+        <div className='app'>
+  {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
+  {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
+</div>
+
 
         <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
