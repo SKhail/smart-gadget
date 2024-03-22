@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import CurrencySelector from '../curencyselector';
+import CheckoutForm from '../checkout';
 import './style.css';
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
   const [selectedCurrency, setSelectedCurrency] = useState('GBP'); // Default currency is GBP
+  const [checkoutVisible, setCheckoutVisible] = useState(false); // State to manage checkout form visibility
 
   const removeFromCart = (index) => {
     const updatedCart = [...cartItems];
@@ -28,6 +30,14 @@ export default function Cart() {
       default:
         return price.toFixed(2); // GBP is default, no conversion needed
     }
+  };
+
+  const handleCheckout = () => {
+    setCheckoutVisible(true); // Show checkout form
+  };
+
+  const handleCloseCheckout = () => {
+    setCheckoutVisible(false); // Hide checkout form
   };
 
   return (
@@ -51,7 +61,7 @@ export default function Cart() {
                       {selectedCurrency} {convertToSelectedCurrency(item.price)}
                     </span>
                     <button onClick={() => removeFromCart(index)} className="ml-4 text-sm font-medium text-red-500">
-                      <FontAwesomeIcon icon={faTrashAlt} /> Remove
+                      <FontAwesomeIcon icon={faTrashAlt} /> 
                     </button>
                   </div>
                 </li>
@@ -71,10 +81,19 @@ export default function Cart() {
         </div>
 
         <div className="mt-8">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bounce">
+          <button onClick={handleCheckout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bounce">
             <FontAwesomeIcon icon={faShoppingCart} /> Checkout
           </button>
         </div>
+
+        {/* Render checkout form modal */}
+        {checkoutVisible && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-8 border rounded">
+              <CheckoutForm onClose={handleCloseCheckout} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

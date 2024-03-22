@@ -74,14 +74,14 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home darkMode={darkMode} />} />
-          <Route path='/consoles' element={<Consoles />} darkMode={darkMode} />
+          <Route path='/Consoles' element={<Consoles addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/laptops' element={<Laptops addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/shoppingcart' element={<ShoppingCart cart={cart} />} />
           <Route path='/smartphones' element={<SmartPhones addtoCart={addtoCart} darkMode={darkMode} />} />
-          <Route path='/specialdeals' element={<SpecialDeals />} darkMode={darkMode} />
+          <Route path='/specialdeals' element={<SpecialDeals addtoCart={addtoCart} darkMode={darkMode} />} />
           <Route path='/latest' element={<Latest />} darkMode={darkMode} />
-          <Route path='/computerstablets' element={<Computerstablets />} darkMode={darkMode}/>
-          <Route path='/refurbished' element={<Refurbished />} darkMode={darkMode}/>
+          <Route path='/computerstablets' element={<Computerstablets darkMode={darkMode}/>} />
+          <Route path='/refurbished' element={<Refurbished darkMode={darkMode}/>} />
           <Route path='/headphonesSpeakers' element={<HeadphonesSpeakers darkMode={darkMode}/>} />
           <Route path='/favoritegadget' element={<Favoritegadget />} darkMode={darkMode}/>
 
@@ -91,11 +91,11 @@ function App() {
 
         </Routes>
 
-        {/* <div className='app'>
-          {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
-          {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
-          <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />
-        </div> */}
+        <div className='app'>
+  {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
+  {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
+</div>
+
 
         <Newsletter className={darkMode ? 'bg-dark' : 'bg-white'} />
       </div>
