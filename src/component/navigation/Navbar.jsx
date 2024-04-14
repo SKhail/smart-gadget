@@ -9,6 +9,9 @@ import '../navigation/style.css' // Ensure correct import path
 
 import WhiteLogo from '../../assets/Logos/white-smart-gadgets-high-resolution-logo.png'
 
+import { getDatabase, ref, query, onValue, orderByChild, startAt, endAt } from "firebase/database";
+import app from '../corousal/firebase'
+
 const NavData = [
   {
     id: 1,
@@ -35,6 +38,7 @@ const NavData = [
     link: '/smartphones',
   },
   {
+    
     id: 5,
     icon: <FaShoppingCart />,
     link: '/shoppingcart',
@@ -46,6 +50,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false) //Toggle Hamburger
   const [isShowModel, setShowModel] = useState(false) // model opener/close
   const [buttonClicked, setButtonClicked] = useState(false) // hide once clicked
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
   // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
@@ -69,6 +76,26 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const handleLoginButtonClick = () => {
     setShowModel(!isShowModel) // Toggle showModal state
   }
+
+  const handleSearchInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const performSearch = () => {
+    const db = getDatabase(app);
+    const itemsRef = query(ref(db, 'items'), orderByChild('name'), startAt(searchTerm), endAt(searchTerm + "\uf8ff"));
+    
+    onValue(itemsRef, (snapshot) => {
+      const items = [];
+      snapshot.forEach((childSnapshot) => {
+        items.push(childSnapshot.val());
+      });
+      setSearchResults(items);
+    }, {
+      onlyOnce: true
+    });
+  };
+
   return (
     <nav
       className={`flex items-center justify-between px-4 py-2 lg:px-12 ${
@@ -101,7 +128,18 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       {/* SearchBar */}
       <div className='relative search-container'>
-        <input type='text' placeholder='Search...' className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar text-black' />
+        <input
+          type='text'
+          placeholder='Search...'
+          className='py-1 pl-8 pr-1 rounded-full border-2 border-gray-300 focus:outline-none focus:border-primary search-bar text-black'
+          value={searchTerm}
+          onChange={handleSearchInputChange}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              performSearch();
+            }
+          }}
+        />
         <FaSearch className='searchIcon absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-baloo' />
       </div>
 

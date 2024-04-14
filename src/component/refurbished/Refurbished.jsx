@@ -49,11 +49,10 @@ export default function Refurbished({ darkMode }) {
   };
 
   const openQuickView = (product) => {
-    setSelectedProduct(product);
-    // Set previous product only if a product is currently selected
     if (selectedProduct) {
       setPreviousProduct(selectedProduct);
     }
+    setSelectedProduct(product);
   };
 
   const closeQuickView = () => {
@@ -99,64 +98,62 @@ export default function Refurbished({ darkMode }) {
       {selectedProduct && (
         <div className='fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none'>
           <div className='fixed inset-0 bg-black opacity-50' onClick={closeQuickView}></div>
-          <div className='relative w-full max-w-3xl p-4 mx-auto my-12'>
-            <div className='relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row'>
+          <div className='relative w-full max-w-6xl p-4 mx-auto my-12'>
+            <div className='relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row m-2'>
               <button className='absolute top-0 right-0 m-4 text-gray-500 transition duration-300 hover:text-gray-700' onClick={closeQuickView}>
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www
-.w3.org/2000/svg'>
-<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
-</svg>
-</button>
-<div className='flex-none w-full lg:w-1/2'>
-<img src={selectedProduct.image} alt={selectedProduct.model} className='h-full w-full object-cover object-center' />
-</div>
-<div className='p-8 w-full lg:w-1/2'>
-<h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{selectedProduct.model}</h2>
-<div className='mb-6'>
-<h3 className='text-lg font-semibold'>Description:</h3>
-<ul className='list-disc list-inside'>
-  {Object.entries(selectedProduct.description).map(([key, value]) => (
-    <li key={key} className='text-gray-700'>
-      <span className='font-semibold'>{key}:</span> {value}
-    </li>
-  ))}
-</ul>
-</div>
-<p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{selectedProduct.price}</p>
-<button
-onClick={() => handleAddToBasket(selectedProduct.key)}
-className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
->
-Add to Cart
-</button>
-</div>
-{previousProduct && (
-<div className='p-8 w-full lg:w-1/2'>
-<h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousProduct.model}</h2>
-<div className='mb-6'>
-  <h3 className='text-lg font-semibold'>Description:</h3>
-  <ul className='list-disc list-inside'>
-    {Object.entries(previousProduct.description).map(([key, value]) => (
-      <li key={key} className='text-gray-700'>
-        <span className='font-semibold'>{key}:</span> {value}
-      </li>
-    ))}
-  </ul>
-</div>
-<p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
-{/* Assuming you want to add a button to add the previous product to the cart */}
-<button
-  onClick={() => handleAddToBasket(previousProduct.key)}
-  className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'
->
-  Add Previous to Cart
-</button>
-</div>
-)}
-</div>
-</div>
-</div>
-)}
-</div>
-);
+                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
+                </svg>
+              </button>
+              <div className='flex-none w-full lg:w-1/2'>
+                <img src={selectedProduct.image} alt={selectedProduct.model} className='h-full w-full object-cover object-center' />
+              </div>
+              <div className='p-8 w-full lg:w-1/2'>
+                <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{selectedProduct.model}</h2>
+                <div className='mb-6'>
+                  <h3 className='text-lg font-semibold'>Description:</h3>
+                  <ul className='list-disc list-inside'>
+                    {Object.entries(selectedProduct.description).map(([key, value]) => (
+                      <li key={key} className='text-gray-700'>
+                        <span className='font-semibold'>{key}:</span> {value}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{selectedProduct.price}</p>
+                <button onClick={() => handleAddToBasket(selectedProduct.key)} className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'>
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            {previousProduct && (
+              <div className='relative bg-white rounded-lg shadow-xl flex flex-col lg:flex-row m-2'>
+                <div className='flex-none w-full lg:w-1/2'>
+                  <img src={previousProduct.image} alt={previousProduct.model} className='h-full w-full object-cover object-center' />
+                </div>
+                <div className='p-8 w-full lg:w-1/2'>
+                  <h2 className='text-2xl lg:text-3xl font-semibold mb-4'>{previousProduct.model}</h2>
+                  <div className='mb-6'>
+                    <h3 className='text-lg font-semibold'>Description:</h3>
+                    <ul className='list-disc list-inside'>
+                      {Object.entries(previousProduct.description).map(([key, value]) => (
+                        <li key={key} className='text-gray-700'>
+                          <span className='font-semibold'>{key}:</span> {value}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <p className='text-xl font-semibold text-gray-800 mb-4'>Price: £{previousProduct.price}</p>
+                  <button onClick={() => handleAddToBasket(previousProduct.key)} className='block w-full py-3 text-lg text-center bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-700 mt-4 transition duration-300 ease-in-out'>
+                    Add Previous to Cart
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
+

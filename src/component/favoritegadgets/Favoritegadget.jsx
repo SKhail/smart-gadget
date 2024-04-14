@@ -31,6 +31,8 @@ export default function Store({ darkMode }) {
     };
   }, []);
 
+ 
+
   const handleAddToCart = (productId) => {
     const selectedItem = store.find((item) => item.key === productId);
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];

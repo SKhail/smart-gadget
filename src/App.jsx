@@ -29,6 +29,7 @@ import ChatInput from './component/chat/ChatInput' // Import from Chat folder
 import Sidebar from './component/chat/sidebar' // Import from Sidebar folder
 import ChatButton from './component/chat/ChatButton'
 import ChatSystem from '../src/component/chat/chatsystem'
+import app from './component/corousal/firebase'
 
 function App() {
   const [cart, setCart] = useState([])
