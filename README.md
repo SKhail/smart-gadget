@@ -160,3 +160,4 @@ Rosemary [**Click here**](https://github.com/RoseBenson) to view their git hub p
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 </div>
+"# SmartGadgets" 
